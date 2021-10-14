@@ -61,3 +61,13 @@ Example:
 Every token has a name and an acronym or symbol, and any smart contract can define a new token. 
 It is common for tokens to represent money. 
 Therefore, in practice, (crypto)coins and tokens are frequently used interchangeably.
+
+## Token contract
+
+> Token contracts are special smart contracts that define a token and keep track of its balance across user accounts.
+ 
+Ethereum has two main technical standards for the implementation of tokens, known as the ERC20 interface and the ERC721 inter- face.
+The standardization allows contracts to operate on different tokens seamlessly, while also fostering interoperability between contracts.
+
+
+
