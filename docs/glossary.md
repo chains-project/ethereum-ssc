@@ -1,24 +1,63 @@
 # Glossary
 
 
-### Ethereum
+## Blockchain
 
-Ethereum is the largest programmable blockchain platform. It is also a novel application development platform.
+> A blockchain is a distributed, chronological database of transactions.
+> This database is shared and maintained across nodes that participate in a peer-to-peer network.
+> Transactions are packaged into blocks which are linked to one another as a chain.
+ 
+Popular blockchain platforms:
 
+- [Bitcoin]( https://bitcoin.org)
+- [Ethereum](https://ethereum.org)
+- [EOS](https://eos.io) 
+- [POA](https://www.poa.network) 
+- [Nxt](https://www.jelurida.com/nxt)
+- [Hyperledger Fabric](https://www.hyperledger.org/projects/fabric)
+ 
+## Transactions
 
-### Smart contracts
+> Adding transactions to a blockchain requires confirmation from several nodes of the network, which all abide to a certain consensus protocol.
+ 
+## Proof of work (PoW) 
 
-Smart contracts are the building blocks of decentralised application (Dapps). Despite its name, they are general-purpose computing programs (Solidity is the most popular language).
+> PoW is a consensus protocol which requires nodes to solve a hard mathematical puzzle.
+ 
+The computing power required to solve the puzzle ensures that tampering with the data is infeasible. 
+Ensures that there is no better strategy to find a solution to the puzzle than enumerating all the possibilities (i.e., brute force).
+On the other hand, verification of a solution is trivial and cheap.
 
+## Ethereum
 
-### Client
+> Ethereum is the largest programmable blockchain platform. It is also a novel application development platform.
 
-A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
+## Smart contracts
 
-What these implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+> Smart contracts are the building blocks of decentralised application (DApps).
 
-Clients can run 3 different types of node : light, full and archive
+- Despite its name, they are general-purpose computing programs.
+- Solidity is the most popular programming language to write smart contracts.
 
+## DApps
 
-- [https://ethereum.org/en/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
+> DApps are smart contracts used to implement the backend of a certain application.  
 
+Example:
+-  [https://www.cryptokitties.co](https://www.cryptokitties.co)
+
+## Client
+
+> A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
+- 
+- What these implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+- Clients can run 3 different types of node : light, full and archive.
+- See also [https://ethereum.org/en/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
+
+## Token
+
+> Tokens represent digital assets that ca be traded, including everything from commodities to voting rights.
+
+Every token has a name and an acronym or symbol, and any smart contract can define a new token. 
+It is common for tokens to represent money. 
+Therefore, in practice, (crypto)coins and tokens are frequently used interchangeably.
