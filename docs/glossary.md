@@ -1,6 +1,8 @@
 # Glossary
 
 
+See also: [https://kauri.io/#communities/Getting%20started%20with%20dapp%20development/blockchain-explained/](https://kauri.io/#communities/Getting%20started%20with%20dapp%20development/blockchain-explained/)
+
 ## Blockchain
 
 > A blockchain is a distributed, chronological database of transactions.
@@ -49,9 +51,10 @@ Example:
 ## Client
 
 > A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
-- 
+ 
 - What these implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
 - Clients can run 3 different types of node : light, full and archive.
+- An 'Ethereum client' is just a term. It refers to any node able to parse and verify the blockchain, its smart contracts and everything related. It also allows you/provides interfaces to create transactions and mine blocks which is the key for any blockchain interaction.
 - See also [https://ethereum.org/en/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
 
 ## Token
@@ -68,6 +71,14 @@ Therefore, in practice, (crypto)coins and tokens are frequently used interchange
  
 Ethereum has two main technical standards for the implementation of tokens, known as the ERC20 interface and the ERC721 inter- face.
 The standardization allows contracts to operate on different tokens seamlessly, while also fostering interoperability between contracts.
+
+## Wallet
+
+> A crypto wallet is a medium, program or service which stores the public and/or private keys for cryptocurrency transactions.
+
+In addition to this basic function of storing the keys, a cryptocurrency wallet more often also offers the functionality of encrypting and/or signing information. 
+Signing can for example result in executing a smart contract, a cryptocurrency transaction, identification or legally signing a "document".
+
 
 
 
