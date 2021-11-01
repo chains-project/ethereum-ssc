@@ -1,5 +1,7 @@
 # Papers
 
+[Search in IEEE Computer](https://ieeexplore.ieee.org/search/searchresult.jsp?contentType=periodicals&queryText=blockchain&highlight=true&returnType=SEARCH&matchPubs=true&sortType=most-popular&refinements=ContentType:Magazines&refinements=PublicationTitle:Computer&returnFacets=ALL): 
+
 ## 2021
  
 - iBatch - saving Ethereum fees via secure and cost-effective batching of smart-contract invocations. ESEC/SIGSOFT FSE
