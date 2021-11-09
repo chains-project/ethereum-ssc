@@ -1,0 +1,1427 @@
+digraph "G" {
+node ["fontname"="Times New Roman"]
+"besuacceptancetests" ["shape"="rectangle","label"="acceptance-tests"]
+"besubesu" ["shape"="rectangle","label"="besu"]
+"besuconfig" ["shape"="rectangle","label"="config"]
+"comfasterxmljacksoncorejacksondatabind" ["shape"="rectangle","label"="jackson-databind"]
+"comgoogleguavaguava" ["shape"="rectangle","label"="guava"]
+"orgapachelogginglog4jlog4japi" ["shape"="rectangle","label"="log4j-api"]
+"infopicoclipicocli" ["shape"="rectangle","label"="picocli"]
+"orgapachetuwenituwenibytes" ["shape"="rectangle","label"="tuweni-bytes"]
+"besupki" ["shape"="rectangle","label"="pki"]
+"orgbouncycastlebcpkixjdk15on" ["shape"="rectangle","label"="bcpkix-jdk15on"]
+"besuconsensusclique" ["shape"="rectangle","label"="clique"]
+"besuconsensuscommon" ["shape"="rectangle","label"="common"]
+"besupluginapi" ["shape"="rectangle","label"="plugin-api"]
+"orgapachetuwenituweniunits" ["shape"="rectangle","label"="tuweni-units"]
+"comgoogleguavafailureaccess" ["shape"="rectangle","label"="failureaccess"]
+"comgoogleguavalistenablefuture" ["shape"="rectangle","label"="listenablefuture"]
+"comgooglecodefindbugsjsr305" ["shape"="rectangle","label"="jsr305"]
+"orgcheckerframeworkcheckerqual" ["shape"="rectangle","label"="checker-qual"]
+"comgoogleerrorproneerror_prone_annotations" ["shape"="rectangle","label"="error_prone_annotations"]
+"comgooglej2objcj2objcannotations" ["shape"="rectangle","label"="j2objc-annotations"]
+"orgconnidframework" ["shape"="rectangle","label"="framework"]
+"orgconnidframeworkinternal" ["shape"="rectangle","label"="framework-internal"]
+"orgjetbrainskotlinkotlinstdlibjdk8" ["shape"="rectangle","label"="kotlin-stdlib-jdk8"]
+"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","label"="kotlin-stdlib-jdk7"]
+"orgjetbrainskotlinkotlinstdlib" ["shape"="rectangle","label"="kotlin-stdlib"]
+"orgjetbrainskotlinkotlinstdlibcommon" ["shape"="rectangle","label"="kotlin-stdlib-common"]
+"orgjetbrainsannotations" ["shape"="rectangle","label"="jetbrains-annotations"]
+"besuconsensusibft" ["shape"="rectangle","label"="ibft"]
+"besuconsensusibftlegacy" ["shape"="rectangle","label"="ibftlegacy"]
+"besucrypto" ["shape"="rectangle","label"="crypto"]
+"besudatatypes" ["shape"="rectangle","label"="datatypes"]
+"besuethereumapi" ["shape"="rectangle","label"="api"]
+"besuethereumblockcreation" ["shape"="rectangle","label"="blockcreation"]
+"besuethereumcore" ["shape"="rectangle","label"="core"]
+"besuethereumeth" ["shape"="rectangle","label"="eth"]
+"besuethereump2p" ["shape"="rectangle","label"="p2p"]
+"besuethereumrlp" ["shape"="rectangle","label"="rlp"]
+"besuevm" ["shape"="rectangle","label"="evm"]
+"besumetricscore" ["shape"="rectangle","label"="core"]
+"besuserviceskvstore" ["shape"="rectangle","label"="kvstore"]
+"iovertxvertxcore" ["shape"="rectangle","label"="vertx-core"]
+"besuconsensusqbft" ["shape"="rectangle","label"="qbft"]
+"besuutil" ["shape"="rectangle","label"="util"]
+"orgbouncycastlebcprovjdk15on" ["shape"="rectangle","label"="bcprov-jdk15on"]
+"besuenclave" ["shape"="rectangle","label"="enclave"]
+"netjavadevjnajna" ["shape"="rectangle","label"="jna"]
+"orghyperledgerbesusecp256k1" ["shape"="rectangle","label"="secp256k1"]
+"orghyperledgerbesusecp256r1" ["shape"="rectangle","label"="secp256r1"]
+"orgapachetuwenituweninet" ["shape"="rectangle","label"="tuweni-net"]
+"orgapachetuwenituwenicrypto" ["shape"="rectangle","label"="tuweni-crypto"]
+"orgapachetuwenituweniio" ["shape"="rectangle","label"="tuweni-io"]
+"commonscodeccommonscodec" ["shape"="rectangle","label"="commons-codec"]
+"comgithubjnrjnrffi" ["shape"="rectangle","label"="jnr-ffi"]
+"comgithubjnrjffi" ["shape"="rectangle","label"="jffi"]
+"orgow2asmasmcommons" ["shape"="rectangle","label"="asm-commons"]
+"orgow2asmasmtree" ["shape"="rectangle","label"="asm-tree"]
+"orgow2asmasm" ["shape"="rectangle","label"="asm"]
+"orgow2asmasmanalysis" ["shape"="rectangle","label"="asm-analysis"]
+"orgow2asmasmutil" ["shape"="rectangle","label"="asm-util"]
+"comgithubjnrjnra64asm" ["shape"="rectangle","label"="jnr-a64asm"]
+"comgithubjnrjnrx86asm" ["shape"="rectangle","label"="jnr-x86asm"]
+"besutestutil" ["shape"="rectangle","label"="testutil"]
+"orgxerialsnappysnappyjava" ["shape"="rectangle","label"="snappy-java"]
+"comsquareupokhttp3okhttp" ["shape"="rectangle","label"="okhttp"]
+"junitjunit" ["shape"="rectangle","label"="junit"]
+"netconsensysorion" ["shape"="rectangle","label"="orion"]
+"orgapachetuwenituwenitoml" ["shape"="rectangle","label"="tuweni-toml"]
+"orgassertjassertjcore" ["shape"="rectangle","label"="assertj-core"]
+"orgmockitomockitocore" ["shape"="rectangle","label"="mockito-core"]
+"orgweb3jcore" ["shape"="rectangle","label"="core"]
+"orgtestcontainerstestcontainers" ["shape"="rectangle","label"="testcontainers"]
+"comgithubdockerjavadockerjavaapi" ["shape"="rectangle","label"="docker-java-api"]
+"comfasterxmljacksoncorejacksonannotations" ["shape"="rectangle","label"="jackson-annotations"]
+"orgslf4jslf4japi" ["shape"="rectangle","label"="slf4j-api"]
+"comgithubdockerjavadockerjavatransportzerodep" ["shape"="rectangle","label"="docker-java-transport-zerodep"]
+"comgithubdockerjavadockerjavatransport" ["shape"="rectangle","label"="docker-java-transport"]
+"orgapachecommonscommonscompress" ["shape"="rectangle","label"="commons-compress"]
+"orgrnorthducttapeducttape" ["shape"="rectangle","label"="duct-tape"]
+"orgbouncycastlebcutiljdk15on" ["shape"="rectangle","label"="bcutil-jdk15on"]
+"orgawaitilityawaitility" ["shape"="rectangle","label"="awaitility"]
+"orghamcresthamcrest" ["shape"="rectangle","label"="hamcrest"]
+"netbytebuddybytebuddy" ["shape"="rectangle","label"="byte-buddy"]
+"netbytebuddybytebuddyagent" ["shape"="rectangle","label"="byte-buddy-agent"]
+"orgobjenesisobjenesis" ["shape"="rectangle","label"="objenesis"]
+"orghamcresthamcrestcore" ["shape"="rectangle","label"="hamcrest-core"]
+"iovertxvertxweb" ["shape"="rectangle","label"="vertx-web"]
+"comfasterxmljacksondatatypejacksondatatypejdk8" ["shape"="rectangle","label"="jackson-datatype-jdk8"]
+"comfasterxmljacksondataformatjacksondataformatcbor" ["shape"="rectangle","label"="jackson-dataformat-cbor"]
+"comfasterxmljacksoncorejacksoncore" ["shape"="rectangle","label"="jackson-core"]
+"comfasterxmljacksonjacksonbom" ["shape"="rectangle","label"="jackson-bom"]
+"orgmapdbmapdb" ["shape"="rectangle","label"="mapdb"]
+"orgeclipsecollectionseclipsecollectionsforkjoin" ["shape"="rectangle","label"="eclipse-collections-forkjoin"]
+"orgeclipsecollectionseclipsecollections" ["shape"="rectangle","label"="eclipse-collections"]
+"orgeclipsecollectionseclipsecollectionsapi" ["shape"="rectangle","label"="eclipse-collections-api"]
+"orgmapdbelsa" ["shape"="rectangle","label"="elsa"]
+"comjolboxbonecp" ["shape"="rectangle","label"="bonecp"]
+"orgapachelogginglog4jlog4jcore" ["shape"="rectangle","label"="log4j-core"]
+"orgapachelogginglog4jlog4jslf4jimpl" ["shape"="rectangle","label"="log4j-slf4j-impl"]
+"orgapachetuwenibytes" ["shape"="rectangle","label"="bytes"]
+"orgapachetuweniconcurrent" ["shape"="rectangle","label"="concurrent"]
+"orgapachetuweniconcurrentcoroutines" ["shape"="rectangle","label"="concurrent-coroutines"]
+"orgapachetuweniconfig" ["shape"="rectangle","label"="config"]
+"orgapachetuwenicrypto" ["shape"="rectangle","label"="crypto"]
+"orgapachetuweniio" ["shape"="rectangle","label"="io"]
+"orgapachetuwenikv" ["shape"="rectangle","label"="kv"]
+"orgapachetuweninet" ["shape"="rectangle","label"="net"]
+"orgapachetuwenirlp" ["shape"="rectangle","label"="rlp"]
+"orgapachetuwenitoml" ["shape"="rectangle","label"="toml"]
+"orgfusesourceleveldbjnileveldbjniall" ["shape"="rectangle","label"="leveldbjni-all"]
+"orglz4lz4java" ["shape"="rectangle","label"="lz4-java"]
+"orgapacheopenjpaopenjpa" ["shape"="rectangle","label"="openjpa"]
+"orgapachecommonscommonscollections4" ["shape"="rectangle","label"="commons-collections4"]
+"netsourceforgeserpserp" ["shape"="rectangle","label"="serp"]
+"orgapachegeronimospecsgeronimojms_11_spec" ["shape"="rectangle","label"="geronimo-jms_1.1_spec"]
+"orgapachegeronimospecsgeronimojta_11_spec" ["shape"="rectangle","label"="geronimo-jta_1.1_spec"]
+"orgapachecommonscommonspool2" ["shape"="rectangle","label"="commons-pool2"]
+"orgapachexbeanxbeanasm7shaded" ["shape"="rectangle","label"="xbean-asm7-shaded"]
+"orgapachegeronimospecsgeronimojpa_22_spec" ["shape"="rectangle","label"="geronimo-jpa_2.2_spec"]
+"orgpostgresqlpostgresql" ["shape"="rectangle","label"="postgresql"]
+"commoandjiezanatomltoml4j" ["shape"="rectangle","label"="toml4j"]
+"comgooglecodegsongson" ["shape"="rectangle","label"="gson"]
+"javaxxmlbindjaxbapi" ["shape"="rectangle","label"="jaxb-api"]
+"comoracleojdbcojdbc10" ["shape"="rectangle","label"="ojdbc10"]
+"comoracleojdbcucp" ["shape"="rectangle","label"="ucp"]
+"comoracleojdbcoraclepki" ["shape"="rectangle","label"="oraclepki"]
+"comoracleojdbcosdt_cert" ["shape"="rectangle","label"="osdt_cert"]
+"comoracleojdbcosdt_core" ["shape"="rectangle","label"="osdt_core"]
+"comoracleojdbcsimplefan" ["shape"="rectangle","label"="simplefan"]
+"comoracleojdbcons" ["shape"="rectangle","label"="ons"]
+"besuethereumpermissioning" ["shape"="rectangle","label"="permissioning"]
+"besuethereumretesteth" ["shape"="rectangle","label"="retesteth"]
+"orgopenjdkjmhjmhcore" ["shape"="rectangle","label"="jmh-core"]
+"orgopenjdkjmhjmhgeneratorbytecode" ["shape"="rectangle","label"="jmh-generator-bytecode"]
+"besunat" ["shape"="rectangle","label"="nat"]
+"besuethereumtrie" ["shape"="rectangle","label"="trie"]
+"besuethereumstratum" ["shape"="rectangle","label"="stratum"]
+"iogrpcgrpcnetty" ["shape"="rectangle","label"="grpc-netty"]
+"iogrpcgrpccore" ["shape"="rectangle","label"="grpc-core"]
+"iogrpcgrpcapi" ["shape"="rectangle","label"="grpc-api"]
+"iogrpcgrpccontext" ["shape"="rectangle","label"="grpc-context"]
+"ionettynettycodechttp2" ["shape"="rectangle","label"="netty-codec-http2"]
+"ionettynettytcnativeboringsslstatic" ["shape"="rectangle","label"="netty-tcnative-boringssl-static"]
+"ionettynettytransportnativeepoll" ["shape"="rectangle","label"="netty-transport-native-epoll"]
+"ionettynettytransportnativeunixcommon" ["shape"="rectangle","label"="netty-transport-native-unix-common"]
+"ionettynettytransport" ["shape"="rectangle","label"="netty-transport"]
+"ionettynettybuffer" ["shape"="rectangle","label"="netty-buffer"]
+"ionettynettycommon" ["shape"="rectangle","label"="netty-common"]
+"ionettynettyall" ["shape"="rectangle","label"="netty-all"]
+"ioopentelemetryopentelemetryapi" ["shape"="rectangle","label"="opentelemetry-api"]
+"ioopentelemetryopentelemetrysdk" ["shape"="rectangle","label"="opentelemetry-sdk"]
+"ioopentelemetryopentelemetrysdktrace" ["shape"="rectangle","label"="opentelemetry-sdk-trace"]
+"ioopentelemetryopentelemetrysdkcommon" ["shape"="rectangle","label"="opentelemetry-sdk-common"]
+"ioopentelemetryopentelemetrysemconv" ["shape"="rectangle","label"="opentelemetry-semconv"]
+"ioopentelemetryopentelemetryexporterotlp" ["shape"="rectangle","label"="opentelemetry-exporter-otlp"]
+"ioopentelemetryopentelemetryexporterotlptrace" ["shape"="rectangle","label"="opentelemetry-exporter-otlp-trace"]
+"ioopentelemetryopentelemetryexporterotlpmetrics" ["shape"="rectangle","label"="opentelemetry-exporter-otlp-metrics"]
+"ioopentelemetryopentelemetrysdkmetrics" ["shape"="rectangle","label"="opentelemetry-sdk-metrics"]
+"ioopentelemetryopentelemetryapimetrics" ["shape"="rectangle","label"="opentelemetry-api-metrics"]
+"ioopentelemetryopentelemetrycontext" ["shape"="rectangle","label"="opentelemetry-context"]
+"ioopentelemetryopentelemetryproto" ["shape"="rectangle","label"="opentelemetry-proto"]
+"iogrpcgrpcstub" ["shape"="rectangle","label"="grpc-stub"]
+"iogrpcgrpcprotobuf" ["shape"="rectangle","label"="grpc-protobuf"]
+"iogrpcgrpcprotobuflite" ["shape"="rectangle","label"="grpc-protobuf-lite"]
+"comgoogleprotobufprotobufjava" ["shape"="rectangle","label"="protobuf-java"]
+"comgoogleapigrpcprotogooglecommonprotos" ["shape"="rectangle","label"="proto-google-common-protos"]
+"ioprometheussimpleclient" ["shape"="rectangle","label"="simpleclient"]
+"ioprometheussimpleclient_common" ["shape"="rectangle","label"="simpleclient_common"]
+"ioprometheussimpleclient_hotspot" ["shape"="rectangle","label"="simpleclient_hotspot"]
+"ioprometheussimpleclient_pushgateway" ["shape"="rectangle","label"="simpleclient_pushgateway"]
+"besuethereumethstats" ["shape"="rectangle","label"="ethstats"]
+"orgimmutablesvalueannotations" ["shape"="rectangle","label"="value-annotations"]
+"orghyperledgerbesubls12381" ["shape"="rectangle","label"="bls12-381"]
+"comgithubbenmanescaffeinecaffeine" ["shape"="rectangle","label"="caffeine"]
+"comsquareupokiookio" ["shape"="rectangle","label"="okio"]
+"orgjupnporgjupnp" ["shape"="rectangle","label"="org.jupnp"]
+"orgjupnporgjupnpsupport" ["shape"="rectangle","label"="org.jupnp.support"]
+"iokubernetesclientjava" ["shape"="rectangle","label"="client-java"]
+"iokubernetesclientjavaapi" ["shape"="rectangle","label"="client-java-api"]
+"comsquareupokhttplogginginterceptor" ["shape"="rectangle","label"="logging-interceptor"]
+"comsquareupokhttpokhttp" ["shape"="rectangle","label"="okhttp"]
+"orgapachecommonscommonslang3" ["shape"="rectangle","label"="commons-lang3"]
+"iosundrbuilderannotations" ["shape"="rectangle","label"="builder-annotations"]
+"iosundrsundrcore" ["shape"="rectangle","label"="sundr-core"]
+"iosundrsundrcodegen" ["shape"="rectangle","label"="sundr-codegen"]
+"iosundrresourcecifyannotations" ["shape"="rectangle","label"="resourcecify-annotations"]
+"ioswaggerswaggerannotations" ["shape"="rectangle","label"="swagger-annotations"]
+"jodatimejodatime" ["shape"="rectangle","label"="joda-time"]
+"orgjodajodaconvert" ["shape"="rectangle","label"="joda-convert"]
+"comsquareupokhttpokhttpws" ["shape"="rectangle","label"="okhttp-ws"]
+"iokubernetesclientjavaproto" ["shape"="rectangle","label"="client-java-proto"]
+"orgyamlsnakeyaml" ["shape"="rectangle","label"="snakeyaml"]
+"orgbouncycastlebcprovextjdk15on" ["shape"="rectangle","label"="bcprov-ext-jdk15on"]
+"besupluginsrocksdb" ["shape"="rectangle","label"="rocksdb"]
+"comgraphqljavagraphqljava" ["shape"="rectangle","label"="graphql-java"]
+"comgraphqljavajavadataloader" ["shape"="rectangle","label"="java-dataloader"]
+"orgreactivestreamsreactivestreams" ["shape"="rectangle","label"="reactive-streams"]
+"ionettynettyhandlerproxy" ["shape"="rectangle","label"="netty-handler-proxy"]
+"ionettynettycodechttp" ["shape"="rectangle","label"="netty-codec-http"]
+"ionettynettyhandler" ["shape"="rectangle","label"="netty-handler"]
+"ionettynettycodec" ["shape"="rectangle","label"="netty-codec"]
+"ionettynettyresolver" ["shape"="rectangle","label"="netty-resolver"]
+"ionettynettycodecsocks" ["shape"="rectangle","label"="netty-codec-socks"]
+"ionettynettyresolverdns" ["shape"="rectangle","label"="netty-resolver-dns"]
+"ionettynettycodecdns" ["shape"="rectangle","label"="netty-codec-dns"]
+"iovertxvertxwebcommon" ["shape"="rectangle","label"="vertx-web-common"]
+"iovertxvertxauthcommon" ["shape"="rectangle","label"="vertx-auth-common"]
+"iovertxvertxbridgecommon" ["shape"="rectangle","label"="vertx-bridge-common"]
+"orgapachetuwenituweniconfig" ["shape"="rectangle","label"="tuweni-config"]
+"organtlrantlr4runtime" ["shape"="rectangle","label"="antlr4-runtime"]
+"orgspringframeworksecurityspringsecuritycrypto" ["shape"="rectangle","label"="spring-security-crypto"]
+"netconsensysservicesquorummainnetlauncher" ["shape"="rectangle","label"="quorum-mainnet-launcher"]
+"besuconsensus" ["shape"="rectangle","label"="consensus"]
+"besucontainertests" ["shape"="rectangle","label"="container-tests"]
+"besuerrorpronechecks" ["shape"="rectangle","label"="errorprone-checks"]
+"comgoogleautoserviceautoservice" ["shape"="rectangle","label"="auto-service"]
+"comgoogleautoserviceautoserviceannotations" ["shape"="rectangle","label"="auto-service-annotations"]
+"comgoogleautoautocommon" ["shape"="rectangle","label"="auto-common"]
+"comgoogleerrorproneerror_prone_annotation" ["shape"="rectangle","label"="error_prone_annotation"]
+"comgoogleerrorproneerror_prone_core" ["shape"="rectangle","label"="error_prone_core"]
+"comgoogleerrorproneerror_prone_check_api" ["shape"="rectangle","label"="error_prone_check_api"]
+"orgcheckerframeworkdataflowerrorprone" ["shape"="rectangle","label"="dataflow-errorprone"]
+"comgoogleerrorpronejavac" ["shape"="rectangle","label"="javac"]
+"comgoogleautovalueautovalueannotations" ["shape"="rectangle","label"="auto-value-annotations"]
+"iogithubjavadiffutilsjavadiffutils" ["shape"="rectangle","label"="java-diff-utils"]
+"orgeclipsejgitorgeclipsejgit" ["shape"="rectangle","label"="org.eclipse.jgit"]
+"comgithubkevinsternsoftwareandalgorithms" ["shape"="rectangle","label"="software-and-algorithms"]
+"comgoogleerrorproneerror_prone_type_annotations" ["shape"="rectangle","label"="error_prone_type_annotations"]
+"orgpcollectionspcollections" ["shape"="rectangle","label"="pcollections"]
+"comgooglecodefindbugsjFormatString" ["shape"="rectangle","label"="jFormatString"]
+"besuethereum" ["shape"="rectangle","label"="ethereum"]
+"besumetrics" ["shape"="rectangle","label"="metrics"]
+"besuplugins" ["shape"="rectangle","label"="plugins"]
+"besuprivacycontracts" ["shape"="rectangle","label"="privacy-contracts"]
+"orgweb3jabi" ["shape"="rectangle","label"="abi"]
+"orgweb3jutils" ["shape"="rectangle","label"="utils"]
+"orgweb3jbesu" ["shape"="rectangle","label"="besu"]
+"orgweb3jeea" ["shape"="rectangle","label"="eea"]
+"orgweb3jcrypto" ["shape"="rectangle","label"="crypto"]
+"orgweb3jrlp" ["shape"="rectangle","label"="rlp"]
+"comsquareupokhttp3logginginterceptor" ["shape"="rectangle","label"="logging-interceptor"]
+"orgjavawebsocketJavaWebSocket" ["shape"="rectangle","label"="Java-WebSocket"]
+"orgweb3jtuples" ["shape"="rectangle","label"="tuples"]
+"ioreactivexrxjava2rxjava" ["shape"="rectangle","label"="rxjava"]
+"besuservices" ["shape"="rectangle","label"="services"]
+"besuacceptancetestsdsl" ["shape"="rectangle","label"="dsl"]
+"orgapachetuwenituweniconcurrent" ["shape"="rectangle","label"="tuweni-concurrent"]
+"netsfjoptsimplejoptsimple" ["shape"="rectangle","label"="jopt-simple"]
+"orgapachecommonscommonsmath3" ["shape"="rectangle","label"="commons-math3"]
+"orgopenjdkjmhjmhgeneratorasm" ["shape"="rectangle","label"="jmh-generator-asm"]
+"orgopenjdkjmhjmhgeneratorreflection" ["shape"="rectangle","label"="jmh-generator-reflection"]
+"besuservicespipeline" ["shape"="rectangle","label"="pipeline"]
+"besuservicestasks" ["shape"="rectangle","label"="tasks"]
+"orgopenjdkjmhjmhgeneratorannprocess" ["shape"="rectangle","label"="jmh-generator-annprocess"]
+"orgapachetuwenituwenirlp" ["shape"="rectangle","label"="tuweni-rlp"]
+"ioopentelemetryopentelemetryextensiontracepropagators" ["shape"="rectangle","label"="opentelemetry-extension-trace-propagators"]
+"iovertxvertxauthjwt" ["shape"="rectangle","label"="vertx-auth-jwt"]
+"iovertxvertxjwt" ["shape"="rectangle","label"="vertx-jwt"]
+"iovertxvertxunit" ["shape"="rectangle","label"="vertx-unit"]
+"comgithubtomakehurstwiremockjre8" ["shape"="rectangle","label"="wiremock-jre8"]
+"orgeclipsejettyhttp2http2server" ["shape"="rectangle","label"="http2-server"]
+"orgeclipsejettyjettyserver" ["shape"="rectangle","label"="jetty-server"]
+"javaxservletjavaxservletapi" ["shape"="rectangle","label"="javax.servlet-api"]
+"orgeclipsejettyjettyhttp" ["shape"="rectangle","label"="jetty-http"]
+"orgeclipsejettyjettyio" ["shape"="rectangle","label"="jetty-io"]
+"orgeclipsejettyjettyutil" ["shape"="rectangle","label"="jetty-util"]
+"orgeclipsejettyhttp2http2common" ["shape"="rectangle","label"="http2-common"]
+"orgeclipsejettyhttp2http2hpack" ["shape"="rectangle","label"="http2-hpack"]
+"orgeclipsejettyjettyalpnconscryptserver" ["shape"="rectangle","label"="jetty-alpn-conscrypt-server"]
+"orgeclipsejettyjettyalpnserver" ["shape"="rectangle","label"="jetty-alpn-server"]
+"orgeclipsejettyjettywebapp" ["shape"="rectangle","label"="jetty-webapp"]
+"orgeclipsejettyjettyservlet" ["shape"="rectangle","label"="jetty-servlet"]
+"orgeclipsejettyjettysecurity" ["shape"="rectangle","label"="jetty-security"]
+"orgeclipsejettyjettyutilajax" ["shape"="rectangle","label"="jetty-util-ajax"]
+"orgeclipsejettyjettyxml" ["shape"="rectangle","label"="jetty-xml"]
+"orgeclipsejettyjettyservlets" ["shape"="rectangle","label"="jetty-servlets"]
+"orgeclipsejettyjettycontinuation" ["shape"="rectangle","label"="jetty-continuation"]
+"orgeclipsejettyjettyproxy" ["shape"="rectangle","label"="jetty-proxy"]
+"orgeclipsejettyjettyclient" ["shape"="rectangle","label"="jetty-client"]
+"orgeclipsejettyjettyalpnconscryptclient" ["shape"="rectangle","label"="jetty-alpn-conscrypt-client"]
+"orgeclipsejettyjettyalpnclient" ["shape"="rectangle","label"="jetty-alpn-client"]
+"orgconscryptconscryptopenjdkuber" ["shape"="rectangle","label"="conscrypt-openjdk-uber"]
+"orgapachehttpcomponentshttpclient" ["shape"="rectangle","label"="httpclient"]
+"orgapachehttpcomponentshttpcore" ["shape"="rectangle","label"="httpcore"]
+"commonsloggingcommonslogging" ["shape"="rectangle","label"="commons-logging"]
+"orgxmlunitxmlunitlegacy" ["shape"="rectangle","label"="xmlunit-legacy"]
+"orgxmlunitxmlunitcore" ["shape"="rectangle","label"="xmlunit-core"]
+"orgxmlunitxmlunitplaceholders" ["shape"="rectangle","label"="xmlunit-placeholders"]
+"netjavacrumbsjsonunitjsonunitcore" ["shape"="rectangle","label"="json-unit-core"]
+"comjaywayjsonpathjsonpath" ["shape"="rectangle","label"="json-path"]
+"netminidevjsonsmart" ["shape"="rectangle","label"="json-smart"]
+"netminidevaccessorssmart" ["shape"="rectangle","label"="accessors-smart"]
+"comgithubjknackhandlebarshelpers" ["shape"="rectangle","label"="handlebars-helpers"]
+"comgithubjknackhandlebars" ["shape"="rectangle","label"="handlebars"]
+"commonsfileuploadcommonsfileupload" ["shape"="rectangle","label"="commons-fileupload"]
+"commonsiocommonsio" ["shape"="rectangle","label"="commons-io"]
+"techpegasysethsignerinternalethsignercore" ["shape"="rectangle","label"="ethsigner-core"]
+"techpegasyssignersinternalsigningsecp256k1api" ["shape"="rectangle","label"="signing-secp256k1-api"]
+"techpegasyssignersinternalsigningsecp256k1impl" ["shape"="rectangle","label"="signing-secp256k1-impl"]
+"besuacceptanceteststestplugins" ["shape"="rectangle","label"="test-plugins"]
+"besuacceptanceteststests" ["shape"="rectangle","label"="tests"]
+"besucontainerteststests" ["shape"="rectangle","label"="tests"]
+"besuethereumevmtool" ["shape"="rectangle","label"="evmtool"]
+"besuethereumreferencetests" ["shape"="rectangle","label"="referencetests"]
+"besumetricsrocksdb" ["shape"="rectangle","label"="rocksdb"]
+"orgrocksdbrocksdbjni" ["shape"="rectangle","label"="rocksdbjni"]
+"comgoogledaggerdagger" ["shape"="rectangle","label"="dagger"]
+"javaxinjectjavaxinject" ["shape"="rectangle","label"="javax.inject"]
+"besuethereummockp2p" ["shape"="rectangle","label"="mock-p2p"]
+"dnsjavadnsjava" ["shape"="rectangle","label"="dnsjava"]
+"orgapachetuwenituwenidevp2p" ["shape"="rectangle","label"="tuweni-devp2p"]
+"orgapachetuwenituweniconcurrentcoroutines" ["shape"="rectangle","label"="tuweni-concurrent-coroutines"]
+"orgjetbrainskotlinxkotlinxcoroutinescore" ["shape"="rectangle","label"="kotlinx-coroutines-core"]
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" ["shape"="rectangle","label"="kotlinx-coroutines-core-jvm"]
+"orgapachetuwenituwenikademlia" ["shape"="rectangle","label"="tuweni-kademlia"]
+"iovertxvertxlangkotlincoroutines" ["shape"="rectangle","label"="vertx-lang-kotlin-coroutines"]
+"iovertxvertxlangkotlin" ["shape"="rectangle","label"="vertx-lang-kotlin"]
+"orgapachetuwenituwenidnsdiscovery" ["shape"="rectangle","label"="tuweni-dns-discovery"]
+"orgapachetuwenituwenimerkletrie" ["shape"="rectangle","label"="tuweni-merkle-trie"]
+"orgapachetuwenituwenikv" ["shape"="rectangle","label"="tuweni-kv"]
+"orgjetbrainskotlinxkotlinxcoroutinesguava" ["shape"="rectangle","label"="kotlinx-coroutines-guava"]
+"orgjetbrainskotlinxkotlinxcoroutinesjdk8" ["shape"="rectangle","label"="kotlinx-coroutines-jdk8"]
+"javaxpersistencejavaxpersistenceapi" ["shape"="rectangle","label"="javax.persistence-api"]
+"techpegasysdiscoverydiscovery" ["shape"="rectangle","label"="discovery"]
+{
+graph ["rank"="same"]
+"besuacceptancetests"
+"besuconsensus"
+"besucontainertests"
+"besuerrorpronechecks"
+"besuethereum"
+"besumetrics"
+"besuplugins"
+"besuprivacycontracts"
+"besuservices"
+"besuacceptancetestsdsl"
+"besuacceptanceteststestplugins"
+"besuacceptanceteststests"
+"besucontainerteststests"
+"besuethereumevmtool"
+"besuethereummockp2p"
+}
+"besubesu" -> "besuconfig"
+"besubesu" -> "besupki"
+"besubesu" -> "besuconsensusclique"
+"besubesu" -> "besuconsensuscommon"
+"besubesu" -> "besuconsensusibft"
+"besubesu" -> "besuconsensusibftlegacy"
+"besubesu" -> "besuconsensusqbft"
+"besubesu" -> "besucrypto"
+"besubesu" -> "besudatatypes"
+"besubesu" -> "besuenclave"
+"besubesu" -> "besuethereumapi"
+"besubesu" -> "besuethereumblockcreation"
+"besubesu" -> "besuethereumcore"
+"besubesu" -> "besuethereumeth"
+"besubesu" -> "besuethereump2p"
+"besubesu" -> "besuethereumpermissioning"
+"besubesu" -> "besuethereumretesteth"
+"besubesu" -> "besuethereumrlp"
+"besubesu" -> "besuethereumtrie"
+"besubesu" -> "besuethereumstratum"
+"besubesu" -> "besuethereumethstats"
+"besubesu" -> "besuevm"
+"besubesu" -> "besumetricscore"
+"besubesu" -> "besunat"
+"besubesu" -> "besupluginapi"
+"besubesu" -> "besupluginsrocksdb"
+"besubesu" -> "besuserviceskvstore"
+"besubesu" -> "comfasterxmljacksoncorejacksondatabind"
+"besubesu" -> "comfasterxmljacksondatatypejacksondatatypejdk8"
+"besubesu" -> "comgoogleguavaguava"
+"besubesu" -> "comgraphqljavagraphqljava"
+"besubesu" -> "infopicoclipicocli"
+"besubesu" -> "iovertxvertxcore"
+"besubesu" -> "iovertxvertxweb"
+"besubesu" -> "orgapachelogginglog4jlog4japi"
+"besubesu" -> "orgapachelogginglog4jlog4jcore"
+"besubesu" -> "orgapachetuwenituwenibytes"
+"besubesu" -> "orgapachetuwenituweniconfig"
+"besubesu" -> "orgapachetuwenituwenitoml"
+"besubesu" -> "orgapachetuwenituweniunits"
+"besubesu" -> "orgspringframeworksecurityspringsecuritycrypto"
+"besubesu" -> "orgxerialsnappysnappyjava"
+"besubesu" -> "netconsensysservicesquorummainnetlauncher"
+"besuconfig" -> "comfasterxmljacksoncorejacksondatabind"
+"besuconfig" -> "comgoogleguavaguava"
+"besuconfig" -> "orgapachelogginglog4jlog4japi"
+"besuconfig" -> "infopicoclipicocli"
+"besuconfig" -> "orgapachetuwenituwenibytes"
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksonannotations"
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksoncore"
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksonjacksonbom"
+"comgoogleguavaguava" -> "comgoogleguavafailureaccess"
+"comgoogleguavaguava" -> "comgoogleguavalistenablefuture"
+"comgoogleguavaguava" -> "comgooglecodefindbugsjsr305"
+"comgoogleguavaguava" -> "orgcheckerframeworkcheckerqual"
+"comgoogleguavaguava" -> "comgoogleerrorproneerror_prone_annotations"
+"comgoogleguavaguava" -> "comgooglej2objcj2objcannotations"
+"orgapachetuwenituwenibytes" -> "comgoogleguavaguava"
+"orgapachetuwenituwenibytes" -> "orgconnidframework"
+"orgapachetuwenituwenibytes" -> "orgconnidframeworkinternal"
+"orgapachetuwenituwenibytes" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"besupki" -> "comgoogleguavaguava"
+"besupki" -> "orgapachelogginglog4jlog4japi"
+"besupki" -> "orgapachetuwenituwenibytes"
+"besupki" -> "orgbouncycastlebcpkixjdk15on"
+"orgbouncycastlebcpkixjdk15on" -> "orgbouncycastlebcutiljdk15on"
+"orgbouncycastlebcpkixjdk15on" -> "orgbouncycastlebcprovjdk15on"
+"besuconsensusclique" -> "besuconfig"
+"besuconsensusclique" -> "besuconsensuscommon"
+"besuconsensusclique" -> "besucrypto"
+"besuconsensusclique" -> "besudatatypes"
+"besuconsensusclique" -> "besuethereumapi"
+"besuconsensusclique" -> "besuethereumblockcreation"
+"besuconsensusclique" -> "besuethereumcore"
+"besuconsensusclique" -> "besuethereumeth"
+"besuconsensusclique" -> "besuethereump2p"
+"besuconsensusclique" -> "besuethereumrlp"
+"besuconsensusclique" -> "besuevm"
+"besuconsensusclique" -> "besuserviceskvstore"
+"besuconsensusclique" -> "besuutil"
+"besuconsensusclique" -> "comgoogleguavaguava"
+"besuconsensusclique" -> "iovertxvertxcore"
+"besuconsensusclique" -> "orgapachetuwenituwenibytes"
+"besuconsensusclique" -> "orgapachetuwenituweniunits"
+"besuconsensuscommon" -> "besuconfig"
+"besuconsensuscommon" -> "besucrypto"
+"besuconsensuscommon" -> "besudatatypes"
+"besuconsensuscommon" -> "besuethereumapi"
+"besuconsensuscommon" -> "besuethereumblockcreation"
+"besuconsensuscommon" -> "besuethereumcore"
+"besuconsensuscommon" -> "besuethereumeth"
+"besuconsensuscommon" -> "besuethereump2p"
+"besuconsensuscommon" -> "besuethereumrlp"
+"besuconsensuscommon" -> "besuevm"
+"besuconsensuscommon" -> "besuutil"
+"besuconsensuscommon" -> "comfasterxmljacksoncorejacksondatabind"
+"besuconsensuscommon" -> "comgoogleguavaguava"
+"besuconsensuscommon" -> "orgapachetuwenituwenibytes"
+"besuconsensuscommon" -> "besupluginapi"
+"besupluginapi" -> "orgapachetuwenituweniunits"
+"besupluginapi" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituweniunits" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituweniunits" -> "comgoogleguavaguava"
+"orgapachetuwenituweniunits" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlibjdk7"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinkotlinstdlibjdk7" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainskotlinkotlinstdlibcommon"
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainsannotations"
+"besuconsensusibft" -> "besuconsensuscommon"
+"besuconsensusibft" -> "besuconfig"
+"besuconsensusibft" -> "besucrypto"
+"besuconsensusibft" -> "besudatatypes"
+"besuconsensusibft" -> "besuethereumapi"
+"besuconsensusibft" -> "besuethereumblockcreation"
+"besuconsensusibft" -> "besuethereumcore"
+"besuconsensusibft" -> "besuethereumeth"
+"besuconsensusibft" -> "besuethereump2p"
+"besuconsensusibft" -> "besuethereumrlp"
+"besuconsensusibft" -> "besuevm"
+"besuconsensusibft" -> "besuserviceskvstore"
+"besuconsensusibft" -> "comgoogleguavaguava"
+"besuconsensusibft" -> "iovertxvertxcore"
+"besuconsensusibft" -> "orgapachetuwenituwenibytes"
+"besuconsensusibft" -> "orgapachetuwenituweniunits"
+"besuconsensusibft" -> "besumetricscore"
+"besuconsensusibft" -> "besutestutil"
+"besuconsensusibft" -> "junitjunit"
+"besuconsensusibft" -> "orgassertjassertjcore"
+"besuconsensusibft" -> "orgmockitomockitocore"
+"besuconsensusibftlegacy" -> "besuconfig"
+"besuconsensusibftlegacy" -> "besuconsensuscommon"
+"besuconsensusibftlegacy" -> "besuconsensusibft"
+"besuconsensusibftlegacy" -> "besucrypto"
+"besuconsensusibftlegacy" -> "besudatatypes"
+"besuconsensusibftlegacy" -> "besuethereumapi"
+"besuconsensusibftlegacy" -> "besuethereumblockcreation"
+"besuconsensusibftlegacy" -> "besuethereumcore"
+"besuconsensusibftlegacy" -> "besuethereumeth"
+"besuconsensusibftlegacy" -> "besuethereump2p"
+"besuconsensusibftlegacy" -> "besuethereumrlp"
+"besuconsensusibftlegacy" -> "besuevm"
+"besuconsensusibftlegacy" -> "besumetricscore"
+"besuconsensusibftlegacy" -> "besuserviceskvstore"
+"besuconsensusibftlegacy" -> "comgoogleguavaguava"
+"besuconsensusibftlegacy" -> "iovertxvertxcore"
+"besuconsensusibftlegacy" -> "orgapachetuwenituwenibytes"
+"besuconsensusibftlegacy" -> "orgapachetuwenituweniunits"
+"besucrypto" -> "comgoogleguavaguava"
+"besucrypto" -> "netjavadevjnajna"
+"besucrypto" -> "orgapachelogginglog4jlog4japi"
+"besucrypto" -> "orgapachetuwenituwenibytes"
+"besucrypto" -> "orgapachetuwenituweniunits"
+"besucrypto" -> "orghyperledgerbesusecp256k1"
+"besucrypto" -> "orghyperledgerbesusecp256r1"
+"besucrypto" -> "besupluginapi"
+"besucrypto" -> "besuutil"
+"besucrypto" -> "orgbouncycastlebcprovjdk15on"
+"besudatatypes" -> "besupluginapi"
+"besudatatypes" -> "comfasterxmljacksoncorejacksondatabind"
+"besudatatypes" -> "besucrypto"
+"besudatatypes" -> "besuethereumrlp"
+"besudatatypes" -> "orgapachetuwenituwenibytes"
+"besudatatypes" -> "orgapachetuwenituweniunits"
+"besuethereumapi" -> "besuconfig"
+"besuethereumapi" -> "besucrypto"
+"besuethereumapi" -> "besudatatypes"
+"besuethereumapi" -> "besuenclave"
+"besuethereumapi" -> "besuethereumblockcreation"
+"besuethereumapi" -> "besuethereumcore"
+"besuethereumapi" -> "besuethereumeth"
+"besuethereumapi" -> "besuethereump2p"
+"besuethereumapi" -> "besuethereumpermissioning"
+"besuethereumapi" -> "besuethereumrlp"
+"besuethereumapi" -> "besuethereumtrie"
+"besuethereumapi" -> "besuevm"
+"besuethereumapi" -> "besumetricscore"
+"besuethereumapi" -> "besunat"
+"besuethereumapi" -> "besupluginapi"
+"besuethereumapi" -> "besuutil"
+"besuethereumapi" -> "comgoogleguavaguava"
+"besuethereumapi" -> "comgraphqljavagraphqljava"
+"besuethereumapi" -> "ioopentelemetryopentelemetryapi"
+"besuethereumapi" -> "ioopentelemetryopentelemetryextensiontracepropagators"
+"besuethereumapi" -> "iovertxvertxauthjwt"
+"besuethereumapi" -> "iovertxvertxcore"
+"besuethereumapi" -> "iovertxvertxunit"
+"besuethereumapi" -> "iovertxvertxweb"
+"besuethereumapi" -> "orgapachelogginglog4jlog4jcore"
+"besuethereumapi" -> "orgapachetuwenituwenibytes"
+"besuethereumapi" -> "orgapachetuwenituweninet"
+"besuethereumapi" -> "orgapachetuwenituwenitoml"
+"besuethereumapi" -> "orgapachetuwenituweniunits"
+"besuethereumapi" -> "orgbouncycastlebcprovjdk15on"
+"besuethereumapi" -> "orgspringframeworksecurityspringsecuritycrypto"
+"besuethereumapi" -> "orgxerialsnappysnappyjava"
+"besuethereumapi" -> "orgimmutablesvalueannotations"
+"besuethereumapi" -> "besuserviceskvstore"
+"besuethereumapi" -> "besutestutil"
+"besuethereumapi" -> "junitjunit"
+"besuethereumapi" -> "orgassertjassertjcore"
+"besuethereumapi" -> "orgmockitomockitocore"
+"besuethereumblockcreation" -> "besuconfig"
+"besuethereumblockcreation" -> "besucrypto"
+"besuethereumblockcreation" -> "besudatatypes"
+"besuethereumblockcreation" -> "besuethereumcore"
+"besuethereumblockcreation" -> "besuethereumeth"
+"besuethereumblockcreation" -> "besuevm"
+"besuethereumblockcreation" -> "besuserviceskvstore"
+"besuethereumblockcreation" -> "besuutil"
+"besuethereumblockcreation" -> "comgoogleguavaguava"
+"besuethereumblockcreation" -> "iovertxvertxcore"
+"besuethereumblockcreation" -> "orgapachetuwenituwenibytes"
+"besuethereumblockcreation" -> "orgapachetuwenituweniunits"
+"besuethereumcore" -> "besuconfig"
+"besuethereumcore" -> "besucrypto"
+"besuethereumcore" -> "besudatatypes"
+"besuethereumcore" -> "besuenclave"
+"besuethereumcore" -> "besuethereumrlp"
+"besuethereumcore" -> "besuethereumtrie"
+"besuethereumcore" -> "besuevm"
+"besuethereumcore" -> "besumetricscore"
+"besuethereumcore" -> "besupluginapi"
+"besuethereumcore" -> "besuserviceskvstore"
+"besuethereumcore" -> "comfasterxmljacksoncorejacksondatabind"
+"besuethereumcore" -> "comgoogleguavaguava"
+"besuethereumcore" -> "ioopentelemetryopentelemetryapi"
+"besuethereumcore" -> "iovertxvertxcore"
+"besuethereumcore" -> "netjavadevjnajna"
+"besuethereumcore" -> "orgapachelogginglog4jlog4japi"
+"besuethereumcore" -> "orgapachetuwenituwenibytes"
+"besuethereumcore" -> "orgapachetuwenituweniconcurrent"
+"besuethereumcore" -> "orgapachetuwenituweniunits"
+"besuethereumcore" -> "orghyperledgerbesubls12381"
+"besuethereumcore" -> "orgimmutablesvalueannotations"
+"besuethereumcore" -> "orgxerialsnappysnappyjava"
+"besuethereumcore" -> "besutestutil"
+"besuethereumcore" -> "junitjunit"
+"besuethereumcore" -> "netconsensysorion"
+"besuethereumcore" -> "orgassertjassertjcore"
+"besuethereumcore" -> "orgmockitomockitocore"
+"besuethereumcore" -> "orgopenjdkjmhjmhcore"
+"besuethereumcore" -> "orgopenjdkjmhjmhgeneratorbytecode"
+"besuethereumeth" -> "besuconfig"
+"besuethereumeth" -> "besudatatypes"
+"besuethereumeth" -> "besuethereumcore"
+"besuethereumeth" -> "besuethereump2p"
+"besuethereumeth" -> "besuethereumpermissioning"
+"besuethereumeth" -> "besuethereumrlp"
+"besuethereumeth" -> "besuethereumtrie"
+"besuethereumeth" -> "besuevm"
+"besuethereumeth" -> "besumetricscore"
+"besuethereumeth" -> "besuserviceskvstore"
+"besuethereumeth" -> "besuservicespipeline"
+"besuethereumeth" -> "besuservicestasks"
+"besuethereumeth" -> "comgoogleguavaguava"
+"besuethereumeth" -> "iovertxvertxcore"
+"besuethereumeth" -> "orgapachetuwenituwenibytes"
+"besuethereumeth" -> "orgapachetuwenituweniunits"
+"besuethereumeth" -> "orgapachetuwenituwenirlp"
+"besuethereumeth" -> "orgimmutablesvalueannotations"
+"besuethereumeth" -> "orgopenjdkjmhjmhcore"
+"besuethereumeth" -> "orgopenjdkjmhjmhgeneratorbytecode"
+"besuethereumeth" -> "orgapachelogginglog4jlog4japi"
+"besuethereumeth" -> "besubesu"
+"besuethereumeth" -> "besupluginsrocksdb"
+"besuethereump2p" -> "besucrypto"
+"besuethereump2p" -> "besudatatypes"
+"besuethereump2p" -> "besuethereumcore"
+"besuethereump2p" -> "besuethereumrlp"
+"besuethereump2p" -> "besupki"
+"besuethereump2p" -> "besumetricscore"
+"besuethereump2p" -> "besunat"
+"besuethereump2p" -> "comgoogleguavaguava"
+"besuethereump2p" -> "dnsjavadnsjava"
+"besuethereump2p" -> "ioprometheussimpleclient"
+"besuethereump2p" -> "iovertxvertxcore"
+"besuethereump2p" -> "orgapachelogginglog4jlog4japi"
+"besuethereump2p" -> "orgapachetuwenituwenibytes"
+"besuethereump2p" -> "orgapachetuwenituwenicrypto"
+"besuethereump2p" -> "orgapachetuwenituwenidevp2p"
+"besuethereump2p" -> "orgapachetuwenituwenidnsdiscovery"
+"besuethereump2p" -> "orgapachetuwenituweniio"
+"besuethereump2p" -> "orgapachetuwenituwenirlp"
+"besuethereump2p" -> "orgapachetuwenituweniunits"
+"besuethereump2p" -> "orgjetbrainskotlinkotlinstdlib"
+"besuethereump2p" -> "orgxerialsnappysnappyjava"
+"besuethereump2p" -> "orgimmutablesvalueannotations"
+"besuethereump2p" -> "techpegasysdiscoverydiscovery"
+"besuethereumrlp" -> "besupluginapi"
+"besuethereumrlp" -> "besuutil"
+"besuethereumrlp" -> "comgoogleguavaguava"
+"besuethereumrlp" -> "orgapachetuwenituwenibytes"
+"besuethereumrlp" -> "orgapachetuwenituweniunits"
+"besuethereumrlp" -> "orgopenjdkjmhjmhcore"
+"besuethereumrlp" -> "orgopenjdkjmhjmhgeneratorbytecode"
+"besuethereumrlp" -> "orgapachelogginglog4jlog4japi"
+"besuevm" -> "comfasterxmljacksoncorejacksondatabind"
+"besuevm" -> "besucrypto"
+"besuevm" -> "besudatatypes"
+"besuevm" -> "besuethereumrlp"
+"besuevm" -> "orgapachetuwenituwenibytes"
+"besuevm" -> "orgapachelogginglog4jlog4japi"
+"besuevm" -> "orghyperledgerbesubls12381"
+"besuevm" -> "netjavadevjnajna"
+"besuevm" -> "comgithubbenmanescaffeinecaffeine"
+"besumetricscore" -> "besupluginapi"
+"besumetricscore" -> "comgoogleguavaguava"
+"besumetricscore" -> "iogrpcgrpcnetty"
+"besumetricscore" -> "iogrpcgrpccore"
+"besumetricscore" -> "ionettynettytcnativeboringsslstatic"
+"besumetricscore" -> "ionettynettytransportnativeepoll"
+"besumetricscore" -> "ionettynettyall"
+"besumetricscore" -> "ioopentelemetryopentelemetryapi"
+"besumetricscore" -> "ioopentelemetryopentelemetrysdk"
+"besumetricscore" -> "ioopentelemetryopentelemetrysemconv"
+"besumetricscore" -> "ioopentelemetryopentelemetrysdktrace"
+"besumetricscore" -> "ioopentelemetryopentelemetryexporterotlp"
+"besumetricscore" -> "ioopentelemetryopentelemetryexporterotlpmetrics"
+"besumetricscore" -> "ioopentelemetryopentelemetryproto"
+"besumetricscore" -> "ioprometheussimpleclient"
+"besumetricscore" -> "ioprometheussimpleclient_common"
+"besumetricscore" -> "ioprometheussimpleclient_hotspot"
+"besumetricscore" -> "ioprometheussimpleclient_pushgateway"
+"besumetricscore" -> "iovertxvertxcore"
+"besumetricscore" -> "iovertxvertxweb"
+"besumetricscore" -> "orgapachelogginglog4jlog4japi"
+"besuserviceskvstore" -> "besumetricscore"
+"besuserviceskvstore" -> "besumetricsrocksdb"
+"besuserviceskvstore" -> "comgoogleguavaguava"
+"besuserviceskvstore" -> "ioprometheussimpleclient"
+"besuserviceskvstore" -> "orgapachelogginglog4jlog4japi"
+"besuserviceskvstore" -> "orgapachetuwenituwenibytes"
+"besuserviceskvstore" -> "orgrocksdbrocksdbjni"
+"besuserviceskvstore" -> "besupluginapi"
+"besuserviceskvstore" -> "besuutil"
+"iovertxvertxcore" -> "comfasterxmljacksoncorejacksoncore"
+"iovertxvertxcore" -> "comfasterxmljacksoncorejacksondatabind"
+"iovertxvertxcore" -> "ionettynettyhandlerproxy"
+"iovertxvertxcore" -> "ionettynettycodechttp2"
+"iovertxvertxcore" -> "ionettynettycodechttp"
+"iovertxvertxcore" -> "ionettynettyresolverdns"
+"iovertxvertxcore" -> "ionettynettyhandler"
+"iovertxvertxcore" -> "ionettynettytransport"
+"iovertxvertxcore" -> "ionettynettybuffer"
+"iovertxvertxcore" -> "ionettynettyresolver"
+"iovertxvertxcore" -> "ionettynettycommon"
+"besuconsensusqbft" -> "besuconfig"
+"besuconsensusqbft" -> "besuconsensuscommon"
+"besuconsensusqbft" -> "besucrypto"
+"besuconsensusqbft" -> "besudatatypes"
+"besuconsensusqbft" -> "besuethereumapi"
+"besuconsensusqbft" -> "besuethereumblockcreation"
+"besuconsensusqbft" -> "besuethereumcore"
+"besuconsensusqbft" -> "besuethereumeth"
+"besuconsensusqbft" -> "besuethereump2p"
+"besuconsensusqbft" -> "besuethereumrlp"
+"besuconsensusqbft" -> "besuevm"
+"besuconsensusqbft" -> "besupki"
+"besuconsensusqbft" -> "besuserviceskvstore"
+"besuconsensusqbft" -> "comgoogleguavaguava"
+"besuconsensusqbft" -> "iovertxvertxcore"
+"besuconsensusqbft" -> "orgapachetuwenituwenibytes"
+"besuconsensusqbft" -> "orgapachetuwenituweniunits"
+"besuconsensusqbft" -> "orgweb3jabi"
+"besuconsensusqbft" -> "besumetricscore"
+"besuconsensusqbft" -> "besutestutil"
+"besuconsensusqbft" -> "junitjunit"
+"besuconsensusqbft" -> "orgassertjassertjcore"
+"besuconsensusqbft" -> "orgmockitomockitocore"
+"besuconsensusqbft" -> "comfasterxmljacksoncorejacksondatabind"
+"besuconsensusqbft" -> "comfasterxmljacksondatatypejacksondatatypejdk8"
+"besuutil" -> "besupluginapi"
+"besuutil" -> "comgoogleguavaguava"
+"besuutil" -> "iovertxvertxcore"
+"besuutil" -> "orgapachetuwenituwenibytes"
+"besuutil" -> "orgapachetuwenituweniunits"
+"besuutil" -> "orgxerialsnappysnappyjava"
+"besuutil" -> "orgapachelogginglog4jlog4japi"
+"besuenclave" -> "besucrypto"
+"besuenclave" -> "besuutil"
+"besuenclave" -> "comfasterxmljacksoncorejacksondatabind"
+"besuenclave" -> "comgoogleguavaguava"
+"besuenclave" -> "iovertxvertxcore"
+"besuenclave" -> "orgapachetuwenituweninet"
+"besuenclave" -> "orgapachelogginglog4jlog4japi"
+"besuenclave" -> "besutestutil"
+"besuenclave" -> "orgbouncycastlebcpkixjdk15on"
+"besuenclave" -> "orgawaitilityawaitility"
+"besuenclave" -> "orgmockitomockitocore"
+"besuenclave" -> "junitjunit"
+"besuenclave" -> "netconsensysorion"
+"besuenclave" -> "orgassertjassertjcore"
+"orgapachetuwenituweninet" -> "orgapachetuwenituwenicrypto"
+"orgapachetuwenituweninet" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituweninet" -> "orgapachetuwenituweniio"
+"orgapachetuwenituweninet" -> "comgoogleguavaguava"
+"orgapachetuwenituweninet" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenicrypto" -> "orgapachetuwenituweniunits"
+"orgapachetuwenituwenicrypto" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenicrypto" -> "orgapachetuwenituweniio"
+"orgapachetuwenituwenicrypto" -> "comgoogleguavaguava"
+"orgapachetuwenituwenicrypto" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenicrypto" -> "comgithubjnrjnrffi"
+"orgapachetuwenituweniio" -> "comgoogleguavaguava"
+"orgapachetuwenituweniio" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituweniio" -> "commonscodeccommonscodec"
+"comgithubjnrjnrffi" -> "comgithubjnrjffi"
+"comgithubjnrjnrffi" -> "orgow2asmasmcommons"
+"comgithubjnrjnrffi" -> "orgow2asmasmanalysis"
+"comgithubjnrjnrffi" -> "orgow2asmasmutil"
+"comgithubjnrjnrffi" -> "orgow2asmasmtree"
+"comgithubjnrjnrffi" -> "orgow2asmasm"
+"comgithubjnrjnrffi" -> "comgithubjnrjnra64asm"
+"comgithubjnrjnrffi" -> "comgithubjnrjnrx86asm"
+"orgow2asmasmcommons" -> "orgow2asmasmtree"
+"orgow2asmasmtree" -> "orgow2asmasm"
+"orgow2asmasmanalysis" -> "orgow2asmasmtree"
+"orgow2asmasmutil" -> "orgow2asmasmtree"
+"besutestutil" -> "besupluginapi"
+"besutestutil" -> "besuutil"
+"besutestutil" -> "comfasterxmljacksoncorejacksondatabind"
+"besutestutil" -> "comgoogleguavaguava"
+"besutestutil" -> "comsquareupokhttp3okhttp"
+"besutestutil" -> "junitjunit"
+"besutestutil" -> "netconsensysorion"
+"besutestutil" -> "orgapachetuwenituwenibytes"
+"besutestutil" -> "orgapachetuwenituweniio"
+"besutestutil" -> "orgapachetuwenituwenitoml"
+"besutestutil" -> "orgassertjassertjcore"
+"besutestutil" -> "orgmockitomockitocore"
+"besutestutil" -> "orgweb3jcore"
+"besutestutil" -> "orgtestcontainerstestcontainers"
+"comsquareupokhttp3okhttp" -> "comsquareupokiookio"
+"comsquareupokhttp3okhttp" -> "orgjetbrainskotlinkotlinstdlib"
+"junitjunit" -> "orghamcresthamcrestcore"
+"netconsensysorion" -> "iovertxvertxweb"
+"netconsensysorion" -> "iovertxvertxcore"
+"netconsensysorion" -> "comfasterxmljacksondatatypejacksondatatypejdk8"
+"netconsensysorion" -> "comfasterxmljacksondataformatjacksondataformatcbor"
+"netconsensysorion" -> "comfasterxmljacksoncorejacksondatabind"
+"netconsensysorion" -> "orgmapdbmapdb"
+"netconsensysorion" -> "comjolboxbonecp"
+"netconsensysorion" -> "orgapachelogginglog4jlog4jcore"
+"netconsensysorion" -> "orgapachelogginglog4jlog4jslf4jimpl"
+"netconsensysorion" -> "orgapachelogginglog4jlog4japi"
+"netconsensysorion" -> "orgbouncycastlebcpkixjdk15on"
+"netconsensysorion" -> "orgbouncycastlebcprovjdk15on"
+"netconsensysorion" -> "orgapachetuwenibytes"
+"netconsensysorion" -> "orgapachetuweniconcurrent"
+"netconsensysorion" -> "orgapachetuweniconcurrentcoroutines"
+"netconsensysorion" -> "orgapachetuweniconfig"
+"netconsensysorion" -> "orgapachetuwenicrypto"
+"netconsensysorion" -> "orgapachetuweniio"
+"netconsensysorion" -> "orgapachetuwenikv"
+"netconsensysorion" -> "orgapachetuweninet"
+"netconsensysorion" -> "orgapachetuwenirlp"
+"netconsensysorion" -> "orgapachetuwenitoml"
+"netconsensysorion" -> "comgithubjnrjnrffi"
+"netconsensysorion" -> "orgfusesourceleveldbjnileveldbjniall"
+"netconsensysorion" -> "orglz4lz4java"
+"netconsensysorion" -> "orgapacheopenjpaopenjpa"
+"netconsensysorion" -> "orgpostgresqlpostgresql"
+"netconsensysorion" -> "commoandjiezanatomltoml4j"
+"netconsensysorion" -> "javaxxmlbindjaxbapi"
+"netconsensysorion" -> "comoracleojdbcojdbc10"
+"orgapachetuwenituwenitoml" -> "comgooglecodefindbugsjsr305"
+"orgapachetuwenituwenitoml" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenitoml" -> "organtlrantlr4runtime"
+"orgmockitomockitocore" -> "netbytebuddybytebuddy"
+"orgmockitomockitocore" -> "netbytebuddybytebuddyagent"
+"orgmockitomockitocore" -> "orgobjenesisobjenesis"
+"orgweb3jcore" -> "orgweb3jcrypto"
+"orgweb3jcore" -> "orgweb3jabi"
+"orgweb3jcore" -> "comfasterxmljacksoncorejacksondatabind"
+"orgweb3jcore" -> "comsquareupokhttp3logginginterceptor"
+"orgweb3jcore" -> "comsquareupokhttp3okhttp"
+"orgweb3jcore" -> "orgjavawebsocketJavaWebSocket"
+"orgweb3jcore" -> "orgslf4jslf4japi"
+"orgweb3jcore" -> "orgweb3jtuples"
+"orgweb3jcore" -> "ioreactivexrxjava2rxjava"
+"orgtestcontainerstestcontainers" -> "comgithubdockerjavadockerjavaapi"
+"orgtestcontainerstestcontainers" -> "junitjunit"
+"orgtestcontainerstestcontainers" -> "comgithubdockerjavadockerjavatransportzerodep"
+"orgtestcontainerstestcontainers" -> "orgslf4jslf4japi"
+"orgtestcontainerstestcontainers" -> "orgapachecommonscommonscompress"
+"orgtestcontainerstestcontainers" -> "orgrnorthducttapeducttape"
+"comgithubdockerjavadockerjavaapi" -> "comfasterxmljacksoncorejacksonannotations"
+"comgithubdockerjavadockerjavaapi" -> "orgslf4jslf4japi"
+"comfasterxmljacksoncorejacksonannotations" -> "comfasterxmljacksonjacksonbom"
+"comgithubdockerjavadockerjavatransportzerodep" -> "orgslf4jslf4japi"
+"comgithubdockerjavadockerjavatransportzerodep" -> "comgithubdockerjavadockerjavatransport"
+"comgithubdockerjavadockerjavatransportzerodep" -> "netjavadevjnajna"
+"orgbouncycastlebcutiljdk15on" -> "orgbouncycastlebcprovjdk15on"
+"orgawaitilityawaitility" -> "orghamcresthamcrest"
+"orghamcresthamcrestcore" -> "orghamcresthamcrest"
+"iovertxvertxweb" -> "iovertxvertxwebcommon"
+"iovertxvertxweb" -> "iovertxvertxauthcommon"
+"iovertxvertxweb" -> "iovertxvertxcore"
+"iovertxvertxweb" -> "iovertxvertxbridgecommon"
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksoncorejacksoncore"
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksonjacksonbom"
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksoncorejacksondatabind"
+"comfasterxmljacksondataformatjacksondataformatcbor" -> "comfasterxmljacksoncorejacksoncore"
+"comfasterxmljacksondataformatjacksondataformatcbor" -> "comfasterxmljacksonjacksonbom"
+"comfasterxmljacksondataformatjacksondataformatcbor" -> "comfasterxmljacksoncorejacksondatabind"
+"comfasterxmljacksoncorejacksoncore" -> "comfasterxmljacksonjacksonbom"
+"orgmapdbmapdb" -> "comgoogleguavaguava"
+"orgmapdbmapdb" -> "orgjetbrainskotlinkotlinstdlib"
+"orgmapdbmapdb" -> "orgeclipsecollectionseclipsecollectionsforkjoin"
+"orgmapdbmapdb" -> "orgeclipsecollectionseclipsecollections"
+"orgmapdbmapdb" -> "orgeclipsecollectionseclipsecollectionsapi"
+"orgmapdbmapdb" -> "orgmapdbelsa"
+"orgeclipsecollectionseclipsecollectionsforkjoin" -> "orgeclipsecollectionseclipsecollections"
+"orgeclipsecollectionseclipsecollectionsforkjoin" -> "orgeclipsecollectionseclipsecollectionsapi"
+"orgeclipsecollectionseclipsecollections" -> "orgeclipsecollectionseclipsecollectionsapi"
+"comjolboxbonecp" -> "comgoogleguavaguava"
+"comjolboxbonecp" -> "orgslf4jslf4japi"
+"orgapachelogginglog4jlog4jcore" -> "orgapachelogginglog4jlog4japi"
+"orgapachelogginglog4jlog4jslf4jimpl" -> "orgapachelogginglog4jlog4japi"
+"orgapachelogginglog4jlog4jslf4jimpl" -> "orgslf4jslf4japi"
+"orgapacheopenjpaopenjpa" -> "orgapachecommonscommonscollections4"
+"orgapacheopenjpaopenjpa" -> "netsourceforgeserpserp"
+"orgapacheopenjpaopenjpa" -> "orgapachegeronimospecsgeronimojms_11_spec"
+"orgapacheopenjpaopenjpa" -> "orgapachegeronimospecsgeronimojta_11_spec"
+"orgapacheopenjpaopenjpa" -> "orgapachecommonscommonspool2"
+"orgapacheopenjpaopenjpa" -> "orgapachexbeanxbeanasm7shaded"
+"orgapacheopenjpaopenjpa" -> "orgapachegeronimospecsgeronimojpa_22_spec"
+"commoandjiezanatomltoml4j" -> "comgooglecodegsongson"
+"comoracleojdbcojdbc10" -> "comoracleojdbcucp"
+"comoracleojdbcojdbc10" -> "comoracleojdbcoraclepki"
+"comoracleojdbcojdbc10" -> "comoracleojdbcosdt_cert"
+"comoracleojdbcojdbc10" -> "comoracleojdbcosdt_core"
+"comoracleojdbcojdbc10" -> "comoracleojdbcsimplefan"
+"comoracleojdbcojdbc10" -> "comoracleojdbcons"
+"comoracleojdbcsimplefan" -> "comoracleojdbcons"
+"besuethereumpermissioning" -> "besucrypto"
+"besuethereumpermissioning" -> "besudatatypes"
+"besuethereumpermissioning" -> "besuethereumcore"
+"besuethereumpermissioning" -> "besuethereump2p"
+"besuethereumpermissioning" -> "besuevm"
+"besuethereumpermissioning" -> "besumetricscore"
+"besuethereumpermissioning" -> "besuutil"
+"besuethereumpermissioning" -> "comfasterxmljacksoncorejacksondatabind"
+"besuethereumpermissioning" -> "comgoogleguavaguava"
+"besuethereumpermissioning" -> "orgapachelogginglog4jlog4japi"
+"besuethereumpermissioning" -> "orgapachetuwenituwenibytes"
+"besuethereumpermissioning" -> "orgapachetuwenituwenitoml"
+"besuethereumpermissioning" -> "orgapachetuwenituweniunits"
+"besuethereumpermissioning" -> "orgweb3jabi"
+"besuethereumretesteth" -> "besuconfig"
+"besuethereumretesteth" -> "besudatatypes"
+"besuethereumretesteth" -> "besuethereumapi"
+"besuethereumretesteth" -> "besuethereumblockcreation"
+"besuethereumretesteth" -> "besuethereumcore"
+"besuethereumretesteth" -> "besuethereumeth"
+"besuethereumretesteth" -> "besuethereump2p"
+"besuethereumretesteth" -> "besuethereumrlp"
+"besuethereumretesteth" -> "besuevm"
+"besuethereumretesteth" -> "besumetricscore"
+"besuethereumretesteth" -> "besunat"
+"besuethereumretesteth" -> "besuserviceskvstore"
+"besuethereumretesteth" -> "besuutil"
+"besuethereumretesteth" -> "comgoogleguavaguava"
+"besuethereumretesteth" -> "iovertxvertxcore"
+"besuethereumretesteth" -> "iovertxvertxweb"
+"besuethereumretesteth" -> "orgapachelogginglog4jlog4japi"
+"besuethereumretesteth" -> "orgapachetuwenituwenibytes"
+"besuethereumretesteth" -> "orgapachetuwenituweniunits"
+"orgopenjdkjmhjmhcore" -> "netsfjoptsimplejoptsimple"
+"orgopenjdkjmhjmhcore" -> "orgapachecommonscommonsmath3"
+"orgopenjdkjmhjmhgeneratorbytecode" -> "orgopenjdkjmhjmhgeneratorasm"
+"orgopenjdkjmhjmhgeneratorbytecode" -> "orgopenjdkjmhjmhgeneratorreflection"
+"orgopenjdkjmhjmhgeneratorbytecode" -> "orgopenjdkjmhjmhcore"
+"besunat" -> "comgoogleguavaguava"
+"besunat" -> "comsquareupokhttp3okhttp"
+"besunat" -> "orgapachelogginglog4jlog4japi"
+"besunat" -> "orgjupnporgjupnp"
+"besunat" -> "orgjupnporgjupnpsupport"
+"besunat" -> "iokubernetesclientjava"
+"besuethereumtrie" -> "besucrypto"
+"besuethereumtrie" -> "besuethereumrlp"
+"besuethereumtrie" -> "besuserviceskvstore"
+"besuethereumtrie" -> "comgoogleguavaguava"
+"besuethereumtrie" -> "ioopentelemetryopentelemetryapi"
+"besuethereumtrie" -> "orgapachetuwenituwenibytes"
+"besuethereumtrie" -> "orgbouncycastlebcprovjdk15on"
+"besuethereumstratum" -> "besupluginapi"
+"besuethereumstratum" -> "besuutil"
+"besuethereumstratum" -> "besudatatypes"
+"besuethereumstratum" -> "besuethereumapi"
+"besuethereumstratum" -> "besuethereumcore"
+"besuethereumstratum" -> "besuethereumblockcreation"
+"besuethereumstratum" -> "besumetricscore"
+"besuethereumstratum" -> "comgoogleguavaguava"
+"besuethereumstratum" -> "iovertxvertxcore"
+"besuethereumstratum" -> "orgapachetuwenituwenibytes"
+"besuethereumstratum" -> "orgapachetuwenituweniunits"
+"iogrpcgrpcnetty" -> "iogrpcgrpccore"
+"iogrpcgrpcnetty" -> "ionettynettycodechttp2"
+"iogrpcgrpccore" -> "iogrpcgrpcapi"
+"iogrpcgrpcapi" -> "comgooglecodefindbugsjsr305"
+"iogrpcgrpcapi" -> "iogrpcgrpccontext"
+"ionettynettycodechttp2" -> "ionettynettycodechttp"
+"ionettynettycodechttp2" -> "ionettynettyhandler"
+"ionettynettycodechttp2" -> "ionettynettycodec"
+"ionettynettycodechttp2" -> "ionettynettytransport"
+"ionettynettycodechttp2" -> "ionettynettybuffer"
+"ionettynettycodechttp2" -> "ionettynettycommon"
+"ionettynettytransportnativeepoll" -> "ionettynettytransportnativeunixcommon"
+"ionettynettytransportnativeepoll" -> "ionettynettytransport"
+"ionettynettytransportnativeepoll" -> "ionettynettybuffer"
+"ionettynettytransportnativeepoll" -> "ionettynettycommon"
+"ionettynettytransportnativeunixcommon" -> "ionettynettytransport"
+"ionettynettytransportnativeunixcommon" -> "ionettynettybuffer"
+"ionettynettytransportnativeunixcommon" -> "ionettynettycommon"
+"ionettynettytransport" -> "ionettynettybuffer"
+"ionettynettytransport" -> "ionettynettyresolver"
+"ionettynettytransport" -> "ionettynettycommon"
+"ionettynettybuffer" -> "ionettynettycommon"
+"ioopentelemetryopentelemetryapi" -> "ioopentelemetryopentelemetrycontext"
+"ioopentelemetryopentelemetrysdk" -> "ioopentelemetryopentelemetrysdktrace"
+"ioopentelemetryopentelemetrysdk" -> "ioopentelemetryopentelemetrysdkcommon"
+"ioopentelemetryopentelemetrysdk" -> "ioopentelemetryopentelemetryapi"
+"ioopentelemetryopentelemetrysdktrace" -> "ioopentelemetryopentelemetrysdkcommon"
+"ioopentelemetryopentelemetrysdktrace" -> "ioopentelemetryopentelemetryapi"
+"ioopentelemetryopentelemetrysdkcommon" -> "ioopentelemetryopentelemetryapi"
+"ioopentelemetryopentelemetrysemconv" -> "ioopentelemetryopentelemetryapi"
+"ioopentelemetryopentelemetryexporterotlp" -> "ioopentelemetryopentelemetryexporterotlptrace"
+"ioopentelemetryopentelemetryexporterotlptrace" -> "ioopentelemetryopentelemetrysdktrace"
+"ioopentelemetryopentelemetryexporterotlpmetrics" -> "ioopentelemetryopentelemetrysdkmetrics"
+"ioopentelemetryopentelemetrysdkmetrics" -> "ioopentelemetryopentelemetrysdkcommon"
+"ioopentelemetryopentelemetrysdkmetrics" -> "ioopentelemetryopentelemetryapimetrics"
+"ioopentelemetryopentelemetryapimetrics" -> "ioopentelemetryopentelemetryapi"
+"ioopentelemetryopentelemetryapimetrics" -> "ioopentelemetryopentelemetrycontext"
+"ioopentelemetryopentelemetryproto" -> "iogrpcgrpcstub"
+"ioopentelemetryopentelemetryproto" -> "iogrpcgrpcprotobuf"
+"ioopentelemetryopentelemetryproto" -> "iogrpcgrpcapi"
+"ioopentelemetryopentelemetryproto" -> "comgoogleprotobufprotobufjava"
+"iogrpcgrpcstub" -> "comgoogleguavaguava"
+"iogrpcgrpcstub" -> "iogrpcgrpcapi"
+"iogrpcgrpcprotobuf" -> "iogrpcgrpcprotobuflite"
+"iogrpcgrpcprotobuf" -> "iogrpcgrpcapi"
+"iogrpcgrpcprotobuf" -> "comgooglecodefindbugsjsr305"
+"iogrpcgrpcprotobuf" -> "comgoogleprotobufprotobufjava"
+"iogrpcgrpcprotobuf" -> "comgoogleapigrpcprotogooglecommonprotos"
+"iogrpcgrpcprotobuflite" -> "iogrpcgrpcapi"
+"ioprometheussimpleclient_common" -> "ioprometheussimpleclient"
+"ioprometheussimpleclient_hotspot" -> "ioprometheussimpleclient"
+"ioprometheussimpleclient_pushgateway" -> "ioprometheussimpleclient_common"
+"ioprometheussimpleclient_pushgateway" -> "ioprometheussimpleclient"
+"ioprometheussimpleclient_pushgateway" -> "javaxxmlbindjaxbapi"
+"besuethereumethstats" -> "comfasterxmljacksoncorejacksondatabind"
+"besuethereumethstats" -> "comgoogleguavaguava"
+"besuethereumethstats" -> "comsquareupokhttp3okhttp"
+"besuethereumethstats" -> "orgapachelogginglog4jlog4japi"
+"besuethereumethstats" -> "iovertxvertxcore"
+"besuethereumethstats" -> "orgapachetuwenituwenibytes"
+"besuethereumethstats" -> "besuconsensusclique"
+"besuethereumethstats" -> "besuconfig"
+"besuethereumethstats" -> "besuutil"
+"besuethereumethstats" -> "besudatatypes"
+"besuethereumethstats" -> "besuethereumapi"
+"besuethereumethstats" -> "besuethereumblockcreation"
+"besuethereumethstats" -> "besuethereumcore"
+"besuethereumethstats" -> "besuethereumeth"
+"besuethereumethstats" -> "besuethereump2p"
+"besuethereumethstats" -> "besuevm"
+"besuethereumethstats" -> "besupluginapi"
+"besuethereumethstats" -> "orgimmutablesvalueannotations"
+"comgithubbenmanescaffeinecaffeine" -> "comgoogleerrorproneerror_prone_annotations"
+"comgithubbenmanescaffeinecaffeine" -> "orgcheckerframeworkcheckerqual"
+"comsquareupokiookio" -> "orgjetbrainskotlinkotlinstdlib"
+"comsquareupokiookio" -> "orgjetbrainskotlinkotlinstdlibcommon"
+"iokubernetesclientjava" -> "comgoogleguavaguava"
+"iokubernetesclientjava" -> "iokubernetesclientjavaapi"
+"iokubernetesclientjava" -> "comsquareupokhttpokhttpws"
+"iokubernetesclientjava" -> "iokubernetesclientjavaproto"
+"iokubernetesclientjava" -> "orgyamlsnakeyaml"
+"iokubernetesclientjava" -> "commonscodeccommonscodec"
+"iokubernetesclientjava" -> "orgapachecommonscommonscompress"
+"iokubernetesclientjava" -> "orgapachecommonscommonslang3"
+"iokubernetesclientjava" -> "orgslf4jslf4japi"
+"iokubernetesclientjava" -> "orgbouncycastlebcprovextjdk15on"
+"iokubernetesclientjava" -> "orgbouncycastlebcpkixjdk15on"
+"iokubernetesclientjava" -> "comgoogleprotobufprotobufjava"
+"iokubernetesclientjavaapi" -> "comsquareupokhttplogginginterceptor"
+"iokubernetesclientjavaapi" -> "comsquareupokhttpokhttp"
+"iokubernetesclientjavaapi" -> "orgapachecommonscommonslang3"
+"iokubernetesclientjavaapi" -> "iosundrbuilderannotations"
+"iokubernetesclientjavaapi" -> "ioswaggerswaggerannotations"
+"iokubernetesclientjavaapi" -> "comgooglecodegsongson"
+"iokubernetesclientjavaapi" -> "jodatimejodatime"
+"iokubernetesclientjavaapi" -> "orgjodajodaconvert"
+"comsquareupokhttplogginginterceptor" -> "comsquareupokhttpokhttp"
+"comsquareupokhttpokhttp" -> "comsquareupokiookio"
+"iosundrbuilderannotations" -> "iosundrsundrcore"
+"iosundrbuilderannotations" -> "iosundrsundrcodegen"
+"iosundrbuilderannotations" -> "iosundrresourcecifyannotations"
+"comsquareupokhttpokhttpws" -> "comsquareupokhttpokhttp"
+"iokubernetesclientjavaproto" -> "comgoogleprotobufprotobufjava"
+"besupluginsrocksdb" -> "besumetricscore"
+"besupluginsrocksdb" -> "besumetricsrocksdb"
+"besupluginsrocksdb" -> "besuserviceskvstore"
+"besupluginsrocksdb" -> "comfasterxmljacksoncorejacksondatabind"
+"besupluginsrocksdb" -> "comgoogleguavaguava"
+"besupluginsrocksdb" -> "infopicoclipicocli"
+"besupluginsrocksdb" -> "ioopentelemetryopentelemetryapi"
+"besupluginsrocksdb" -> "ioprometheussimpleclient"
+"besupluginsrocksdb" -> "orgapachelogginglog4jlog4japi"
+"besupluginsrocksdb" -> "orgapachetuwenituwenibytes"
+"besupluginsrocksdb" -> "orgrocksdbrocksdbjni"
+"besupluginsrocksdb" -> "besupluginapi"
+"comgraphqljavagraphqljava" -> "comgraphqljavajavadataloader"
+"comgraphqljavagraphqljava" -> "orgreactivestreamsreactivestreams"
+"ionettynettyhandlerproxy" -> "ionettynettycodechttp"
+"ionettynettyhandlerproxy" -> "ionettynettycodecsocks"
+"ionettynettyhandlerproxy" -> "ionettynettycodec"
+"ionettynettyhandlerproxy" -> "ionettynettytransport"
+"ionettynettyhandlerproxy" -> "ionettynettybuffer"
+"ionettynettyhandlerproxy" -> "ionettynettycommon"
+"ionettynettycodechttp" -> "ionettynettyhandler"
+"ionettynettycodechttp" -> "ionettynettycodec"
+"ionettynettycodechttp" -> "ionettynettytransport"
+"ionettynettycodechttp" -> "ionettynettybuffer"
+"ionettynettycodechttp" -> "ionettynettycommon"
+"ionettynettyhandler" -> "ionettynettycodec"
+"ionettynettyhandler" -> "ionettynettytransport"
+"ionettynettyhandler" -> "ionettynettybuffer"
+"ionettynettyhandler" -> "ionettynettyresolver"
+"ionettynettyhandler" -> "ionettynettycommon"
+"ionettynettycodec" -> "ionettynettytransport"
+"ionettynettycodec" -> "ionettynettybuffer"
+"ionettynettycodec" -> "ionettynettycommon"
+"ionettynettyresolver" -> "ionettynettycommon"
+"ionettynettycodecsocks" -> "ionettynettycodec"
+"ionettynettycodecsocks" -> "ionettynettytransport"
+"ionettynettycodecsocks" -> "ionettynettybuffer"
+"ionettynettycodecsocks" -> "ionettynettycommon"
+"ionettynettyresolverdns" -> "ionettynettyhandler"
+"ionettynettyresolverdns" -> "ionettynettycodecdns"
+"ionettynettyresolverdns" -> "ionettynettycodec"
+"ionettynettyresolverdns" -> "ionettynettytransport"
+"ionettynettyresolverdns" -> "ionettynettybuffer"
+"ionettynettyresolverdns" -> "ionettynettyresolver"
+"ionettynettyresolverdns" -> "ionettynettycommon"
+"ionettynettycodecdns" -> "ionettynettycodec"
+"ionettynettycodecdns" -> "ionettynettytransport"
+"ionettynettycodecdns" -> "ionettynettybuffer"
+"ionettynettycodecdns" -> "ionettynettycommon"
+"iovertxvertxwebcommon" -> "iovertxvertxcore"
+"iovertxvertxauthcommon" -> "iovertxvertxcore"
+"orgapachetuwenituweniconfig" -> "comgoogleguavaguava"
+"orgapachetuwenituweniconfig" -> "orgapachetuwenituwenitoml"
+"orgapachetuwenituweniconfig" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"besuerrorpronechecks" -> "comgoogleautoserviceautoservice"
+"besuerrorpronechecks" -> "comgoogleerrorproneerror_prone_annotation"
+"besuerrorpronechecks" -> "comgoogleerrorproneerror_prone_core"
+"besuerrorpronechecks" -> "infopicoclipicocli"
+"comgoogleautoserviceautoservice" -> "comgoogleautoserviceautoserviceannotations"
+"comgoogleautoserviceautoservice" -> "comgoogleautoautocommon"
+"comgoogleautoserviceautoservice" -> "comgoogleguavaguava"
+"comgoogleautoautocommon" -> "comgoogleguavaguava"
+"comgoogleerrorproneerror_prone_annotation" -> "comgoogleguavaguava"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleerrorproneerror_prone_check_api"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleerrorproneerror_prone_annotation"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleautoserviceautoserviceannotations"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleautoautocommon"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleguavaguava"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleerrorproneerror_prone_type_annotations"
+"comgoogleerrorproneerror_prone_core" -> "orgpcollectionspcollections"
+"comgoogleerrorproneerror_prone_core" -> "comgooglecodefindbugsjFormatString"
+"comgoogleerrorproneerror_prone_core" -> "comgooglecodefindbugsjsr305"
+"comgoogleerrorproneerror_prone_core" -> "orgcheckerframeworkdataflowerrorprone"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleerrorpronejavac"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleautovalueautovalueannotations"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleerrorproneerror_prone_annotations"
+"comgoogleerrorproneerror_prone_core" -> "comgoogleprotobufprotobufjava"
+"comgoogleerrorproneerror_prone_check_api" -> "comgoogleerrorproneerror_prone_annotation"
+"comgoogleerrorproneerror_prone_check_api" -> "comgooglecodefindbugsjsr305"
+"comgoogleerrorproneerror_prone_check_api" -> "orgcheckerframeworkdataflowerrorprone"
+"comgoogleerrorproneerror_prone_check_api" -> "comgoogleerrorpronejavac"
+"comgoogleerrorproneerror_prone_check_api" -> "comgoogleautovalueautovalueannotations"
+"comgoogleerrorproneerror_prone_check_api" -> "comgithubbenmanescaffeinecaffeine"
+"comgoogleerrorproneerror_prone_check_api" -> "comgoogleerrorproneerror_prone_annotations"
+"comgoogleerrorproneerror_prone_check_api" -> "iogithubjavadiffutilsjavadiffutils"
+"comgoogleerrorproneerror_prone_check_api" -> "comgithubkevinsternsoftwareandalgorithms"
+"iogithubjavadiffutilsjavadiffutils" -> "orgeclipsejgitorgeclipsejgit"
+"besuprivacycontracts" -> "netconsensysorion"
+"besuprivacycontracts" -> "orgapachetuwenituwenibytes"
+"besuprivacycontracts" -> "orgapachetuwenituweniio"
+"besuprivacycontracts" -> "orgapachetuwenituwenitoml"
+"besuprivacycontracts" -> "orgweb3jabi"
+"besuprivacycontracts" -> "orgweb3jbesu"
+"orgweb3jabi" -> "orgweb3jutils"
+"orgweb3jutils" -> "orgbouncycastlebcprovjdk15on"
+"orgweb3jbesu" -> "orgweb3jeea"
+"orgweb3jeea" -> "orgweb3jcore"
+"orgweb3jcrypto" -> "orgweb3jabi"
+"orgweb3jcrypto" -> "orgweb3jrlp"
+"orgweb3jcrypto" -> "orgweb3jutils"
+"orgweb3jcrypto" -> "comfasterxmljacksoncorejacksondatabind"
+"orgweb3jcrypto" -> "orgslf4jslf4japi"
+"orgweb3jrlp" -> "orgweb3jutils"
+"comsquareupokhttp3logginginterceptor" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"comsquareupokhttp3logginginterceptor" -> "comsquareupokhttp3okhttp"
+"orgjavawebsocketJavaWebSocket" -> "orgslf4jslf4japi"
+"ioreactivexrxjava2rxjava" -> "orgreactivestreamsreactivestreams"
+"besuacceptancetestsdsl" -> "besubesu"
+"besuacceptancetestsdsl" -> "besuconfig"
+"besuacceptancetestsdsl" -> "besuconsensusclique"
+"besuacceptancetestsdsl" -> "besuconsensuscommon"
+"besuacceptancetestsdsl" -> "besuconsensusibft"
+"besuacceptancetestsdsl" -> "besuconsensusqbft"
+"besuacceptancetestsdsl" -> "besucrypto"
+"besuacceptancetestsdsl" -> "besuenclave"
+"besuacceptancetestsdsl" -> "besuethereumapi"
+"besuacceptancetestsdsl" -> "besuethereumblockcreation"
+"besuacceptancetestsdsl" -> "besuethereumcore"
+"besuacceptancetestsdsl" -> "besuethereumeth"
+"besuacceptancetestsdsl" -> "besuethereump2p"
+"besuacceptancetestsdsl" -> "besuevm"
+"besuacceptancetestsdsl" -> "besudatatypes"
+"besuacceptancetestsdsl" -> "besuethereumpermissioning"
+"besuacceptancetestsdsl" -> "besuethereumrlp"
+"besuacceptancetestsdsl" -> "besumetricscore"
+"besuacceptancetestsdsl" -> "besupki"
+"besuacceptancetestsdsl" -> "besupluginapi"
+"besuacceptancetestsdsl" -> "besupluginsrocksdb"
+"besuacceptancetestsdsl" -> "besuserviceskvstore"
+"besuacceptancetestsdsl" -> "besutestutil"
+"besuacceptancetestsdsl" -> "besuutil"
+"besuacceptancetestsdsl" -> "comgithubtomakehurstwiremockjre8"
+"besuacceptancetestsdsl" -> "comgoogleguavaguava"
+"besuacceptancetestsdsl" -> "comsquareupokhttp3okhttp"
+"besuacceptancetestsdsl" -> "infopicoclipicocli"
+"besuacceptancetestsdsl" -> "ioreactivexrxjava2rxjava"
+"besuacceptancetestsdsl" -> "iovertxvertxcore"
+"besuacceptancetestsdsl" -> "junitjunit"
+"besuacceptancetestsdsl" -> "netconsensysorion"
+"besuacceptancetestsdsl" -> "orgapachelogginglog4jlog4japi"
+"besuacceptancetestsdsl" -> "orgapachelogginglog4jlog4jcore"
+"besuacceptancetestsdsl" -> "orgapachelogginglog4jlog4jslf4jimpl"
+"besuacceptancetestsdsl" -> "orgapachetuwenituwenibytes"
+"besuacceptancetestsdsl" -> "orgapachetuwenituweniio"
+"besuacceptancetestsdsl" -> "orgapachetuwenituweniunits"
+"besuacceptancetestsdsl" -> "orgassertjassertjcore"
+"besuacceptancetestsdsl" -> "orgawaitilityawaitility"
+"besuacceptancetestsdsl" -> "orgjavawebsocketJavaWebSocket"
+"besuacceptancetestsdsl" -> "orgweb3jabi"
+"besuacceptancetestsdsl" -> "orgweb3jbesu"
+"besuacceptancetestsdsl" -> "orgweb3jcrypto"
+"besuacceptancetestsdsl" -> "techpegasysethsignerinternalethsignercore"
+"besuacceptancetestsdsl" -> "techpegasyssignersinternalsigningsecp256k1api"
+"besuacceptancetestsdsl" -> "techpegasyssignersinternalsigningsecp256k1impl"
+"besuacceptancetestsdsl" -> "orgtestcontainerstestcontainers"
+"orgapachetuwenituweniconcurrent" -> "comgoogleguavaguava"
+"orgapachetuwenituweniconcurrent" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgopenjdkjmhjmhgeneratorasm" -> "orgopenjdkjmhjmhgeneratorreflection"
+"orgopenjdkjmhjmhgeneratorasm" -> "orgopenjdkjmhjmhcore"
+"orgopenjdkjmhjmhgeneratorasm" -> "orgow2asmasm"
+"orgopenjdkjmhjmhgeneratorreflection" -> "orgopenjdkjmhjmhcore"
+"besuservicespipeline" -> "besuutil"
+"besuservicespipeline" -> "besumetricscore"
+"besuservicespipeline" -> "besupluginapi"
+"besuservicespipeline" -> "ioopentelemetryopentelemetryapi"
+"besuservicespipeline" -> "comgoogleguavaguava"
+"besuservicespipeline" -> "orgapachelogginglog4jlog4japi"
+"besuservicestasks" -> "besupluginapi"
+"besuservicestasks" -> "besuutil"
+"besuservicestasks" -> "orgopenjdkjmhjmhgeneratorannprocess"
+"besuservicestasks" -> "besumetricscore"
+"besuservicestasks" -> "comgoogleguavaguava"
+"besuservicestasks" -> "iovertxvertxcore"
+"besuservicestasks" -> "orgapachelogginglog4jlog4japi"
+"besuservicestasks" -> "orgapachetuwenituwenibytes"
+"orgopenjdkjmhjmhgeneratorannprocess" -> "orgopenjdkjmhjmhcore"
+"orgapachetuwenituwenirlp" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenirlp" -> "comgoogleguavaguava"
+"orgapachetuwenituwenirlp" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"ioopentelemetryopentelemetryextensiontracepropagators" -> "ioopentelemetryopentelemetryapi"
+"iovertxvertxauthjwt" -> "iovertxvertxjwt"
+"iovertxvertxauthjwt" -> "iovertxvertxauthcommon"
+"iovertxvertxauthjwt" -> "iovertxvertxcore"
+"iovertxvertxjwt" -> "iovertxvertxauthcommon"
+"iovertxvertxjwt" -> "iovertxvertxcore"
+"iovertxvertxunit" -> "iovertxvertxcore"
+"comgithubtomakehurstwiremockjre8" -> "comgoogleguavaguava"
+"comgithubtomakehurstwiremockjre8" -> "comfasterxmljacksoncorejacksondatabind"
+"comgithubtomakehurstwiremockjre8" -> "comfasterxmljacksoncorejacksonannotations"
+"comgithubtomakehurstwiremockjre8" -> "comfasterxmljacksoncorejacksoncore"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyhttp2http2server"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyalpnconscryptserver"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyalpnserver"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettywebapp"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyservlet"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyserver"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyservlets"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyproxy"
+"comgithubtomakehurstwiremockjre8" -> "orgeclipsejettyjettyalpnconscryptclient"
+"comgithubtomakehurstwiremockjre8" -> "orgconscryptconscryptopenjdkuber"
+"comgithubtomakehurstwiremockjre8" -> "orgapachehttpcomponentshttpclient"
+"comgithubtomakehurstwiremockjre8" -> "orgxmlunitxmlunitlegacy"
+"comgithubtomakehurstwiremockjre8" -> "orgxmlunitxmlunitplaceholders"
+"comgithubtomakehurstwiremockjre8" -> "orgxmlunitxmlunitcore"
+"comgithubtomakehurstwiremockjre8" -> "netjavacrumbsjsonunitjsonunitcore"
+"comgithubtomakehurstwiremockjre8" -> "comjaywayjsonpathjsonpath"
+"comgithubtomakehurstwiremockjre8" -> "netminidevjsonsmart"
+"comgithubtomakehurstwiremockjre8" -> "orgow2asmasm"
+"comgithubtomakehurstwiremockjre8" -> "comgithubjknackhandlebarshelpers"
+"comgithubtomakehurstwiremockjre8" -> "comgithubjknackhandlebars"
+"comgithubtomakehurstwiremockjre8" -> "orgslf4jslf4japi"
+"comgithubtomakehurstwiremockjre8" -> "netsfjoptsimplejoptsimple"
+"comgithubtomakehurstwiremockjre8" -> "orgapachecommonscommonslang3"
+"comgithubtomakehurstwiremockjre8" -> "commonsfileuploadcommonsfileupload"
+"comgithubtomakehurstwiremockjre8" -> "commonsiocommonsio"
+"orgeclipsejettyhttp2http2server" -> "orgeclipsejettyjettyserver"
+"orgeclipsejettyhttp2http2server" -> "orgeclipsejettyhttp2http2common"
+"orgeclipsejettyjettyserver" -> "javaxservletjavaxservletapi"
+"orgeclipsejettyjettyserver" -> "orgeclipsejettyjettyhttp"
+"orgeclipsejettyjettyserver" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyjettyhttp" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyjettyhttp" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyio" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyhttp2http2common" -> "orgeclipsejettyhttp2http2hpack"
+"orgeclipsejettyhttp2http2hpack" -> "orgeclipsejettyjettyhttp"
+"orgeclipsejettyhttp2http2hpack" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyhttp2http2hpack" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyalpnconscryptserver" -> "orgeclipsejettyjettyalpnserver"
+"orgeclipsejettyjettyalpnconscryptserver" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyjettyalpnserver" -> "orgeclipsejettyjettyserver"
+"orgeclipsejettyjettywebapp" -> "orgeclipsejettyjettyservlet"
+"orgeclipsejettyjettywebapp" -> "orgeclipsejettyjettyxml"
+"orgeclipsejettyjettyservlet" -> "orgeclipsejettyjettysecurity"
+"orgeclipsejettyjettyservlet" -> "orgeclipsejettyjettyutilajax"
+"orgeclipsejettyjettysecurity" -> "orgeclipsejettyjettyserver"
+"orgeclipsejettyjettyutilajax" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyxml" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyservlets" -> "orgeclipsejettyjettyhttp"
+"orgeclipsejettyjettyservlets" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyjettyservlets" -> "orgeclipsejettyjettycontinuation"
+"orgeclipsejettyjettyservlets" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyproxy" -> "orgeclipsejettyjettyclient"
+"orgeclipsejettyjettyproxy" -> "orgeclipsejettyjettyutil"
+"orgeclipsejettyjettyclient" -> "orgeclipsejettyjettyhttp"
+"orgeclipsejettyjettyclient" -> "orgeclipsejettyjettyio"
+"orgeclipsejettyjettyalpnconscryptclient" -> "orgeclipsejettyjettyalpnclient"
+"orgeclipsejettyjettyalpnclient" -> "orgeclipsejettyjettyio"
+"orgapachehttpcomponentshttpclient" -> "commonscodeccommonscodec"
+"orgapachehttpcomponentshttpclient" -> "orgapachehttpcomponentshttpcore"
+"orgapachehttpcomponentshttpclient" -> "commonsloggingcommonslogging"
+"orgxmlunitxmlunitlegacy" -> "orgxmlunitxmlunitcore"
+"orgxmlunitxmlunitplaceholders" -> "orgxmlunitxmlunitcore"
+"netjavacrumbsjsonunitjsonunitcore" -> "orghamcresthamcrestcore"
+"comjaywayjsonpathjsonpath" -> "netminidevjsonsmart"
+"comjaywayjsonpathjsonpath" -> "orgslf4jslf4japi"
+"netminidevjsonsmart" -> "netminidevaccessorssmart"
+"netminidevaccessorssmart" -> "orgow2asmasm"
+"comgithubjknackhandlebarshelpers" -> "comgithubjknackhandlebars"
+"comgithubjknackhandlebarshelpers" -> "orgapachecommonscommonslang3"
+"comgithubjknackhandlebars" -> "orgslf4jslf4japi"
+"besuacceptanceteststestplugins" -> "besubesu"
+"besuacceptanceteststestplugins" -> "besucrypto"
+"besuacceptanceteststestplugins" -> "besudatatypes"
+"besuacceptanceteststestplugins" -> "besuethereumcore"
+"besuacceptanceteststestplugins" -> "besuethereumrlp"
+"besuacceptanceteststestplugins" -> "besupluginapi"
+"besuacceptanceteststestplugins" -> "comgoogleautoserviceautoservice"
+"besuacceptanceteststestplugins" -> "infopicoclipicocli"
+"besuacceptanceteststestplugins" -> "orgapachelogginglog4jlog4japi"
+"besuacceptanceteststestplugins" -> "orgapachelogginglog4jlog4jcore"
+"besuacceptanceteststests" -> "besucrypto"
+"besuethereumevmtool" -> "besubesu"
+"besuethereumevmtool" -> "besuconfig"
+"besuethereumevmtool" -> "besucrypto"
+"besuethereumevmtool" -> "besudatatypes"
+"besuethereumevmtool" -> "besuconsensusclique"
+"besuethereumevmtool" -> "besuconsensuscommon"
+"besuethereumevmtool" -> "besuconsensusibft"
+"besuethereumevmtool" -> "besuconsensusqbft"
+"besuethereumevmtool" -> "besuethereumapi"
+"besuethereumevmtool" -> "besuethereumcore"
+"besuethereumevmtool" -> "besuethereumreferencetests"
+"besuethereumevmtool" -> "besuethereumrlp"
+"besuethereumevmtool" -> "besuevm"
+"besuethereumevmtool" -> "besumetricscore"
+"besuethereumevmtool" -> "besupluginsrocksdb"
+"besuethereumevmtool" -> "besuserviceskvstore"
+"besuethereumevmtool" -> "besuutil"
+"besuethereumevmtool" -> "comfasterxmljacksoncorejacksondatabind"
+"besuethereumevmtool" -> "comgoogledaggerdagger"
+"besuethereumevmtool" -> "comgoogleguavaguava"
+"besuethereumevmtool" -> "infopicoclipicocli"
+"besuethereumevmtool" -> "iovertxvertxcore"
+"besuethereumevmtool" -> "orgapachelogginglog4jlog4japi"
+"besuethereumevmtool" -> "orgapachelogginglog4jlog4jcore"
+"besuethereumreferencetests" -> "besuconfig"
+"besuethereumreferencetests" -> "besucrypto"
+"besuethereumreferencetests" -> "besudatatypes"
+"besuethereumreferencetests" -> "besuethereumcore"
+"besuethereumreferencetests" -> "besuethereumrlp"
+"besuethereumreferencetests" -> "besuevm"
+"besuethereumreferencetests" -> "besuserviceskvstore"
+"besuethereumreferencetests" -> "comfasterxmljacksoncorejacksondatabind"
+"besuethereumreferencetests" -> "comgoogleguavaguava"
+"besumetricsrocksdb" -> "besumetricscore"
+"besumetricsrocksdb" -> "besupluginapi"
+"besumetricsrocksdb" -> "comgoogleguavaguava"
+"besumetricsrocksdb" -> "ioprometheussimpleclient"
+"besumetricsrocksdb" -> "orgapachelogginglog4jlog4japi"
+"besumetricsrocksdb" -> "orgrocksdbrocksdbjni"
+"comgoogledaggerdagger" -> "javaxinjectjavaxinject"
+"besuethereummockp2p" -> "besupluginapi"
+"besuethereummockp2p" -> "besuethereump2p"
+"besuethereummockp2p" -> "besuethereumpermissioning"
+"besuethereummockp2p" -> "besuutil"
+"besuethereummockp2p" -> "iovertxvertxcore"
+"besuethereummockp2p" -> "orgapachetuwenituwenibytes"
+"dnsjavadnsjava" -> "orgslf4jslf4japi"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituwenicrypto"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituwenirlp"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituweniunits"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituweniio"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituweniconcurrentcoroutines"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituweniconcurrent"
+"orgapachetuwenituwenidevp2p" -> "orgapachetuwenituwenikademlia"
+"orgapachetuwenituwenidevp2p" -> "comgoogleguavaguava"
+"orgapachetuwenituwenidevp2p" -> "iovertxvertxlangkotlincoroutines"
+"orgapachetuwenituwenidevp2p" -> "iovertxvertxlangkotlin"
+"orgapachetuwenituwenidevp2p" -> "iovertxvertxcore"
+"orgapachetuwenituwenidevp2p" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgapachetuwenituwenidevp2p" -> "orgjetbrainskotlinkotlinstdlib"
+"orgapachetuwenituwenidevp2p" -> "orgslf4jslf4japi"
+"orgapachetuwenituweniconcurrentcoroutines" -> "orgapachetuwenituweniconcurrent"
+"orgapachetuwenituweniconcurrentcoroutines" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituweniconcurrentcoroutines" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgjetbrainskotlinxkotlinxcoroutinescore" -> "orgjetbrainskotlinxkotlinxcoroutinescorejvm"
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" -> "orgjetbrainskotlinkotlinstdlibcommon"
+"orgapachetuwenituwenikademlia" -> "comgoogleguavaguava"
+"orgapachetuwenituwenikademlia" -> "orgjetbrainskotlinkotlinstdlib"
+"iovertxvertxlangkotlincoroutines" -> "iovertxvertxcore"
+"iovertxvertxlangkotlincoroutines" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"iovertxvertxlangkotlincoroutines" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"iovertxvertxlangkotlin" -> "iovertxvertxcore"
+"iovertxvertxlangkotlin" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenidevp2p"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenimerkletrie"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenicrypto"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenirlp"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenikv"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituweniio"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituweniconcurrentcoroutines"
+"orgapachetuwenituwenidnsdiscovery" -> "orgapachetuwenituweniconcurrent"
+"orgapachetuwenituwenidnsdiscovery" -> "dnsjavadnsjava"
+"orgapachetuwenituwenidnsdiscovery" -> "iovertxvertxcore"
+"orgapachetuwenituwenidnsdiscovery" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenidnsdiscovery" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgapachetuwenituwenidnsdiscovery" -> "orgslf4jslf4japi"
+"orgapachetuwenituwenimerkletrie" -> "orgapachetuwenituwenicrypto"
+"orgapachetuwenituwenimerkletrie" -> "orgapachetuwenituwenirlp"
+"orgapachetuwenituwenimerkletrie" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenimerkletrie" -> "orgapachetuwenituweniconcurrentcoroutines"
+"orgapachetuwenituwenimerkletrie" -> "orgapachetuwenituweniconcurrent"
+"orgapachetuwenituwenimerkletrie" -> "comgoogleguavaguava"
+"orgapachetuwenituwenimerkletrie" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenimerkletrie" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgapachetuwenituwenikv" -> "orgapachetuwenituwenibytes"
+"orgapachetuwenituwenikv" -> "orgapachetuwenituweniio"
+"orgapachetuwenituwenikv" -> "orgapachetuwenituweniconcurrentcoroutines"
+"orgapachetuwenituwenikv" -> "orgapachetuwenituweniconcurrent"
+"orgapachetuwenituwenikv" -> "orgjetbrainskotlinxkotlinxcoroutinesguava"
+"orgapachetuwenituwenikv" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgapachetuwenituwenikv" -> "orgjetbrainskotlinxkotlinxcoroutinesjdk8"
+"orgapachetuwenituwenikv" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgapachetuwenituwenikv" -> "javaxpersistencejavaxpersistenceapi"
+"orgjetbrainskotlinxkotlinxcoroutinesguava" -> "comgoogleguavaguava"
+"orgjetbrainskotlinxkotlinxcoroutinesguava" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgjetbrainskotlinxkotlinxcoroutinesguava" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinxkotlinxcoroutinesjdk8" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgjetbrainskotlinxkotlinxcoroutinesjdk8" -> "orgjetbrainskotlinkotlinstdlib"
+}

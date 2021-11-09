@@ -1,0 +1,152 @@
+digraph "G" {
+node ["fontname"="Times New Roman"]
+"orgweb3jabi" ["shape"="rectangle","label"="abi"]
+"orgweb3jutils" ["shape"="rectangle","label"="utils"]
+"orgbouncycastlebcprovjdk15on" ["shape"="rectangle","label"="bcprov-jdk15on"]
+"orgweb3jbesu" ["shape"="rectangle","label"="besu"]
+"orgweb3jeea" ["shape"="rectangle","label"="eea"]
+"orgweb3jcore" ["shape"="rectangle","label"="core"]
+"orgweb3jcrypto" ["shape"="rectangle","label"="crypto"]
+"comfasterxmljacksoncorejacksondatabind" ["shape"="rectangle","label"="jackson-databind"]
+"comfasterxmljacksoncorejacksonannotations" ["shape"="rectangle","label"="jackson-annotations"]
+"comfasterxmljacksoncorejacksoncore" ["shape"="rectangle","label"="jackson-core"]
+"orgslf4jslf4japi" ["shape"="rectangle","label"="slf4j-api"]
+"orgweb3jrlp" ["shape"="rectangle","label"="rlp"]
+"orgweb3jtuples" ["shape"="rectangle","label"="tuples"]
+"comgithubjnrjnrunixsocket" ["shape"="rectangle","label"="jnr-unixsocket"]
+"comgithubjnrjnrenxio" ["shape"="rectangle","label"="jnr-enxio"]
+"comgithubjnrjnrffi" ["shape"="rectangle","label"="jnr-ffi"]
+"comgithubjnrjffi" ["shape"="rectangle","label"="jffi"]
+"orgow2asmasmcommons" ["shape"="rectangle","label"="asm-commons"]
+"orgow2asmasmtree" ["shape"="rectangle","label"="asm-tree"]
+"orgow2asmasm" ["shape"="rectangle","label"="asm"]
+"orgow2asmasmanalysis" ["shape"="rectangle","label"="asm-analysis"]
+"orgow2asmasmutil" ["shape"="rectangle","label"="asm-util"]
+"comgithubjnrjnra64asm" ["shape"="rectangle","label"="jnr-a64asm"]
+"comgithubjnrjnrx86asm" ["shape"="rectangle","label"="jnr-x86asm"]
+"comgithubjnrjnrconstants" ["shape"="rectangle","label"="jnr-constants"]
+"comgithubjnrjnrposix" ["shape"="rectangle","label"="jnr-posix"]
+"comsquareupokhttp3logginginterceptor" ["shape"="rectangle","label"="logging-interceptor"]
+"comsquareupokhttp3okhttp" ["shape"="rectangle","label"="okhttp"]
+"comsquareupokiookio" ["shape"="rectangle","label"="okio"]
+"orgjetbrainskotlinkotlinstdlib" ["shape"="rectangle","label"="kotlin-stdlib"]
+"orgjetbrainskotlinkotlinstdlibcommon" ["shape"="rectangle","label"="kotlin-stdlib-common"]
+"orgjetbrainsannotations" ["shape"="rectangle","label"="jetbrains-annotations"]
+"orgjetbrainskotlinkotlinstdlibjdk8" ["shape"="rectangle","label"="kotlin-stdlib-jdk8"]
+"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","label"="kotlin-stdlib-jdk7"]
+"ioreactivexrxjava2rxjava" ["shape"="rectangle","label"="rxjava"]
+"orgreactivestreamsreactivestreams" ["shape"="rectangle","label"="reactive-streams"]
+"orgjavawebsocketJavaWebSocket" ["shape"="rectangle","label"="Java-WebSocket"]
+"orgweb3jcodegen" ["shape"="rectangle","label"="codegen"]
+"comsquareupkotlinpoet" ["shape"="rectangle","label"="kotlinpoet"]
+"comsquareupjavapoet" ["shape"="rectangle","label"="javapoet"]
+"infopicoclipicocli" ["shape"="rectangle","label"="picocli"]
+"orgjunitplatformjunitplatformlauncher" ["shape"="rectangle","label"="junit-platform-launcher"]
+"orgjunitplatformjunitplatformengine" ["shape"="rectangle","label"="junit-platform-engine"]
+"orgjunitplatformjunitplatformcommons" ["shape"="rectangle","label"="junit-platform-commons"]
+"orgapiguardianapiguardianapi" ["shape"="rectangle","label"="apiguardian-api"]
+"orgopentest4jopentest4j" ["shape"="rectangle","label"="opentest4j"]
+"orgjunitjupiterjunitjupiterengine" ["shape"="rectangle","label"="junit-jupiter-engine"]
+"orgjunitjupiterjunitjupiterapi" ["shape"="rectangle","label"="junit-jupiter-api"]
+"orgjunitvintagejunitvintageengine" ["shape"="rectangle","label"="junit-vintage-engine"]
+"junitjunit" ["shape"="rectangle","label"="junit"]
+"orghamcresthamcrestcore" ["shape"="rectangle","label"="hamcrest-core"]
+"orgweb3jcontracts" ["shape"="rectangle","label"="contracts"]
+"orgweb3jgeth" ["shape"="rectangle","label"="geth"]
+"orgweb3jhostedproviders" ["shape"="rectangle","label"="hosted-providers"]
+"orgweb3jintegrationtests" ["shape"="rectangle","label"="integration-tests"]
+"orgweb3jparity" ["shape"="rectangle","label"="parity"]
+{
+graph ["rank"="same"]
+"orgweb3jcontracts"
+"orgweb3jhostedproviders"
+"orgweb3jintegrationtests"
+}
+"orgweb3jabi" -> "orgweb3jutils"
+"orgweb3jutils" -> "orgbouncycastlebcprovjdk15on"
+"orgweb3jbesu" -> "orgweb3jeea"
+"orgweb3jeea" -> "orgweb3jcore"
+"orgweb3jcore" -> "orgweb3jcrypto"
+"orgweb3jcore" -> "orgweb3jabi"
+"orgweb3jcore" -> "orgweb3jtuples"
+"orgweb3jcore" -> "comgithubjnrjnrunixsocket"
+"orgweb3jcore" -> "comsquareupokhttp3logginginterceptor"
+"orgweb3jcore" -> "comsquareupokhttp3okhttp"
+"orgweb3jcore" -> "ioreactivexrxjava2rxjava"
+"orgweb3jcore" -> "orgjavawebsocketJavaWebSocket"
+"orgweb3jcore" -> "comfasterxmljacksoncorejacksondatabind"
+"orgweb3jcore" -> "orgslf4jslf4japi"
+"orgweb3jcrypto" -> "orgweb3jabi"
+"orgweb3jcrypto" -> "comfasterxmljacksoncorejacksondatabind"
+"orgweb3jcrypto" -> "orgslf4jslf4japi"
+"orgweb3jcrypto" -> "orgweb3jrlp"
+"orgweb3jcrypto" -> "orgweb3jutils"
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksonannotations"
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksoncore"
+"orgweb3jrlp" -> "orgweb3jutils"
+"comgithubjnrjnrunixsocket" -> "comgithubjnrjnrenxio"
+"comgithubjnrjnrunixsocket" -> "comgithubjnrjnrposix"
+"comgithubjnrjnrunixsocket" -> "comgithubjnrjnrffi"
+"comgithubjnrjnrunixsocket" -> "comgithubjnrjnrconstants"
+"comgithubjnrjnrenxio" -> "comgithubjnrjnrffi"
+"comgithubjnrjnrenxio" -> "comgithubjnrjnrconstants"
+"comgithubjnrjnrffi" -> "comgithubjnrjffi"
+"comgithubjnrjnrffi" -> "orgow2asmasmcommons"
+"comgithubjnrjnrffi" -> "orgow2asmasmanalysis"
+"comgithubjnrjnrffi" -> "orgow2asmasmutil"
+"comgithubjnrjnrffi" -> "orgow2asmasmtree"
+"comgithubjnrjnrffi" -> "orgow2asmasm"
+"comgithubjnrjnrffi" -> "comgithubjnrjnra64asm"
+"comgithubjnrjnrffi" -> "comgithubjnrjnrx86asm"
+"orgow2asmasmcommons" -> "orgow2asmasmtree"
+"orgow2asmasmtree" -> "orgow2asmasm"
+"orgow2asmasmanalysis" -> "orgow2asmasmtree"
+"orgow2asmasmutil" -> "orgow2asmasmtree"
+"comgithubjnrjnrposix" -> "comgithubjnrjnrffi"
+"comgithubjnrjnrposix" -> "comgithubjnrjnrconstants"
+"comsquareupokhttp3logginginterceptor" -> "comsquareupokhttp3okhttp"
+"comsquareupokhttp3logginginterceptor" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"comsquareupokhttp3okhttp" -> "comsquareupokiookio"
+"comsquareupokhttp3okhttp" -> "orgjetbrainskotlinkotlinstdlib"
+"comsquareupokiookio" -> "orgjetbrainskotlinkotlinstdlib"
+"comsquareupokiookio" -> "orgjetbrainskotlinkotlinstdlibcommon"
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainskotlinkotlinstdlibcommon"
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainsannotations"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlibjdk7"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinkotlinstdlibjdk7" -> "orgjetbrainskotlinkotlinstdlib"
+"ioreactivexrxjava2rxjava" -> "orgreactivestreamsreactivestreams"
+"orgweb3jcodegen" -> "orgweb3jcore"
+"orgweb3jcodegen" -> "comsquareupkotlinpoet"
+"orgweb3jcodegen" -> "comsquareupjavapoet"
+"orgweb3jcodegen" -> "infopicoclipicocli"
+"orgweb3jcodegen" -> "orgjunitplatformjunitplatformlauncher"
+"orgweb3jcodegen" -> "orgjunitjupiterjunitjupiterengine"
+"orgweb3jcodegen" -> "orgjunitvintagejunitvintageengine"
+"comsquareupkotlinpoet" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgjunitplatformjunitplatformlauncher" -> "orgjunitplatformjunitplatformengine"
+"orgjunitplatformjunitplatformlauncher" -> "orgapiguardianapiguardianapi"
+"orgjunitplatformjunitplatformengine" -> "orgjunitplatformjunitplatformcommons"
+"orgjunitplatformjunitplatformengine" -> "orgapiguardianapiguardianapi"
+"orgjunitplatformjunitplatformengine" -> "orgopentest4jopentest4j"
+"orgjunitplatformjunitplatformcommons" -> "orgapiguardianapiguardianapi"
+"orgjunitjupiterjunitjupiterengine" -> "orgjunitplatformjunitplatformengine"
+"orgjunitjupiterjunitjupiterengine" -> "orgjunitjupiterjunitjupiterapi"
+"orgjunitjupiterjunitjupiterengine" -> "orgapiguardianapiguardianapi"
+"orgjunitjupiterjunitjupiterapi" -> "orgjunitplatformjunitplatformcommons"
+"orgjunitjupiterjunitjupiterapi" -> "orgapiguardianapiguardianapi"
+"orgjunitjupiterjunitjupiterapi" -> "orgopentest4jopentest4j"
+"orgjunitvintagejunitvintageengine" -> "orgjunitplatformjunitplatformengine"
+"orgjunitvintagejunitvintageengine" -> "orgapiguardianapiguardianapi"
+"orgjunitvintagejunitvintageengine" -> "junitjunit"
+"junitjunit" -> "orghamcresthamcrestcore"
+"orgweb3jcontracts" -> "orgweb3jcore"
+"orgweb3jgeth" -> "orgweb3jcore"
+"orgweb3jhostedproviders" -> "orgweb3jcore"
+"orgweb3jintegrationtests" -> "orgweb3jcore"
+"orgweb3jintegrationtests" -> "orgweb3jbesu"
+"orgweb3jintegrationtests" -> "orgweb3jparity"
+"orgweb3jintegrationtests" -> "orgweb3jgeth"
+"orgweb3jintegrationtests" -> "orgweb3jcodegen"
+"orgweb3jparity" -> "orgweb3jcore"
+}
