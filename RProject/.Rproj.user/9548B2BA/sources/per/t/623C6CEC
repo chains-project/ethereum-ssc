@@ -1,0 +1,28 @@
+{
+    "id": "623C6CEC",
+    "path": "~/WebstormProjects/ethereum-ssc/RProject/fig1.Rmd.Rmd",
+    "project_path": "fig1.Rmd.Rmd",
+    "type": "r_markdown",
+    "hash": "2948479480",
+    "contents": "",
+    "dirty": false,
+    "created": 1639227511681.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "10,48",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1640169738,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1640169738972,
+    "read_only": false,
+    "read_only_alternatives": []
+}
