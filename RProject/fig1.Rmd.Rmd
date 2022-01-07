@@ -4,18 +4,94 @@ output: html_notebook
 ---
 
 ```{r}
-devtools::install_github("fbreitwieser/hiervis")
-library(hiervis)
+library(tidyverse)
 
- agwrite(graph, filename) 
- agread(filename, layoutType="dot", layout=TRUE)
+besu_data <- read.csv("besu_produc-inventory-report.csv", sep = ";")
+teku_data <- read.csv("teku_produc-inventory-report.csv", sep = ";")
+web3j_data <- read.csv("web3j_produc-inventory-report.csv", sep = ";")
 
 ```
+
+# Count the number of different suppliers.
 
 ```{r}
-hiervis_demo()
-str(Titanic)
+besu_data %>% 
+  select("Group") %>%
+  group_by(Group) %>%         
+  summarise(Unique_Elements = n())
 
-Titanic
+teku_data %>% 
+  select("Group") %>%
+  group_by(Group) %>%         
+  summarise(Unique_Elements = n())
+
+web3j_data %>% 
+  select("Group") %>%
+  group_by(Group) %>%         
+  summarise(Unique_Elements = n())
 ```
+# Count the number of unique direct and transitive dependencies
 
+```{r}
+besu_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+besu_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+
+teku_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+teku_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+
+web3j_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+web3j_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+```
+# Count the number of internal dependencies
+
+```{r}
+besu_data %>% 
+  select("Name") %>%
+  group_by(Name) %>%         
+  summarise(Unique_Elements = n()) %>% 
+  filter(across(Name, ~ grepl('besu', .)))
+
+
+teku_data %>% 
+  select("Name") %>%
+  group_by(Name) %>%         
+  summarise(Unique_Elements = n()) %>% 
+  filter(across(Name, ~ grepl('teku', .)))
+
+web3j_data %>% 
+  select("Name") %>%
+  group_by(Name) %>%         
+  summarise(Unique_Elements = n()) %>% 
+  filter(across(Name, ~ grepl('teku', .)))
+
+```
