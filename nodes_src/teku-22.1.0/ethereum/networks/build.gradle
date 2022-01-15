@@ -1,0 +1,12 @@
+dependencies {
+    api project(':ethereum:spec')
+
+    implementation project(':infrastructure:io')
+    implementation 'org.apache.tuweni:tuweni-units'
+
+    testImplementation 'tech.pegasys.discovery:discovery'
+
+    testFixturesImplementation project(':ethereum:spec')
+    testFixturesImplementation project(':infrastructure:io')
+    testFixturesImplementation 'com.google.guava:guava'
+}

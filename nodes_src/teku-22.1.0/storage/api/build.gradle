@@ -1,0 +1,13 @@
+dependencies {
+    implementation project(':infrastructure:async')
+    implementation project(':infrastructure:events')
+    implementation project(':util')
+
+    implementation 'org.apache.tuweni:tuweni-bytes'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) { artifactId 'storage-api' }
+    }
+}

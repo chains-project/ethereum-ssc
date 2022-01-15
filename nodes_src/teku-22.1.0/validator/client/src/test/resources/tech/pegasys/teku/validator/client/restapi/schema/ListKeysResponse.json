@@ -1,0 +1,24 @@
+{
+  "title": "ListKeysResponse",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "validating_pubkey": {
+            "$ref": "#/components/schemas/PubKey"
+          },
+          "derivation_path": {
+            "type": "string",
+            "description": "The derivation path (if present in the imported keystore)."
+          },
+          "readonly": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

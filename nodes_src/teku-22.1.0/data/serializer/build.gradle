@@ -1,0 +1,15 @@
+dependencies {
+  api 'com.fasterxml.jackson.core:jackson-databind'
+  api 'io.swagger.core.v3:swagger-annotations'
+
+  implementation project(':ethereum:spec')
+  implementation project(':infrastructure:bls')
+  implementation project(':util')
+  implementation 'org.apache.tuweni:tuweni-bytes'
+  implementation 'org.apache.tuweni:tuweni-units'
+
+  testImplementation project(':data:provider')
+  testImplementation testFixtures(project(':ethereum:spec'))
+  testImplementation testFixtures(project(':ethereum:networks'))
+  testImplementation testFixtures(project(':infrastructure:ssz'))
+}

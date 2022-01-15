@@ -1,0 +1,24 @@
+jar { enabled = false }
+
+dependencies {
+    integrationTestImplementation project(':data')
+    integrationTestImplementation project(':ethereum:core')
+    integrationTestImplementation testFixtures(project(':ethereum:spec'))
+    integrationTestImplementation project(':ethereum:statetransition')
+    integrationTestImplementation project(':eth-tests')
+    integrationTestImplementation project(':protoarray')
+    integrationTestImplementation project(':infrastructure:bls')
+    integrationTestImplementation project(':infrastructure:ssz')
+    integrationTestImplementation project(':storage')
+    integrationTestImplementation project(':infrastructure:async')
+    integrationTestImplementation project(':util')
+
+    integrationTestImplementation testFixtures(project(':ethereum:networks'))
+    integrationTestImplementation testFixtures(project(':infrastructure:async'))
+    integrationTestImplementation testFixtures(project(':storage'))
+
+    integrationTestImplementation 'com.fasterxml.jackson.core:jackson-databind'
+    integrationTestImplementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    integrationTestImplementation 'org.apache.tuweni:tuweni-bytes'
+    integrationTestImplementation 'org.apache.tuweni:tuweni-junit'
+}

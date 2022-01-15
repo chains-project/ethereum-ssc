@@ -1,0 +1,20 @@
+dependencies {
+  implementation project(':infrastructure:async')
+  implementation project(':infrastructure:bls')
+  implementation project(':infrastructure:events')
+  implementation project(':infrastructure:exceptions')
+  implementation project(':ethereum:core')
+  implementation project(':ethereum:spec')
+  implementation project(':data:serializer')
+  implementation project(':util')
+  implementation 'org.apache.tuweni:tuweni-bytes'
+
+  testImplementation testFixtures(project(':infrastructure:bls'))
+  testImplementation testFixtures(project(':ethereum:spec'))
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) { artifactId 'validator-api' }
+  }
+}

@@ -1,0 +1,21 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1900 files    2000 files    2100 files    2200 files    2300 files    2400 files    2500 files    2600 files    2700 files    2800 files    2900 files    3000 files    3100 files    3152 text files.
+classified 3152 filesDuplicate file check 3152 files (2444 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                          Unique:     1600 files                                          Unique:     1700 files                                          Unique:     1800 files                                          Unique:     1900 files                                          Unique:     2000 files                                          Unique:     2100 files                                          Unique:     2200 files                                          Unique:     2300 files                                          Unique:     2400 files                                              3132 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800Counting:  1900Counting:  2000Counting:  2100Counting:  2200Counting:  2300Counting:  2400Counting:  2500Counting:  2600Counting:  2700Counting:  2800Counting:  2900Counting:  3000Counting:  3100      57 files ignored.
+
+github.com/AlDanial/cloc v 1.90  T=3.77 s (822.7 files/s, 84315.7 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                          2582          39149          40788         209860
+YAML                           222            605           1910          11832
+JSON                           197              1              0           9125
+Gradle                          68            322             88           2274
+Markdown                        15            223              0            697
+XML                             11              0              0            561
+JavaScript                       2             29             21            168
+Bourne Shell                     3             35            108            124
+Dockerfile                       3             27             12             85
+DOS Batch                        1             21              2             66
+-------------------------------------------------------------------------------
+SUM:                          3104          40412          42929         234792
+-------------------------------------------------------------------------------

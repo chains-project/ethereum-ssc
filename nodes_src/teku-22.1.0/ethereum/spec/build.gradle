@@ -1,0 +1,65 @@
+dependencies {
+    api 'it.unimi.dsi:fastutil'
+    api 'org.apache.tuweni:tuweni-bytes'
+
+    implementation project(':infrastructure:ssz')
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'org.apache.tuweni:tuweni-ssz'
+
+    testFixturesImplementation project(':infrastructure:unsigned')
+    testFixturesImplementation testFixtures(project(':infrastructure:bls'))
+    testFixturesImplementation project(':infrastructure:io')
+    testFixturesImplementation 'org.apache.tuweni:tuweni-units'
+    testFixturesImplementation 'org.junit.jupiter:junit-jupiter-api'
+
+    testFixturesApi project(':ethereum:pow:api')
+    testFixturesApi 'com.google.guava:guava'
+
+    testImplementation testFixtures(project(':infrastructure:bls'))
+
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+
+
+    // From datastructures - TODO(#3356) clean up these imports
+    api project(':infrastructure:bls')
+    api project(':infrastructure:ssz')
+    api project(':util')
+
+    implementation project(':infrastructure:async')
+    implementation project(':infrastructure:bls')
+    implementation project(':infrastructure:crypto')
+    api project(':infrastructure:collections')
+    implementation project(':infrastructure:events')
+    implementation project(':infrastructure:io')
+    implementation project(':infrastructure:logging')
+    implementation project(':ethereum:pow:api')
+
+    implementation 'com.google.code.gson:gson'
+    implementation 'org.apache.tuweni:tuweni-bytes'
+    implementation 'org.apache.tuweni:tuweni-units'
+    implementation 'org.apache.tuweni:tuweni-ssz'
+
+    testImplementation testFixtures(project(':infrastructure:bls'))
+    testImplementation testFixtures(project(':infrastructure:ssz'))
+
+    testImplementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+
+    testFixturesApi project(':ethereum:pow:api')
+    testFixturesApi project(':infrastructure:ssz')
+    testFixturesApi project(':storage:api')
+
+    testFixturesApi 'org.apache.tuweni:tuweni-bytes'
+    testFixturesApi 'com.google.guava:guava'
+    testFixturesApi project(':infrastructure:unsigned')
+
+    testFixturesImplementation project(':util')
+    testFixturesImplementation project(':infrastructure:async')
+    testFixturesImplementation project(':infrastructure:bls')
+    testFixturesImplementation testFixtures(project(':infrastructure:bls'))
+    testFixturesImplementation project(':infrastructure:events')
+}
