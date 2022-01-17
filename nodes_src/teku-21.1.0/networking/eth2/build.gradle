@@ -1,0 +1,65 @@
+dependencies {
+  api project(':networking:p2p')
+  implementation project(':bls')
+  implementation project(':data')
+  implementation project(':ethereum:core')
+  implementation project(':ethereum:datastructures')
+  implementation project(':ethereum:statetransition')
+  implementation project(':infrastructure:async')
+  implementation project(':infrastructure:collections')
+  implementation project(':infrastructure:logging')
+  implementation project(':infrastructure:metrics')
+  implementation project(':infrastructure:subscribers')
+  implementation project(':ssz')
+  implementation project(':storage')
+  implementation project(':storage:api')
+  implementation project(':protoarray')
+  implementation project(':util')
+  implementation project(':services:serviceutils')
+
+  implementation 'io.libp2p:jvm-libp2p-minimal'
+  implementation 'io.vertx:vertx-core'
+  implementation 'org.apache.tuweni:tuweni-bytes'
+  implementation 'org.apache.tuweni:tuweni-plumtree'
+  implementation 'org.apache.tuweni:tuweni-rlpx'
+  implementation 'org.apache.tuweni:tuweni-ssz'
+  implementation 'org.apache.tuweni:tuweni-units'
+  implementation 'org.xerial.snappy:snappy-java'
+
+  testImplementation testFixtures(project(':infrastructure:metrics'))
+  testImplementation testFixtures(project(':ethereum:core'))
+  testImplementation testFixtures(project(':ethereum:datastructures'))
+  testImplementation testFixtures(project(':ethereum:statetransition'))
+  testImplementation testFixtures(project(':infrastructure:async'))
+  testImplementation testFixtures(project(':infrastructure:time'))
+  testImplementation testFixtures(project(':networking:p2p'))
+  testImplementation testFixtures(project(':util'))
+  testImplementation testFixtures(project(':storage'))
+
+  testImplementation 'org.hyperledger.besu.internal:metrics-core'
+
+  integrationTestImplementation testFixtures(project(':ethereum:core'))
+  integrationTestImplementation testFixtures(project(':ethereum:datastructures'))
+  integrationTestImplementation testFixtures(project(':ethereum:statetransition'))
+  integrationTestImplementation testFixtures(project(':networking:eth2'))
+  integrationTestImplementation testFixtures(project(':util'))
+  integrationTestImplementation testFixtures(project(':infrastructure:events'))
+
+  testFixturesImplementation testFixtures(project(':ethereum:datastructures'))
+  testFixturesImplementation testFixtures(project(':ethereum:core'))
+  testFixturesImplementation testFixtures(project(':ethereum:statetransition'))
+  testFixturesImplementation testFixtures(project(':networking:p2p'))
+  testFixturesImplementation testFixtures(project(':infrastructure:async'))
+  testFixturesImplementation testFixtures(project(':util'))
+  testFixturesImplementation testFixtures(project(':infrastructure:events'))
+  testFixturesImplementation testFixtures(project(':infrastructure:time'))
+  testFixturesImplementation testFixtures(project(':storage'))
+  testFixturesImplementation project(':infrastructure:subscribers')
+  testFixturesImplementation project(':services:serviceutils')
+
+  testFixturesImplementation 'io.libp2p:jvm-libp2p-minimal'
+  testFixturesImplementation 'org.mockito:mockito-core'
+  testFixturesImplementation 'org.hyperledger.besu:plugin-api'
+  testFixturesImplementation 'org.hyperledger.besu.internal:metrics-core'
+  testFixturesImplementation 'org.apache.logging.log4j:log4j-core'
+}

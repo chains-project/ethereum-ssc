@@ -1,0 +1,287 @@
+ com.fasterxml.jackson.core:jackson-annotations
+ com.fasterxml.jackson.core:jackson-core
+ com.fasterxml.jackson.core:jackson-databind
+ com.fasterxml.jackson.datatype:jackson-datatype-jdk8
+ com.flipkart.zjsonpatch:zjsonpatch
+ com.github.ben-manes.caffeine:caffeine
+ com.github.jknack:handlebars
+ com.github.jknack:handlebars-helpers
+ com.github.jnr:jffi
+ com.github.jnr:jnr-a64asm
+ com.github.jnr:jnr-constants
+ com.github.jnr:jnr-enxio
+ com.github.jnr:jnr-ffi
+ com.github.jnr:jnr-posix
+ com.github.jnr:jnr-unixsocket
+ com.github.jnr:jnr-x86asm
+ com.github.kevinstern:software-and-algorithms
+ com.github.tomakehurst:wiremock-jre8
+ com.github.tomakehurst:wiremock-jre8-standalone
+ com.google.android:annotations
+ com.google.api.grpc:proto-google-common-protos
+ com.google.auto.service:auto-service
+ com.google.auto.service:auto-service-annotations
+ com.google.auto.value:auto-value
+ com.google.auto.value:auto-value-annotations
+ com.google.auto:auto-common
+ com.google.code.findbugs:jFormatString
+ com.google.code.findbugs:jsr305
+ com.google.code.gson:gson
+ com.google.dagger:dagger
+ com.google.dagger:dagger-compiler
+ com.google.dagger:dagger-producers
+ com.google.dagger:dagger-spi
+ com.google.errorprone:error_prone_annotation
+ com.google.errorprone:error_prone_annotations
+ com.google.errorprone:error_prone_check_api
+ com.google.errorprone:error_prone_core
+ com.google.errorprone:error_prone_test_helpers
+ com.google.errorprone:error_prone_type_annotations
+ com.google.errorprone:javac-shaded:9-dev-r4023
+ com.google.errorprone:javac:9+181-r4173-1
+ com.google.googlejavaformat:google-java-format
+ com.google.guava:failureaccess
+ com.google.guava:guava
+ com.google.guava:listenablefuture
+ com.google.j2objc:j2objc-annotations
+ com.google.jimfs:jimfs
+ com.google.protobuf:protobuf-java
+ com.google.testing.compile:compile-testing
+ com.google.truth:truth
+ com.googlecode.java-diff-utils:diffutils
+ com.graphql-java:graphql-java
+ com.graphql-java:java-dataloader
+ com.jayway.jsonpath:json-path
+ com.splunk.logging:splunk-library-javalogging
+ com.squareup.okhttp3:logging-interceptor
+ com.squareup.okhttp3:okhttp
+ com.squareup.okhttp:logging-interceptor
+ com.squareup.okhttp:okhttp
+ com.squareup.okhttp:okhttp-ws
+ com.squareup.okio:okio
+ com.squareup:javapoet
+ commons-codec:commons-codec
+ commons-fileupload:commons-fileupload
+ commons-io:commons-io
+ commons-logging:commons-logging
+ dnsjava:dnsjava
+ info.picocli:picocli
+ io.grpc:grpc-api
+ io.grpc:grpc-context
+ io.grpc:grpc-core
+ io.grpc:grpc-netty
+ io.grpc:grpc-protobuf
+ io.grpc:grpc-protobuf-lite
+ io.grpc:grpc-stub
+ io.kubernetes:client-java
+ io.kubernetes:client-java-api
+ io.kubernetes:client-java-proto
+ io.netty:netty-all
+ io.netty:netty-buffer
+ io.netty:netty-codec
+ io.netty:netty-codec-dns
+ io.netty:netty-codec-http
+ io.netty:netty-codec-http2
+ io.netty:netty-codec-socks
+ io.netty:netty-common
+ io.netty:netty-handler
+ io.netty:netty-handler-proxy
+ io.netty:netty-resolver
+ io.netty:netty-resolver-dns
+ io.netty:netty-tcnative-boringssl-static
+ io.netty:netty-transport
+ io.netty:netty-transport-native-epoll
+ io.netty:netty-transport-native-unix
+ io.opentelemetry:opentelemetry-api
+ io.opentelemetry:opentelemetry-api-baggage
+ io.opentelemetry:opentelemetry-api-common
+ io.opentelemetry:opentelemetry-api-metrics
+ io.opentelemetry:opentelemetry-api-trace
+ io.opentelemetry:opentelemetry-context
+ io.opentelemetry:opentelemetry-exporter-otlp
+ io.opentelemetry:opentelemetry-exporter-otlp-metrics
+ io.opentelemetry:opentelemetry-exporter-otlp-trace
+ io.opentelemetry:opentelemetry-extension-trace-propagators
+ io.opentelemetry:opentelemetry-proto
+ io.opentelemetry:opentelemetry-sdk
+ io.opentelemetry:opentelemetry-sdk-common
+ io.opentelemetry:opentelemetry-sdk-extension-otproto
+ io.opentelemetry:opentelemetry-sdk-metrics
+ io.opentelemetry:opentelemetry-sdk-trace
+ io.perfmark:perfmark-api
+ io.pkts:pkts-buffers
+ io.pkts:pkts-core
+ io.prometheus:simpleclient
+ io.prometheus:simpleclient_common
+ io.prometheus:simpleclient_hotspot
+ io.prometheus:simpleclient_pushgateway
+ io.reactivex.rxjava2:rxjava
+ io.sundr:builder-annotations
+ io.sundr:resourcecify-annotations
+ io.sundr:sundr-codegen
+ io.sundr:sundr-core
+ io.swagger:swagger-annotations
+ io.vertx:vertx-auth-common
+ io.vertx:vertx-auth-jwt
+ io.vertx:vertx-bridge-common
+ io.vertx:vertx-codegen
+ io.vertx:vertx-core
+ io.vertx:vertx-jwt
+ io.vertx:vertx-unit
+ io.vertx:vertx-web
+ io.vertx:vertx-web-common
+ javax.annotation:jsr250-api
+ javax.inject:javax.inject:1
+ javax.servlet:javax.servlet-api
+ javax.xml.bind:jaxb-api
+ joda-time:joda-time
+ junit:junit
+ net.bytebuddy:byte-buddy
+ net.bytebuddy:byte-buddy-agent
+ net.consensys:orion
+ net.java.dev.jna:jna
+ net.javacrumbs.json-unit:json-unit-core
+ net.ltgt.gradle.incap:incap
+ net.minidev:accessors-smart
+ net.minidev:json-smart
+ net.sf.jopt-simple:jopt-simple
+ org.antlr:antlr4-runtime
+ org.apache.commons:commons-compress
+ org.apache.commons:commons-lang3
+ org.apache.commons:commons-math3
+ org.apache.commons:commons-text
+ org.apache.httpcomponents:httpclient
+ org.apache.httpcomponents:httpcore
+ org.apache.logging.log4j:log4j-api
+ org.apache.logging.log4j:log4j-core
+ org.apache.logging.log4j:log4j-jul
+ org.apache.logging.log4j:log4j-slf4j-impl
+ org.apache.tuweni:bytes
+ org.apache.tuweni:config
+ org.apache.tuweni:crypto
+ org.apache.tuweni:devp2p
+ org.apache.tuweni:dns-discovery
+ org.apache.tuweni:io
+ org.apache.tuweni:net
+ org.apache.tuweni:rlp
+ org.apache.tuweni:toml
+ org.apache.tuweni:units
+ org.assertj:assertj-core
+ org.awaitility:awaitility
+ org.bouncycastle:bcpkix-jdk15on
+ org.bouncycastle:bcprov-ext-jdk15on
+ org.bouncycastle:bcprov-jdk15on
+ org.checkerframework:checker-compat-qual
+ org.checkerframework:checker-qual
+ org.checkerframework:dataflow-shaded
+ org.codehaus.mojo:animal-sniffer-annotations
+ org.conscrypt:conscrypt-openjdk-uber
+ org.eclipse.jetty.http2:http2-common
+ org.eclipse.jetty.http2:http2-hpack
+ org.eclipse.jetty.http2:http2-server
+ org.eclipse.jetty:jetty-alpn-client
+ org.eclipse.jetty:jetty-alpn-conscrypt-client
+ org.eclipse.jetty:jetty-alpn-conscrypt-server
+ org.eclipse.jetty:jetty-alpn-server
+ org.eclipse.jetty:jetty-continuation
+ org.eclipse.jetty:jetty-http
+ org.eclipse.jetty:jetty-io
+ org.eclipse.jetty:jetty-security
+ org.eclipse.jetty:jetty-server
+ org.eclipse.jetty:jetty-servlet
+ org.eclipse.jetty:jetty-servlets
+ org.eclipse.jetty:jetty-util
+ org.eclipse.jetty:jetty-webapp
+ org.eclipse.jetty:jetty-xml
+ org.fusesource.jansi:jansi
+ org.hamcrest:hamcrest
+ org.hamcrest:hamcrest-core
+ org.hamcrest:hamcrest-library
+ org.hyperledger.besu:bls12-381
+ org.hyperledger.besu:secp256k1
+ org.immutables:value
+ org.immutables:value-annotations
+ org.jacoco:org.jacoco.agent
+ org.jacoco:org.jacoco.ant
+ org.jacoco:org.jacoco.core
+ org.jacoco:org.jacoco.report
+ org.java-websocket:Java-WebSocket
+ org.jetbrains.kotlin:kotlin-stdlib
+ org.jetbrains.kotlin:kotlin-stdlib-common
+ org.jetbrains.kotlinx:kotlinx-metadata-jvm
+ org.jetbrains:annotations
+ org.joda:joda-convert
+ org.jupnp:org.jupnp
+ org.jupnp:org.jupnp.support
+ org.mockito:mockito-core
+ org.mvel:mvel2
+ org.objenesis:objenesis
+ org.openjdk.jmh:jmh-core
+ org.openjdk.jmh:jmh-generator-annprocess
+ org.openjdk.jmh:jmh-generator-asm
+ org.openjdk.jmh:jmh-generator-bytecode
+ org.openjdk.jmh:jmh-generator-reflection
+ org.opentest4j:opentest4j
+ org.ow2.asm:asm
+ org.ow2.asm:asm-analysis
+ org.ow2.asm:asm-commons
+ org.ow2.asm:asm-tree
+ org.ow2.asm:asm-util
+ org.pcollections:pcollections
+ org.reactivestreams:reactive-streams
+ org.rocksdb:rocksdbjni
+ org.slf4j:slf4j-api
+ org.springframework.security:spring-security-crypto
+ org.threeten:threeten-extra
+ org.web3j:abi
+ org.web3j:besu
+ org.web3j:core
+ org.web3j:crypto
+ org.web3j:eea
+ org.web3j:rlp
+ org.web3j:tuples
+ org.web3j:utils
+ org.xerial.snappy:snappy-java
+ org.xmlunit:xmlunit-core
+ org.xmlunit:xmlunit-legacy
+ org.xmlunit:xmlunit-placeholders
+ org.yaml:snakeyaml
+ project :acceptance-tests:dsl
+ project :besu
+ project :config
+ project :consensus:clique
+ project :consensus:common
+ project :consensus:ibft
+ project :consensus:ibftlegacy
+ project :crypto
+ project :enclave
+ project :errorprone-checks
+ project :ethereum:api
+ project :ethereum:blockcreation
+ project :ethereum:core
+ project :ethereum:eth
+ project :ethereum:ethstats
+ project :ethereum:evmtool
+ project :ethereum:mock-p2p
+ project :ethereum:p2p
+ project :ethereum:permissioning
+ project :ethereum:referencetests
+ project :ethereum:retesteth
+ project :ethereum:rlp
+ project :ethereum:stratum
+ project :ethereum:trie
+ project :metrics:core
+ project :metrics:rocksdb
+ project :nat
+ project :plugin-api
+ project :plugins:rocksdb
+ project :privacy-contracts
+ project :services:kvstore
+ project :services:pipeline
+ project :services:tasks
+ project :testutil
+ project :util
+ tech.pegasys.discovery:discovery
+ tech.pegasys.ethsigner.internal:core
+ tech.pegasys.ethsigner.internal:file-based
+ tech.pegasys.ethsigner.internal:signing-api

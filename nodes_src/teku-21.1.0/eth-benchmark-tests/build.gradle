@@ -1,0 +1,36 @@
+plugins {
+  id 'me.champeau.gradle.jmh'
+}
+
+idea {
+  module {
+    testSourceDirs += sourceSets.main.java.srcDirs
+  }
+}
+
+dependencies {
+  implementation project(':bls')
+  implementation project(':ethereum:weaksubjectivity')
+  implementation project(':eth-tests')
+  implementation project(':infrastructure:async')
+  implementation project(':util')
+  implementation project(':data')
+
+  implementation testFixtures(project(':ethereum:core'))
+  implementation testFixtures(project(':ethereum:datastructures'))
+  implementation testFixtures(project(':ethereum:statetransition'))
+  implementation testFixtures(project(':storage'))
+
+  implementation 'org.apache.tuweni:tuweni-bytes'
+  implementation 'org.miracl.milagro.amcl:milagro-crypto-java'
+
+  jmh 'org.openjdk.jmh:jmh-core'
+  jmh 'org.openjdk.jmh:jmh-generator-annprocess'
+  jmh 'org.apache.tuweni:tuweni-ssz'
+  jmh project(':bls')
+}
+
+jmh {
+  resultFormat = 'CSV'
+  duplicateClassesStrategy = 'warn'
+}

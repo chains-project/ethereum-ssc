@@ -1,0 +1,166 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+
+besu_deps_direct <- read.csv("Data/besu-21.10.6_dependencies_direct.txt", sep = " ", header = FALSE)
+teku_deps_direct <- read.csv("Data/teku-22.1.0_dependencies_direct.txt", sep = " ", header = FALSE)
+
+besu_deps_all <- read.csv("Data/besu-21.10.6_dependencies_all.txt", sep = ":", header = FALSE)
+teku_deps_all <- read.csv("Data/teku-22.1.0_dependencies_all.txt", sep = ":", header = FALSE)
+
+besu_deps_all_Jan2021 <- read.csv("Data/besu-20.10.4_dependencies_all.txt", sep = ":", header = FALSE)
+teku_deps_all_Jan2021 <- read.csv("Data/teku-21.1.0_dependencies_all.txt", sep = ":", header = FALSE)
+
+
+besu_deps_all_Jan2021_gav <- read.csv("Data/besu-20.10.4_dependencies_all_gav.txt", sep = ":", header = FALSE)
+besu_deps_all_gav <- read.csv("Data/besu-21.10.6_dependencies_all_gav.txt", sep = ":", header = FALSE)
+
+teku_deps_all_Jan2021_gav <- read.csv("Data/teku-21.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
+teku_deps_all_gav <- read.csv("Data/teku-22.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
+
+
+```
+
+# Unique direct dependencies
+
+```{r}
+besu_deps_direct <- besu_deps_direct %>% 
+  rename(Type =  V2, GA = V3) %>% 
+  select(GA) %>% 
+  distinct()
+print("Unique direct dependencies (Besu):")
+nrow(besu_deps_direct)
+
+
+teku_deps_direct <- teku_deps_direct %>% 
+  rename(Type = V2, GA = V3) %>% 
+  select(GA) %>% 
+  distinct()
+print("Unique direct dependencies (Teku):")
+nrow(teku_deps_direct)
+```
+
+# Unique transitive dependencies
+
+```{r}
+besu_deps_all <- besu_deps_all %>% 
+  rename(G = V1, A = V2) %>% 
+  mutate(GA = paste(G,A,sep = ":"))
+print("Unique transitive dependencies (Besu):")
+nrow(besu_deps_all) - nrow(besu_deps_direct)
+
+teku_deps_all <- teku_deps_all %>% 
+  rename(G = V1, A = V2) %>% 
+  mutate(GA = paste(G,A,sep = ":"))
+print("Unique transitive dependencies (Teku):")
+nrow(teku_deps_all) - nrow(teku_deps_direct)
+```
+
+# Unique third-party dependencies
+
+```{r}
+besu_deps_all %>%
+  filter(!str_detect(G, 'project-'))
+
+teku_deps_all %>%
+  filter(!str_detect(G, 'project-'))
+```
+
+# Unique third-party suppliers
+
+```{r}
+besu_deps_all %>%
+  select(G) %>% 
+  distinct()
+
+teku_deps_all %>%
+  select(G) %>% 
+  distinct()
+```
+
+# Dependencies introduced in 2021
+
+```{r}
+besu_deps_all_Jan2021 <- besu_deps_all_Jan2021 %>% 
+  rename(G = V1, A = V2) %>% 
+  mutate(GA = paste(G,A,sep = ":"))
+
+print("Dependencies introduced in 2021 (Besu):")
+nrow(besu_deps_all) - nrow(besu_deps_all_Jan2021)
+
+
+teku_deps_all_Jan2021 <- teku_deps_all_Jan2021 %>% 
+  rename(G = V1, A = V2) %>% 
+  mutate(GA = paste(G,A,sep = ":"))
+
+print("Dependencies introduced in 2021 (Teku):")
+nrow(teku_deps_all) - nrow(teku_deps_all_Jan2021)
+```
+
+# Dependencies modified in 2021
+
+```{r}
+# Besu
+besu_Jan2022 <- besu_deps_all_gav %>%
+  mutate(TMP = str_split_fixed(V2, " -> ", 2)[, 2]) %>%
+  mutate(V2 = str_split_fixed(V2, " -> ", 2)[, 1]) %>%
+  filter(!str_detect(V3, '->')) %>%
+  mutate(V = paste(V3, TMP, sep = "")) %>%
+  rename(G = V1, A = V2) %>%
+  select(G, A, V) %>%
+  mutate(GA = paste(G, A, sep = ":")) %>%
+  mutate(GAV = paste(GA, V, sep = ":")) %>% 
+  select(GA, GAV) %>% 
+  mutate(Date = "Jan2022")
+
+besu_Jan2021 <- besu_deps_all_Jan2021_gav %>%
+  mutate(TMP = str_split_fixed(V2, " -> ", 2)[, 2]) %>%
+  mutate(V2 = str_split_fixed(V2, " -> ", 2)[, 1]) %>%
+  filter(!str_detect(V3, '->')) %>%
+  mutate(V = paste(V3, TMP, sep = "")) %>%
+  rename(G = V1, A = V2) %>%
+  select(G, A, V) %>%
+  mutate(GA = paste(G, A, sep = ":")) %>%
+  mutate(GAV = paste(GA, V, sep = ":")) %>% 
+  select(GA, GAV) %>% 
+  mutate(Date = "Jan2021")
+
+besu_join <- inner_join(besu_Jan2022, besu_Jan2021, by = "GA")
+besu_join %>% filter(GAV.x != GAV.y) %>% 
+  select(GA) %>% 
+  distinct()
+
+# Teku
+teku_Jan2022 <- teku_deps_all_gav %>%
+  mutate(TMP = str_split_fixed(V2, " -> ", 2)[, 2]) %>%
+  mutate(V2 = str_split_fixed(V2, " -> ", 2)[, 1]) %>%
+  filter(!str_detect(V3, '->')) %>%
+  mutate(V = paste(V3, TMP, sep = "")) %>%
+  rename(G = V1, A = V2) %>%
+  select(G, A, V) %>%
+  mutate(GA = paste(G, A, sep = ":")) %>%
+  mutate(GAV = paste(GA, V, sep = ":")) %>% 
+  select(GA, GAV) %>% 
+  mutate(Date = "Jan2022")
+
+teku_Jan2021 <- teku_deps_all_Jan2021_gav %>%
+  mutate(TMP = str_split_fixed(V2, " -> ", 2)[, 2]) %>%
+  mutate(V2 = str_split_fixed(V2, " -> ", 2)[, 1]) %>%
+  filter(!str_detect(V3, '->')) %>%
+  mutate(V = paste(V3, TMP, sep = "")) %>%
+  rename(G = V1, A = V2) %>%
+  select(G, A, V) %>%
+  mutate(GA = paste(G, A, sep = ":")) %>%
+  mutate(GAV = paste(GA, V, sep = ":")) %>% 
+  select(GA, GAV) %>% 
+  mutate(Date = "Jan2021")
+
+teku_join <- inner_join(teku_Jan2022, teku_Jan2021, by = "GA")
+teku_join %>% filter(GAV.x != GAV.y) %>% 
+  select(GA) %>% 
+  distinct()
+```

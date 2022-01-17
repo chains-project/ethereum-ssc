@@ -1,0 +1,75 @@
+/*
+ * Copyright ConsenSys AG.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+sourceSets {
+  test {
+    resources {
+      include '*Tests/**/*.json'
+    }
+  }
+}
+
+configurations { testOutput }
+
+dependencies {
+  implementation project(':config')
+  implementation project(':crypto')
+  implementation project(':ethereum:core')
+  implementation project(path: ':ethereum:core', configuration: 'testSupportArtifacts')
+  implementation project(':ethereum:rlp')
+  implementation project(':services:kvstore')
+
+  implementation 'com.fasterxml.jackson.core:jackson-databind'
+  implementation 'com.google.guava:guava'
+
+  testOutput sourceSets.test.output
+}
+
+task ('validateReferenceTestSubmodule') {
+  description = "Checks that the reference tests submodule is not accidentially changed"
+  doLast {
+    def expectedHash = 'b8abaebf5949877ead03e8f74ac03c0ede41d5f7'
+    def result = new ByteArrayOutputStream()
+    try {
+      exec {
+        commandLine 'git', 'submodule'
+        standardOutput = result
+        errorOutput = result
+      }
+    } catch (Exception ignore) {
+      // Ignore it.  We want to fail in a friendly fashion if they don't have git installed.
+      // The CI servers have git and that is the only critical place for this failure
+      expectedHash = ''
+    }
+    if (!result.toString().contains(expectedHash)) {
+      throw new GradleException("""For the Ethereum Reference Tests the git commit did not match what was expected.
+
+If this is a deliberate change where you are updating the reference tests 
+then update "expectedHash" in `ethereum/referencetests/build.gradle` as the 
+commit hash for this task.
+Expected hash   :  ${expectedHash}
+Full git output : ${result}
+
+If this is accidental you can correct the reference test versions with the 
+following commands:
+    pushd ethereum/referencetests/src/test/resources
+    git checkout ${expectedHash}
+    cd ..
+    git add resources
+    popd""")
+    }
+  }
+}
+processResources.dependsOn('validateReferenceTestSubmodule')

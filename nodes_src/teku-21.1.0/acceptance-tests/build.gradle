@@ -1,0 +1,29 @@
+dependencies {
+  acceptanceTestImplementation project(":util")
+  acceptanceTestImplementation project(":bls")
+  testFixturesImplementation project(':bls')
+  testFixturesImplementation project(':data:provider')
+  testFixturesImplementation project(':data:serializer')
+  testFixturesImplementation project(':ethereum:datastructures')
+  testFixturesImplementation project(':pow')
+  testFixturesImplementation project(':infrastructure:async')
+  testFixturesImplementation testFixtures(project(':infrastructure:async'))
+  testFixturesImplementation testFixtures(project(':util'))
+  testFixturesImplementation project(':util')
+  testFixturesImplementation project(':teku')
+
+  testFixturesImplementation 'tech.pegasys.signers.internal:bls-keystore'
+  testFixturesImplementation 'com.google.code.gson:gson'
+  testFixturesImplementation 'com.squareup.okhttp3:okhttp'
+  testFixturesImplementation 'io.libp2p:jvm-libp2p-minimal'
+  testFixturesImplementation 'org.apache.commons:commons-lang3'
+  testFixturesImplementation 'commons-io:commons-io'
+  testFixturesImplementation 'org.apache.tuweni:tuweni-bytes'
+  testFixturesImplementation 'org.apache.tuweni:tuweni-toml'
+  testFixturesImplementation 'org.junit.jupiter:junit-jupiter-api'
+  testFixturesImplementation 'org.testcontainers:testcontainers'
+  testFixturesImplementation 'com.fasterxml.jackson.core:jackson-databind'
+  testFixturesImplementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+  testFixturesImplementation 'org.web3j:core'
+  testFixturesImplementation 'org.apache.logging.log4j:log4j-core'
+}

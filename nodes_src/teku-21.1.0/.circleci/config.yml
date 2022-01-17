@@ -1,0 +1,476 @@
+version: 2.1
+executors:
+  small_executor:
+    docker:
+      - image: circleci/openjdk:11.0.8-jdk-buster
+        auth:
+          username: $DOCKER_USER_RO
+          password: $DOCKER_PASSWORD_RO
+    resource_class: small
+    working_directory: ~/project
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx2g
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.parallel=true -Dorg.gradle.workers.max=2
+
+  medium_executor:
+    docker:
+      - image: circleci/openjdk:11.0.8-jdk-buster
+        auth:
+          username: $DOCKER_USER_RO
+          password: $DOCKER_PASSWORD_RO
+    resource_class: medium
+    working_directory: ~/project
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx2g
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.parallel=true -Dorg.gradle.workers.max=2
+
+  medium_plus_executor:
+    docker:
+      - image: circleci/openjdk:11.0.8-jdk-buster
+        auth:
+          username: $DOCKER_USER_RO
+          password: $DOCKER_PASSWORD_RO
+    resource_class: "medium+"
+    working_directory: ~/project
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx2g
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.parallel=true -Dorg.gradle.workers.max=2
+
+  large_executor:
+    docker:
+      - image: circleci/openjdk:11.0.8-jdk-buster
+        auth:
+          username: $DOCKER_USER_RO
+          password: $DOCKER_PASSWORD_RO
+    resource_class: large
+    working_directory: ~/project
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx3g
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.parallel=true -Dorg.gradle.workers.max=2
+
+  machine_executor:
+    machine:
+      image: ubuntu-2004:202008-01 #Ubuntu 20.04, docker 19.03, docker-compose 1.27.4
+      docker_layer_caching: true
+    working_directory: ~/project
+
+  node_executor:
+    docker:
+      - image: circleci/node:14-buster
+        auth:
+          username: $DOCKER_USER_RO
+          password: $DOCKER_PASSWORD_RO
+
+commands:
+  prepare:
+    description: "Prepare"
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore cached gradle dependencies
+          keys:
+            - deps-{{ checksum "build.gradle" }}-{{ .Branch }}-{{ .Revision }}
+            - deps-{{ checksum "build.gradle" }}
+            - deps-
+  capture_test_results:
+    description: "Capture test results"
+    steps:
+      - run:
+          name: "Gather test results"
+          when: "always"
+          command: |
+            FILES=`find . -name test-results`
+            for FILE in $FILES
+            do
+              MODULE=`echo "$FILE" | sed -e 's@./\(.*\)/build/test-results@\1@'`
+              TARGET="build/test-results/$MODULE"
+              mkdir -p "$TARGET"
+              cp -rf ${FILE}/*/* "$TARGET"
+            done
+      - store_test_results:
+          path: build/test-results
+
+  capture_test_artifacts:
+    description: "Capture test artifacts"
+    steps:
+      - run:
+          name: "Gather test artifacts"
+          when: "always"
+          command: |
+            FILES=`find . -name test-artifacts`
+            for FILE in $FILES
+            do
+              MODULE=`echo "$FILE" | sed -e 's@./\(.*\)/build/test-artifacts@\1@'`
+              TARGET="build/test-artifacts/$MODULE"
+              mkdir -p "$TARGET"
+              cp -rf ${FILE}/*/* "$TARGET"
+            done
+      - store_artifacts:
+          path: build/test-artifacts
+
+jobs:
+  assemble:
+    executor: medium_executor
+    steps:
+      - prepare
+      - run:
+          name: Assemble
+          command: |
+            ./gradlew --no-daemon --parallel clean compileJava compileTestJava compileJmhJava compileIntegrationTestJava compileAcceptanceTestJava compileCompatibilityTestJava assemble
+      - save_cache:
+          name: Caching gradle dependencies
+          key: deps-{{ checksum "build.gradle" }}-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .gradle
+            - ~/.gradle
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - ./
+      - store_artifacts:
+          name: Distribution artifacts
+          path:  build/distributions
+          destination: distributions
+          when: always
+
+  spotless:
+    executor: small_executor
+    steps:
+      - prepare
+      - run:
+          name: Spotless
+          command: |
+            ./gradlew --no-daemon --parallel spotlessCheck
+
+  unitTests:
+    parallelism: 2
+    executor: medium_plus_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: UnitTests
+          no_output_timeout: 20m
+          command: |
+            CLASSNAMES=$(circleci tests glob "**/src/test/java/**/*.java" \
+              | sed 's@.*/src/test/java/@@' \
+              | sed 's@/@.@g' \
+              | sed 's/.\{5\}$//' \
+              | circleci tests split --split-by=timings --timings-type=classname)
+            # Format the arguments to "./gradlew test"
+            GRADLE_ARGS=$(echo $CLASSNAMES | awk '{for (i=1; i<=NF; i++) print "--tests",$i}')
+            echo "Prepared arguments for Gradle: $GRADLE_ARGS"
+            ./gradlew --no-daemon --parallel test $GRADLE_ARGS
+      - capture_test_results
+
+  integrationTests:
+    executor: medium_plus_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: IntegrationTests
+          no_output_timeout: 20m
+          command: |
+            ./gradlew --no-daemon --parallel integrationTest
+      - capture_test_results
+
+  acceptanceTests:
+    parallelism: 2
+    executor: machine_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: AcceptanceTests
+          command: |
+            CLASSNAMES=$(circleci tests glob "**/src/acceptance-test/java/**/*.java" \
+              | sed 's@.*/src/acceptance-test/java/@@' \
+              | sed 's@/@.@g' \
+              | sed 's/.\{5\}$//' \
+              | circleci tests split --split-by=timings --timings-type=classname)
+            # Format the arguments to "./gradlew test"
+            GRADLE_ARGS=$(echo $CLASSNAMES | awk '{for (i=1; i<=NF; i++) print "--tests",$i}')
+            echo "Prepared arguments for Gradle: $GRADLE_ARGS"
+            ./gradlew --no-daemon --parallel acceptanceTest $GRADLE_ARGS
+      - capture_test_results
+      - capture_test_artifacts
+
+  referenceTests:
+    parallelism: 5
+    executor: large_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          name: Restore cached reference test downloads
+          keys:
+            - reftests-{{ checksum "build.gradle" }}
+      - run:
+          name: FetchReferenceTests
+          command: |
+            if [ ! -d "eth-reference-tests/src/referenceTest/resources/eth2.0-spec-tests/tests" ]
+            then
+              ./gradlew --no-daemon expandRefTests
+            fi
+      - run:
+          name: CompileReferenceTests
+          command: |
+            ./gradlew --no-daemon --parallel compileReferenceTestJava
+      - run:
+          name: ReferenceTests
+          command: |
+            CLASSNAMES=$(circleci tests glob "**/src/referenceTest/generated/**/*Test.java" \
+              | sed 's@.*/src/referenceTest/generated/@@' \
+              | sed 's@/@.@g' \
+              | sed 's/.\{5\}$//' \
+              | circleci tests split --split-by=timings --timings-type=classname)
+            # Format the arguments to "./gradlew test"
+            GRADLE_ARGS=$(echo $CLASSNAMES | awk '{for (i=1; i<=NF; i++) print "--tests",$i}')
+            echo "Prepared arguments for Gradle: $GRADLE_ARGS"
+            ./gradlew --no-daemon --parallel referenceTest $GRADLE_ARGS
+      - save_cache:
+          name: Caching reference tests
+          key: reftests-{{ checksum "build.gradle" }}
+          paths:
+            - eth-reference-tests/src/referenceTest/resources/eth2.0-spec-tests/
+      - capture_test_results
+
+  compatibilityTests:
+    executor: machine_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: CompatibilityTests
+          no_output_timeout: 20m
+          command: |
+            ./gradlew --no-daemon --parallel compatibilityTest
+      - capture_test_results
+
+  docker:
+    executor: medium_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Docker
+          command: |
+            ./gradlew --no-daemon --parallel distDocker
+
+  publish:
+    executor: medium_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Publish
+          # binTray plugin doesn't publish pom artifacts if configure-on-demand is used
+          command: |
+            ./gradlew --no-daemon --parallel -no-configure-on-demand bintrayUpload
+
+  publishDocker:
+    executor: medium_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Publish Docker
+          command: |
+            docker login --username "${DOCKER_USER_RW}" --password "${DOCKER_PASSWORD_RW}"
+            ./gradlew --no-daemon --parallel "-Pbranch=${CIRCLE_BRANCH}" dockerUpload
+
+  extractAPISpec:
+    executor: medium_executor
+    steps:
+      - prepare
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Build runnable Teku binaries
+          command: |
+            ./gradlew --no-daemon --parallel installDist
+      - run:
+          name: Extract OpenAPI JSON
+          command: |
+            mkdir -p .openapidoc/spec
+
+            build/install/teku/bin/teku --network=mainnet --Xinterop-enabled=true --rest-api-enabled=true --rest-api-docs-enabled=true 2>&1 > teku_output.log &
+            TEKU_PID=$!
+
+            EXIT_CODE=0
+            wget --timeout=30 --retry-connrefused --output-document=.openapidoc/spec/teku.json http://localhost:5051/swagger-docs
+            if [ $? != 0 ]; then
+              EXIT_CODE=1
+            fi
+
+            kill $TEKU_PID
+            exit $EXIT_CODE
+      - store_artifacts:
+          path: .openapidoc/spec/teku.json
+      - store_artifacts:
+          path: teku_output.log
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .openapidoc/spec/teku.json
+
+  publishAPISpec:
+    executor: node_executor
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "45:36:58:67:43:15:c6:5f:2c:58:ec:7f:71:e2:e6:ef"
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          keys:
+            - node-cache-{{ checksum "./.openapidoc/package-lock.json" }}
+            - node-cache-
+      - run:
+          name: install
+          working_directory: .openapidoc
+          command: |
+            npm ci
+      - run:
+          name: Build Folder
+          working_directory: .openapidoc
+          command: |
+            OA_GIT_USERNAME=$CIRCLE_USERNAME OA_GIT_EMAIL="${CIRCLE_USERNAME}@users.noreply.github.com" OA_GIT_URL=$CIRCLE_REPOSITORY_URL OA_GH_PAGES_BRANCH="gh-pages" node publish.js
+      - save_cache:
+          paths:
+            - ~/.npm
+          key: node-cache-{{ checksum "./.openapidoc/package-lock.json" }}
+
+workflows:
+  circleci:
+    jobs:
+      - assemble:
+          context:
+            - dockerhub-quorumengineering-ro
+          filters:
+            tags: &filters-release-tags
+              only: /^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?/
+      - spotless:
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - referenceTests:
+          requires:
+            - assemble
+            - spotless
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - unitTests:
+          requires:
+            - assemble
+            - spotless
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - integrationTests:
+          requires:
+            - assemble
+            - spotless
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - acceptanceTests:
+          requires:
+            - assemble
+            - spotless
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - docker:
+          requires:
+            - assemble
+            - spotless
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context:
+            - dockerhub-quorumengineering-ro
+      - extractAPISpec:
+          requires:
+            - assemble
+          filters:
+            tags:
+              <<: *filters-release-tags
+          context: dockerhub-quorumengineering-ro
+      - publish:
+          filters:
+            branches:
+              only:
+                - master
+                - /^release-.*/
+            tags:
+              <<: *filters-release-tags
+          requires:
+            - unitTests
+            - integrationTests
+            - acceptanceTests
+            - referenceTests
+            - docker
+            - extractAPISpec
+          context:
+            - dockerhub-quorumengineering-ro
+            - quorum-gradle
+      - publishDocker:
+          filters:
+            branches:
+              only:
+                - master
+                - /^release-.*/
+            tags:
+              <<: *filters-release-tags
+          requires:
+            - unitTests
+            - integrationTests
+            - acceptanceTests
+            - referenceTests
+            - docker
+            - extractAPISpec
+          context:
+            - dockerhub-quorumengineering-rw
+      - publishAPISpec:
+          filters:
+            branches:
+              only:
+                - master
+                - /^release-.*/
+            tags: # stable doc is published only on tags to prevent confusion on the doc site.
+              <<: *filters-release-tags
+          requires:
+            - unitTests
+            - integrationTests
+            - acceptanceTests
+            - referenceTests
+            - docker
+            - extractAPISpec
+          context:
+            - dockerhub-quorumengineering-ro

@@ -1,0 +1,504 @@
+ cc.vileda:kotlin-openapi3-dsl:1.0.0
+ com.barchart.udt:barchart-udt-bundle:2.3.0
+ com.fasterxml.jackson.core:jackson-annotations:2.13.1
+ com.fasterxml.jackson.core:jackson-core:2.13.1
+ com.fasterxml.jackson.core:jackson-databind -> 2.13.1
+ com.fasterxml.jackson.core:jackson-databind:2.8.11.6 -> 2.13.1
+ com.fasterxml.jackson.dataformat:jackson-dataformat-yaml -> 2.13.1
+ com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.1 -> 2.13.1
+ com.fasterxml.jackson.datatype:jackson-datatype-json-org:2.11.2
+ com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.1 -> 2.13.1
+ com.fasterxml.jackson.module:jackson-module-jsonSchema:2.11.2 -> 2.13.1
+ com.fasterxml.jackson.module:jackson-module-kotlin -> 2.13.1
+ com.fasterxml.jackson:jackson-bom:2.13.1
+ com.fasterxml.uuid:java-uuid-generator:4.0.1
+ com.fasterxml:aalto-xml:1.0.0
+ com.github.ben-manes.caffeine:caffeine:2.8.8
+ com.github.docker-java:docker-java-api:3.2.12
+ com.github.docker-java:docker-java-transport
+ com.github.docker-java:docker-java-transport:3.2.12
+ com.github.java-json-tools:btf:1.3
+ com.github.java-json-tools:jackson-coreutils
+ com.github.java-json-tools:jackson-coreutils:2.0
+ com.github.java-json-tools:json-patch:1.13
+ com.github.java-json-tools:json-schema
+ com.github.java-json-tools:msg-simple:1.2
+ com.github.java-json-tools:uri-template:0.10
+ com.github.jnr:jffi:1.2.16 -> 1.2.17
+ com.github.jnr:jffi:1.2.17
+ com.github.jnr:jnr-a64asm:1.0.0
+ com.github.jnr:jnr-constants:0.9.11
+ com.github.jnr:jnr-constants:0.9.9 -> 0.9.11
+ com.github.jnr:jnr-enxio:0.19
+ com.github.jnr:jnr-ffi:2.1.9
+ com.github.jnr:jnr-posix:3.0.47
+ com.github.jnr:jnr-unixsocket:0.21
+ com.github.jnr:jnr-x86asm:1.0.2
+ com.github.kevinstern:software-and-algorithms:1.0
+ com.google.android:annotations:4.1.1.4
+ com.google.api.grpc:proto-google-common-protos:2.0.1
+ com.google.auto.service:auto-service-annotations:1.0
+ com.google.auto.service:auto-service-annotations:1.0-rc6
+ com.google.auto.value:auto-value-annotations:1.7
+ com.google.auto:auto-common:1.1.2
+ com.google.code.findbugs:jFormatString:3.0.0
+ com.google.code.findbugs:jsr305:2.0.1 -> 3.0.2
+ com.google.code.findbugs:jsr305:3.0.0 -> 3.0.2
+ com.google.code.findbugs:jsr305:3.0.2
+ com.google.code.gson:gson -> 2.8.9
+ com.google.code.gson:gson:2.8.6 -> 2.8.9
+ com.google.errorprone:error_prone_annotation:2.10.0
+ com.google.errorprone:error_prone_annotations:2.10.0
+ com.google.errorprone:error_prone_annotations:2.4.0 -> 2.10.0
+ com.google.errorprone:error_prone_annotations:2.4.0 -> 2.7.1
+ com.google.errorprone:error_prone_annotations:2.7.1
+ com.google.errorprone:error_prone_annotations:2.7.1 -> 2.10.0
+ com.google.errorprone:error_prone_check_api:2.10.0
+ com.google.errorprone:error_prone_core -> 2.10.0
+ com.google.errorprone:error_prone_type_annotations:2.10.0
+ com.google.guava:failureaccess:1.0.1
+ com.google.guava:guava -> 31.0.1-jre
+ com.google.guava:guava:27.0.1-jre -> 31.0.1-jre
+ com.google.guava:guava:30.1-jre -> 31.0.1-jre
+ com.google.guava:listenablefuture:9999.0-empty-to-avoid
+ com.google.j2objc:j2objc-annotations:1.3
+ com.google.protobuf:protobuf-java:3.11.0
+ com.google.protobuf:protobuf-java:3.11.0 -> 3.17.2
+ com.google.protobuf:protobuf-java:3.12.0 -> 3.17.2
+ com.google.protobuf:protobuf-java:3.17.2
+ com.google.protobuf:protobuf-java:3.4.0
+ com.googlecode.json-simple:json-simple -> 1.1.1
+ com.googlecode.libphonenumber:libphonenumber:8.11.1
+ com.jayway.jsonpath:json-path:2.4.0
+ com.jcraft:jzlib:1.1.3
+ com.launchdarkly:okhttp-eventsource -> 2.3.2
+ com.lmax:disruptor:3.4.2
+ com.reprezen.jsonoverlay:jsonoverlay:4.0.4
+ com.reprezen.kaizen:openapi-parser:4.0.4
+ com.squareup.okhttp3:logging-interceptor:4.3.1
+ com.squareup.okhttp3:mockwebserver -> 4.9.2
+ com.squareup.okhttp3:okhttp -> 4.9.2
+ com.squareup.okhttp3:okhttp:4.3.1 -> 4.9.2
+ com.squareup.okhttp3:okhttp:4.5.0 -> 4.9.2
+ com.squareup.okio:okio:2.8.0
+ com.sun.mail:javax.mail:1.6.1
+ com.sun.mail:mailapi:1.6.2
+ com.zaxxer:HikariCP-java7:2.4.13
+ commons-codec:commons-codec:1.12
+ commons-codec:commons-codec:1.12 -> 1.13
+ commons-codec:commons-codec:1.12 -> 1.15
+ commons-codec:commons-codec:1.13
+ commons-codec:commons-codec:1.13 -> 1.15
+ commons-codec:commons-codec:1.15
+ commons-codec:commons-codec:1.9 -> 1.13
+ commons-codec:commons-codec:1.9 -> 1.15
+ commons-io:commons-io -> 2.11.0
+ commons-io:commons-io:2.4 -> 2.11.0
+ commons-io:commons-io:2.6 -> 2.11.0
+ commons-io:commons-io:2.8.0 -> 2.11.0
+ commons-logging:commons-logging:1.2
+ info.picocli:picocli -> 4.6.2
+ io.github.classgraph:classgraph -> 4.8.138
+ io.github.classgraph:classgraph:4.8.102 -> 4.8.138
+ io.github.java-diff-utils:java-diff
+ io.grpc:grpc-api:1.39.0
+ io.grpc:grpc-context:1.39.0
+ io.grpc:grpc-core:1.39.0
+ io.grpc:grpc-netty:1.39.0
+ io.grpc:grpc-protobuf-lite:1.38.0
+ io.grpc:grpc-protobuf:1.38.0
+ io.grpc:grpc-stub:1.38.0
+ io.javalin:javalin -> 4.1.1
+ io.javalin:javalin-openapi -> 4.1.1
+ io.libp2p:jvm-libp2p-minimal -> 0.8.4
+ io.netty:netty-all:4.1.66.Final -> 4.1.69.Final
+ io.netty:netty-all:4.1.69.Final
+ io.netty:netty-buffer:4.1.53.Final
+ io.netty:netty-buffer:4.1.67.Final
+ io.netty:netty-buffer:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-buffer:4.1.69.Final
+ io.netty:netty-codec-dns:4.1.67.Final
+ io.netty:netty-codec-dns:4.1.69.Final
+ io.netty:netty-codec-haproxy:4.1.69.Final
+ io.netty:netty-codec-http2:4.1.67.Final
+ io.netty:netty-codec-http2:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-codec-http2:4.1.69.Final
+ io.netty:netty-codec-http:4.1.53.Final
+ io.netty:netty-codec-http:4.1.67.Final
+ io.netty:netty-codec-http:4.1.69.Final
+ io.netty:netty-codec-memcache:4.1.69.Final
+ io.netty:netty-codec-mqtt:4.1.69.Final
+ io.netty:netty-codec-redis:4.1.69.Final
+ io.netty:netty-codec-smtp:4.1.69.Final
+ io.netty:netty-codec-socks:4.1.53.Final
+ io.netty:netty-codec-socks:4.1.67.Final
+ io.netty:netty-codec-socks:4.1.69.Final
+ io.netty:netty-codec-stomp:4.1.69.Final
+ io.netty:netty-codec-xml:4.1.69.Final
+ io.netty:netty-codec:4.1.53.Final
+ io.netty:netty-codec:4.1.67.Final
+ io.netty:netty-codec:4.1.69.Final
+ io.netty:netty-common:4.1.53.Final
+ io.netty:netty-common:4.1.53.Final -> 4.1.69.Final
+ io.netty:netty-common:4.1.67.Final
+ io.netty:netty-common:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-common:4.1.69.Final
+ io.netty:netty-handler-proxy:4.1.53.Final
+ io.netty:netty-handler-proxy:4.1.67.Final
+ io.netty:netty-handler-proxy:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-handler-proxy:4.1.69.Final
+ io.netty:netty-handler:4.1.53.Final
+ io.netty:netty-handler:4.1.67.Final
+ io.netty:netty-handler:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-handler:4.1.69.Final
+ io.netty:netty-resolver-dns-native
+ io.netty:netty-resolver-dns:4.1.67.Final
+ io.netty:netty-resolver-dns:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-resolver-dns:4.1.69.Final
+ io.netty:netty-resolver:4.1.53.Final
+ io.netty:netty-resolver:4.1.67.Final
+ io.netty:netty-resolver:4.1.69.Final
+ io.netty:netty-tcnative-boringssl-static:2.0.40.Final
+ io.netty:netty-transport-native-epoll:4.1.66.Final
+ io.netty:netty-transport-native-epoll:4.1.69.Final
+ io.netty:netty-transport-native-kqueue:4.1.69.Final
+ io.netty:netty-transport-native-unix
+ io.netty:netty-transport-rxtx:4.1.69.Final
+ io.netty:netty-transport-sctp:4.1.69.Final
+ io.netty:netty-transport-udt:4.1.69.Final
+ io.netty:netty-transport:4.1.53.Final
+ io.netty:netty-transport:4.1.67.Final
+ io.netty:netty-transport:4.1.67.Final -> 4.1.69.Final
+ io.netty:netty-transport:4.1.69.Final
+ io.opentelemetry:opentelemetry-api-metrics:1.5.0-alpha
+ io.opentelemetry:opentelemetry-api:1.5.0
+ io.opentelemetry:opentelemetry-context:1.5.0
+ io.opentelemetry:opentelemetry-exporter-otlp-common:1.5.0
+ io.opentelemetry:opentelemetry-exporter-otlp-metrics:1.5.0
+ io.opentelemetry:opentelemetry-exporter-otlp-trace:1.5.0
+ io.opentelemetry:opentelemetry-exporter-otlp:1.5.0
+ io.opentelemetry:opentelemetry-proto:1.5.0-alpha
+ io.opentelemetry:opentelemetry-sdk-common:1.5.0
+ io.opentelemetry:opentelemetry-sdk-metrics:1.5.0-alpha
+ io.opentelemetry:opentelemetry-sdk-trace:1.5.0
+ io.opentelemetry:opentelemetry-sdk:1.5.0
+ io.opentelemetry:opentelemetry-semconv:1.5.0-alpha
+ io.perfmark:perfmark-api:0.23.0
+ io.projectreactor:reactor-core -> 3.4.13
+ io.projectreactor:reactor-core:3.4.12 -> 3.4.13
+ io.prometheus:simpleclient -> 0.9.0
+ io.prometheus:simpleclient:0.9.0
+ io.prometheus:simpleclient_common:0.9.0
+ io.prometheus:simpleclient_hotspot:0.9.0
+ io.prometheus:simpleclient_pushgateway:0.9.0
+ io.reactivex.rxjava2:rxjava:2.2.2
+ io.swagger.core.v3:swagger-annotations -> 2.1.11
+ io.swagger.core.v3:swagger-annotations:2.1.11
+ io.swagger.core.v3:swagger-core -> 2.1.11
+ io.swagger.core.v3:swagger-core:2.1.5 -> 2.1.11
+ io.swagger.core.v3:swagger-models:2.1.11
+ io.swagger.core.v3:swagger-models:2.1.5 -> 2.1.11
+ io.swagger.parser.v3:swagger-parser-core:2.0.23
+ io.swagger.parser.v3:swagger-parser-core:2.0.27
+ io.swagger.parser.v3:swagger-parser-v2-converter:2.0.23
+ io.swagger.parser.v3:swagger-parser-v2-converter:2.0.27
+ io.swagger.parser.v3:swagger-parser-v3:2.0.23
+ io.swagger.parser.v3:swagger-parser-v3:2.0.27
+ io.swagger.parser.v3:swagger-parser:2.0.23
+ io.swagger.parser.v3:swagger-parser:2.0.27
+ io.swagger:swagger-annotations:1.6.2
+ io.swagger:swagger-compat-spec-parser:1.0.52
+ io.swagger:swagger-compat-spec-parser:1.0.55
+ io.swagger:swagger-core:1.6.2
+ io.swagger:swagger-models:1.6.2
+ io.swagger:swagger-parser:1.0.52
+ io.swagger:swagger-parser:1.0.55
+ io.vertx:vertx-auth-common:3.9.9
+ io.vertx:vertx-bridge-common:3.9.9
+ io.vertx:vertx-core -> 3.9.9
+ io.vertx:vertx-web -> 3.9.9
+ io.vertx:vertx-web-common:3.9.9
+ it.unimi.dsi:fastutil -> 8.5.6
+ jakarta.activation:jakarta.activation-api:1.2.1
+ jakarta.validation:jakarta.validation-api:2.0.2
+ jakarta.xml.bind:jakarta.xml.bind-api:2.3.2
+ javax.activation:activation:1.1
+ javax.activation:javax.activation-api:1.2.0
+ javax.mail:javax.mail-api:1.6.1
+ javax.persistence:javax.persistence-api:2.2
+ javax.servlet:javax.servlet-api:3.1.0
+ javax.servlet:javax.servlet-api:3.1.0 -> 4.0.1
+ javax.servlet:javax.servlet-api:4.0.1
+ javax.validation:validation-api:1.1.0.Final
+ javax.xml.bind:jaxb-api:2.3.0
+ javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
+ javax.xml.bind:jaxb-api:2.3.0 -> 2.4.0-b180830.0359
+ javax.xml.bind:jaxb-api:2.4.0-b180830.0359
+ joda-time:joda-time:2.10.5
+ junit:junit:4.13
+ junit:junit:4.13.2
+ net.bytebuddy:byte-buddy-agent:1.12.4
+ net.bytebuddy:byte-buddy:1.12.4
+ net.java.dev.jna:jna:5.8.0
+ net.javacrumbs.json-unit:json-unit-core:2.19.0
+ net.minidev:accessors-smart:1.2
+ net.minidev:json-smart:2.3
+ net.sf.jopt-simple:jopt-simple:4.6
+ net.sf.jopt-simple:jopt-simple:5.0.4
+ org.antlr:antlr4-runtime:4.7.1
+ org.apache.commons:commons-compress:1.21
+ org.apache.commons:commons-lang3 -> 3.12.0
+ org.apache.commons:commons-lang3:3.11 -> 3.12.0
+ org.apache.commons:commons-lang3:3.2.1 -> 3.12.0
+ org.apache.commons:commons-lang3:3.7 -> 3.12.0
+ org.apache.commons:commons-lang3:3.9 -> 3.12.0
+ org.apache.commons:commons-math3:3.2
+ org.apache.commons:commons-text -> 1.9
+ org.apache.commons:commons-text:1.9
+ org.apache.httpcomponents:httpclient:4.5.2
+ org.apache.httpcomponents:httpcore:4.4.4
+ org.apache.logging.log4j:log4j-api -> 2.17.1
+ org.apache.logging.log4j:log4j-api:2.17.0 -> 2.17.1
+ org.apache.logging.log4j:log4j-api:2.17.1
+ org.apache.logging.log4j:log4j-core -> 2.17.1
+ org.apache.logging.log4j:log4j-slf4j-impl -> 2.17.1
+ org.apache.tuweni:bytes:1.3.0
+ org.apache.tuweni:crypto:1.3.0
+ org.apache.tuweni:tuweni-bytes -> 1.0.0
+ org.apache.tuweni:tuweni-bytes:1.0.0
+ org.apache.tuweni:tuweni-bytes:2.0.0 -> 1.0.0
+ org.apache.tuweni:tuweni-concurrent-coroutines:1.0.0
+ org.apache.tuweni:tuweni-concurrent:1.0.0
+ org.apache.tuweni:tuweni-crypto:1.0.0
+ org.apache.tuweni:tuweni-io:1.0.0
+ org.apache.tuweni:tuweni-junit -> 1.0.0
+ org.apache.tuweni:tuweni-kv -> 1.0.0
+ org.apache.tuweni:tuweni-plumtree -> 1.0.0
+ org.apache.tuweni:tuweni-rlp:1.0.0
+ org.apache.tuweni:tuweni-rlpx -> 1.0.0
+ org.apache.tuweni:tuweni-ssz -> 1.0.0
+ org.apache.tuweni:tuweni-toml -> 1.0.0
+ org.apache.tuweni:tuweni-units -> 1.0.0
+ org.apache.tuweni:tuweni-units:1.0.0
+ org.apache.tuweni:tuweni-units:2.0.0 -> 1.0.0
+ org.apache.tuweni:units:1.3.0
+ org.apache.velocity:velocity-engine-core:2.2
+ org.apache.velocity:velocity-engine-scripting:2.2
+ org.apiguardian:apiguardian-api:1.1.2
+ org.assertj:assertj-core -> 3.21.0
+ org.awaitility:awaitility -> 4.1.1
+ org.bouncycastle:bcpkix-jdk15on:1.62
+ org.bouncycastle:bcprov-jdk15on -> 1.70
+ org.bouncycastle:bcprov-jdk15on:1.60 -> 1.70
+ org.bouncycastle:bcprov-jdk15on:1.62 -> 1.70
+ org.bouncycastle:bcprov-jdk15on:1.64 -> 1.70
+ org.bouncycastle:bcprov-jdk15on:1.65 -> 1.70
+ org.bouncycastle:bcprov-jdk15on:1.70
+ org.checkerframework:checker-qual:3.12.0
+ org.checkerframework:checker-qual:3.8.0 -> 3.12.0
+ org.checkerframework:dataflow-errorprone:3.15.0
+ org.codehaus.mojo:animal-sniffer-annotations:1.19
+ org.codehaus.woodstox:stax2-api:4.0.0
+ org.eclipse.jetty.websocket:websocket-api:9.4.44.v20210927
+ org.eclipse.jetty.websocket:websocket-client:9.4.44.v20210927
+ org.eclipse.jetty.websocket:websocket-common:9.4.44.v20210927
+ org.eclipse.jetty.websocket:websocket-server:9.4.44.v20210927
+ org.eclipse.jetty.websocket:websocket-servlet:9.4.44.v20210927
+ org.eclipse.jetty:jetty-client:9.4.44.v20210927
+ org.eclipse.jetty:jetty-http:9.4.44.v20210927
+ org.eclipse.jetty:jetty-io:9.4.44.v20210927
+ org.eclipse.jetty:jetty-security:9.4.44.v20210927
+ org.eclipse.jetty:jetty-server:9.4.44.v20210927
+ org.eclipse.jetty:jetty-servlet:9.4.44.v20210927
+ org.eclipse.jetty:jetty-util-ajax:9.4.44.v20210927
+ org.eclipse.jetty:jetty-util:9.4.44.v20210927
+ org.eclipse.jetty:jetty-webapp:9.4.44.v20210927
+ org.eclipse.jetty:jetty-xml:9.4.44.v20210927
+ org.eclipse.jgit:org.eclipse.jgit:4.4.1.201607150455-r
+ org.fusesource.hawtjni:hawtjni-runtime:1.9
+ org.fusesource.leveldbjni:leveldbjni-win32 -> 1.8
+ org.fusesource.leveldbjni:leveldbjni-win64 -> 1.8
+ org.fusesource.leveldbjni:leveldbjni:1.8
+ org.hamcrest:hamcrest-core:1.3
+ org.hamcrest:hamcrest-core:2.2
+ org.hamcrest:hamcrest:2.1
+ org.hamcrest:hamcrest:2.1 -> 2.2
+ org.hamcrest:hamcrest:2.2
+ org.hdrhistogram:HdrHistogram -> 2.1.12
+ org.hyperledger.besu.internal:metrics-core -> 21.10.5
+ org.hyperledger.besu:plugin-api -> 21.10.3
+ org.iq80.leveldb:leveldb-api:0.6
+ org.java-websocket:Java-WebSocket:1.3.8 -> 1.5.2
+ org.jetbrains.kotlin:kotlin-reflect:1.5.30
+ org.jetbrains.kotlin:kotlin-stdlib -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib-common:1.3.20 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib-common:1.3.31 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.30
+ org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10
+ org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31
+ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.30
+ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.30 -> 1.4.10
+ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.30 -> 1.5.31
+ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10
+ org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31
+ org.jetbrains.kotlin:kotlin-stdlib:1.3.30 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib:1.4.0 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib:1.5.30 -> 1.6.10
+ org.jetbrains.kotlin:kotlin-stdlib:1.5.31 -> 1.6.10
+ org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.1.1
+ org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1
+ org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1 -> 1.3.0
+ org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.1.1
+ org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.1.1
+ org.jetbrains:annotations:13.0
+ org.jetbrains:annotations:13.0 -> 17.0.0
+ org.jetbrains:annotations:17.0.0
+ org.json:json:20190722
+ org.jsoup:jsoup -> 1.14.3
+ org.junit.jupiter:junit-jupiter-api -> 5.8.2
+ org.junit.jupiter:junit-jupiter-api:5.8.2
+ org.junit.jupiter:junit-jupiter-engine -> 5.8.2
+ org.junit.jupiter:junit-jupiter-engine:5.7.0 -> 5.8.2
+ org.junit.jupiter:junit-jupiter-params -> 5.8.2
+ org.junit.platform:junit-platform-commons:1.8.2
+ org.junit.platform:junit-platform-engine:1.8.2
+ org.junit:junit-bom:5.8.2
+ org.jupnp:org.jupnp -> 2.6.0
+ org.jupnp:org.jupnp.support -> 2.6.0
+ org.logl:logl-api:0.3.1
+ org.mock-server:mockserver-client-java:5.11.2
+ org.mock-server:mockserver-core:5.11.2
+ org.mock-server:mockserver-junit-jupiter
+ org.mock-server:mockserver-netty:5.11.2
+ org.mockito:mockito-core -> 4.2.0
+ org.mozilla:rhino:1.7.7.2
+ org.objenesis:objenesis:3.2
+ org.openjdk.jmh:jmh-core -> 1.33
+ org.openjdk.jmh:jmh-core:1.33
+ org.openjdk.jmh:jmh-generator-annprocess -> 1.33
+ org.opentest4j:opentest4j:1.2.0
+ org.ow2.asm:asm-analysis:5.0.3
+ org.ow2.asm:asm-commons:5.0.3
+ org.ow2.asm:asm-tree:5.0.3
+ org.ow2.asm:asm-util:5.0.3
+ org.ow2.asm:asm:5.0.3
+ org.ow2.asm:asm:5.0.3 -> 5.0.4
+ org.ow2.asm:asm:5.0.4
+ org.pcollections:pcollections:2.1.2
+ org.quartz-scheduler:quartz -> 2.3.2
+ org.reactivestreams:reactive-streams:1.0.2
+ org.reactivestreams:reactive-streams:1.0.2 -> 1.0.3
+ org.reactivestreams:reactive-streams:1.0.3
+ org.rnorth.duct-tape:duct-tape:1.0.8
+ org.rocksdb:rocksdbjni -> 6.27.3
+ org.rxtx:rxtx:2.1.7
+ org.slf4j:slf4j-api:1.7.21
+ org.slf4j:slf4j-api:1.7.21 -> 1.7.25
+ org.slf4j:slf4j-api:1.7.21 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.21 -> 1.7.32
+ org.slf4j:slf4j-api:1.7.22
+ org.slf4j:slf4j-api:1.7.22 -> 1.7.25
+ org.slf4j:slf4j-api:1.7.22 -> 1.7.30
+ org.slf4j:slf4j-api:1.7.22 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.22 -> 1.7.32
+ org.slf4j:slf4j-api:1.7.25
+ org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+ org.slf4j:slf4j-api:1.7.25 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.25 -> 1.7.32
+ org.slf4j:slf4j-api:1.7.28 -> 1.7.30
+ org.slf4j:slf4j-api:1.7.28 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.29 -> 1.7.30
+ org.slf4j:slf4j-api:1.7.29 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.30
+ org.slf4j:slf4j-api:1.7.30 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.30 -> 1.7.32
+ org.slf4j:slf4j-api:1.7.31
+ org.slf4j:slf4j-api:1.7.31 -> 1.7.32
+ org.slf4j:slf4j-api:1.7.32
+ org.slf4j:slf4j-api:1.7.7 -> 1.7.21
+ org.slf4j:slf4j-api:1.7.7 -> 1.7.25
+ org.slf4j:slf4j-api:1.7.7 -> 1.7.31
+ org.slf4j:slf4j-api:1.7.7 -> 1.7.32
+ org.slf4j:slf4j-ext:1.7.28
+ org.testcontainers:junit-jupiter -> 1.16.2
+ org.testcontainers:testcontainers -> 1.16.2
+ org.web3j:abi:5.0.0
+ org.web3j:core -> 5.0.0
+ org.web3j:core:5.0.0
+ org.web3j:crypto:5.0.0
+ org.web3j:rlp:5.0.0
+ org.web3j:tuples:5.0.0
+ org.web3j:utils:5.0.0
+ org.webjars.npm:redoc:2.0.0-rc.45
+ org.webjars:swagger-ui -> 3.43.0
+ org.webjars:swagger-ui:3.43.0
+ org.xerial.snappy:snappy-java -> 1.1.8.4
+ org.xerial.snappy:snappy-java:1.1.7.2 -> 1.1.8.4
+ org.xmlunit:xmlunit-core:2.8.0
+ org.xmlunit:xmlunit-placeholders:2.8.0
+ org.yaml:snakeyaml:1.28
+ project :beacon:validator
+ project :data
+ project :data:beaconrestapi
+ project :data:dataexchange
+ project :data:provider
+ project :data:publisher
+ project :data:serializer
+ project :data:signingrecord
+ project :data:yaml
+ project :eth-tests
+ project :ethereum:core
+ project :ethereum:dataproviders
+ project :ethereum:events
+ project :ethereum:executionlayer
+ project :ethereum:networks
+ project :ethereum:pow:api
+ project :ethereum:spec
+ project :ethereum:statetransition
+ project :ethereum:weaksubjectivity
+ project :infrastructure:async
+ project :infrastructure:bls
+ project :infrastructure:collections
+ project :infrastructure:crypto
+ project :infrastructure:events
+ project :infrastructure:exceptions
+ project :infrastructure:http
+ project :infrastructure:io
+ project :infrastructure:logging
+ project :infrastructure:metrics
+ project :infrastructure:restapi
+ project :infrastructure:serviceutils
+ project :infrastructure:ssz
+ project :infrastructure:subscribers
+ project :infrastructure:time
+ project :infrastructure:unsigned
+ project :infrastructure:version
+ project :networking:eth2
+ project :networking:nat
+ project :networking:p2p
+ project :pow
+ project :protoarray
+ project :services:beaconchain
+ project :services:chainstorage
+ project :services:executionengine
+ project :services:powchain
+ project :services:timer
+ project :storage
+ project :storage:api
+ project :sync
+ project :teku
+ project :util
+ project :validator:api
+ project :validator:beaconnode
+ project :validator:client
+ project :validator:eventadapter
+ project :validator:relaypublisher
+ project :validator:remote
+ tech.pegasys.discovery:discovery -> 21.12.1
+ tech.pegasys.signers.internal:bls-keystore -> 1.0.23
+ tech.pegasys.tools.epchecks:errorprone-checks -> 1.0.1
+ tech.pegasys:jblst -> 0.3.6-4
+ tech.pegasys:leveldb-native -> 0.2.0
+ tech.pegasys:noise-java:1.0.0

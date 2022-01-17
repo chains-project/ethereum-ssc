@@ -1,0 +1,69 @@
+---
+title: "Visualization of dependency tree"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+
+besu_data <- read.csv("besu_produc-inventory-report.csv", sep = ";")
+teku_data <- read.csv("teku_produc-inventory-report.csv", sep = ";")
+```
+
+# Count the number of different suppliers.
+
+```{r}
+besu_data %>% 
+  select("Group") %>%
+  group_by(Group) %>%         
+  summarise(Unique_Elements = n())
+
+teku_data %>% 
+  select("Group") %>%
+  group_by(Group) %>%         
+  summarise(Unique_Elements = n())
+```
+# Count the number of unique direct and transitive dependencies
+
+```{r}
+besu_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+besu_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+
+teku_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+
+teku_data %>% 
+  select(Name, Project) %>% 
+  filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
+  select(Name) %>% 
+  distinct()
+```
+# Count the number of internal dependencies
+
+```{r}
+besu_data %>% 
+  select("Name") %>%
+  group_by(Name) %>%         
+  summarise(Unique_Elements = n()) %>% 
+  filter(across(Name, ~ grepl('besu', .)))
+
+
+teku_data %>% 
+  select("Name") %>%
+  group_by(Name) %>%         
+  summarise(Unique_Elements = n()) %>% 
+  filter(across(Name, ~ grepl('teku', .)))
+```
