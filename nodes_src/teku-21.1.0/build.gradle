@@ -1,4 +1,4 @@
-import java.text.SimpleDateFormat
+//import java.text.SimpleDateFormat
 
 plugins {
   id 'com.diffplug.gradle.spotless' version '4.5.1'
@@ -13,9 +13,9 @@ plugins {
   id 'org.ajoberstar.grgit' version '4.0.2'
 }
 
-rootProject.version = calculatePublishVersion()
-def specificVersion = calculateVersion()
-def isDevelopBuild = rootProject.version.contains('develop')
+//rootProject.version = calculatePublishVersion()
+//def specificVersion = calculateVersion()
+//def isDevelopBuild = rootProject.version.contains('develop')
 
 apply plugin: 'application'
 
@@ -46,7 +46,7 @@ def expandedTaskList = []
 gradle.startParameter.taskNames.each {
   expandedTaskList << (buildAliases[it] ? buildAliases[it] : it)
 }
-gradle.startParameter.taskNames = expandedTaskList.flatten() as Iterable<String>
+//gradle.startParameter.taskNames = expandedTaskList.flatten() as Iterable<String>
 
 def userHome = System.getProperty("user.home")
 
@@ -67,7 +67,7 @@ def bintrayPackage = bintray.pkg {
 
   version {
     name = project.version
-    released = new Date()
+//    released = new Date()
   }
 }
 
@@ -199,18 +199,18 @@ allprojects {
       '-Xmx4g',
       '-XX:-UseGCOverheadLimit'
     ]
-    Set toImport = [
-      'test.ethereum.include',
-      'test.ethereum.state.eip',
-      'root.log.level',
-      'evm.log.level'
-    ]
+//    Set toImport = [
+//      'test.ethereum.include',
+//      'test.ethereum.state.eip',
+//      'root.log.level',
+//      'evm.log.level'
+//    ]
     testLogging.showStandardStreams = project.hasProperty("showOutput") ? project.property("showOutput") : false
-    for (String name : toImport) {
-      if (System.getProperty(name) != null) {
-        systemProperty name, System.getProperty(name)
-      }
-    }
+//    for (String name : toImport) {
+//      if (System.getProperty(name) != null) {
+//        systemProperty name, System.getProperty(name)
+//      }
+//    }
   }
 
   // Normalize Xdoclint behaviour across JDKs (OpenJDK 8 is more lenient than Oracle JDK by default).
@@ -344,17 +344,17 @@ tasks.register("dockerDistUntar") {
   def distTarFile = distTar.outputs.files.singleFile
   def distTarFileName = distTar.outputs.files.singleFile.name.replace(".tar.gz", "")
 
-  doFirst {
-    def dockerBuildDir = new File(dockerBuildPath)
-    dockerBuildDir.deleteDir()
-    dockerBuildDir.mkdir()
-    copy {
-      from tarTree(distTarFile)
-      into(dockerBuildPath)
-    }
-    def dockerDist = file("${dockerBuildPath}/${distTarFileName}")
-    dockerDist.renameTo("${dockerBuildPath}/teku")
-  }
+//  doFirst {
+//    def dockerBuildDir = new File(dockerBuildPath)
+//    dockerBuildDir.deleteDir()
+//    dockerBuildDir.mkdir()
+//    copy {
+//      from tarTree(distTarFile)
+//      into(dockerBuildPath)
+//    }
+//    def dockerDist = file("${dockerBuildPath}/${distTarFileName}")
+//    dockerDist.renameTo("${dockerBuildPath}/teku")
+//  }
 }
 
 def dockerVariants = [
@@ -466,56 +466,56 @@ subprojects {
     }
   }
 
-  if (sourceSetIsPopulated("main") || sourceSetIsPopulated("testFixtures")) {
-    apply plugin: 'com.jfrog.bintray'
-    apply plugin: 'maven-publish'
-
-    publishing {
-      publications {
-        mavenJava(MavenPublication) {
-          groupId "tech.pegasys.teku.internal"
-          version "${project.version}"
-          if (sourceSetIsPopulated("main")) {
-            from components.java
-            artifact sourcesJar
-          }
-
-          versionMapping {
-            usage('java-api') { fromResolutionOf('runtimeClasspath') }
-            usage('java-runtime') { fromResolutionResult() }
-          }
-          pom {
-            name = "Teku - ${project.name}"
-            url = 'https://github.com/ConsenSys/teku'
-            licenses {
-              license {
-                name = 'The Apache License, Version 2.0'
-                url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-              }
-            }
-            scm {
-              connection = 'scm:git:git://github.com/ConsenSys/teku.git'
-              developerConnection = 'https://github.com/ConsenSys/teku.git'
-              url = 'https://github.com/ConsenSys/teku'
-            }
-          }
-        }
-      }
-    }
-
-    bintray {
-      user = bintrayUser
-      key = bintrayKey
-
-      publications = ['mavenJava']
-      override = isDevelopBuild
-
-      publish = true
-
-      pkg = bintrayPackage
-    }
-  }
-
+//  if (sourceSetIsPopulated("main") || sourceSetIsPopulated("testFixtures")) z{
+//    apply plugin: 'com.jfrog.bintray'
+//    apply plugin: 'maven-publish'
+//
+//    publishing {
+//      publications {
+//        mavenJava(MavenPublication) {
+//          groupId "tech.pegasys.teku.internal"
+//          version "${project.version}"
+//          if (sourceSetIsPopulated("main")) {
+//            from components.java
+//            artifact sourcesJar
+//          }
+//
+//          versionMapping {
+//            usage('java-api') { fromResolutionOf('runtimeClasspath') }
+//            usage('java-runtime') { fromResolutionResult() }
+//          }
+//          pom {
+//            name = "Teku - ${project.name}"
+//            url = 'https://github.com/ConsenSys/teku'
+//            licenses {
+//              license {
+//                name = 'The Apache License, Version 2.0'
+//                url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//              }
+//            }
+//            scm {
+//              connection = 'scm:git:git://github.com/ConsenSys/teku.git'
+//              developerConnection = 'https://github.com/ConsenSys/teku.git'
+//              url = 'https://github.com/ConsenSys/teku'
+//            }
+//          }
+//        }
+//      }
+//    }
+//
+//    bintray {
+//      user = bintrayUser
+//      key = bintrayKey
+//
+//      publications = ['mavenJava']
+//      override = isDevelopBuild
+//
+//      publish = true
+//
+//      pkg = bintrayPackage
+//    }
+//  }
+//
   configurations {
     integrationTestImplementation.extendsFrom testImplementation
     acceptanceTestImplementation.extendsFrom testImplementation
@@ -537,17 +537,17 @@ subprojects {
     parent = parent.parent
   }
 
-  jar {
-    baseName jarName
-    manifest {
-      attributes(
-          'Specification-Title': jarName,
-          'Specification-Version': project.version,
-          'Implementation-Title': jarName,
-          'Implementation-Version': specificVersion
-      )
-    }
-  }
+//  jar {
+//    baseName jarName
+//    manifest {
+//      attributes(
+//          'Specification-Title': jarName,
+//          'Specification-Version': project.version,
+//          'Implementation-Title': jarName,
+//          'Implementation-Version': specificVersion
+//      )
+//    }
+//  }
 
   dependencies {
     implementation 'com.google.guava:guava'
@@ -586,7 +586,7 @@ subprojects {
     group = "verification"
     description = "Runs the Teku acceptance tests"
 
-    systemProperty "teku.testArtifactDir", new File(project.buildDir, "test-artifacts").getAbsolutePath()
+//    systemProperty "teku.testArtifactDir", new File(project.buildDir, "test-artifacts").getAbsolutePath()
     testClassesDirs = sourceSets.acceptanceTest.output.classesDirs
     classpath = sourceSets.acceptanceTest.runtimeClasspath
   }
@@ -627,10 +627,10 @@ run {
   }
 }
 
-dependencies {
-  compile project(':teku')
-  errorprone 'com.google.errorprone:error_prone_core'
-}
+//dependencies {
+//  compile project(':teku')
+//  errorprone 'com.google.errorprone:error_prone_core'
+//}
 
 distributions {
   main {
@@ -645,43 +645,43 @@ distributions {
 
 // http://label-schema.org/rc1/
 // using the RFC3339 format "2016-04-12T23:20:50.52Z"
-def buildTime() {
-  def df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'")
-  df.setTimeZone(TimeZone.getTimeZone("UTC"))
-  return df.format(new Date())
-}
+//def buildTime() {
+//  def df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'")
+//  df.setTimeZone(TimeZone.getTimeZone("UTC"))
+//  return df.format(new Date())
+//}
 
 // Calculate the version that this build would be published under (if it is published)
 // If this exact commit is tagged, use the tag
 // If this is on a release-* branch, use the most recent tag appended with +develop (e.g. 0.1.1-RC1+develop)
 // Otherwise, use develop
-def calculatePublishVersion() {
-  if (!grgit) {
-    return 'UNKNOWN'
-  }
-  def specificVersion = calculateVersion()
-  def isReleaseBranch = grgit.branch.current().name.startsWith('release-')
-  if (specificVersion.contains('+')) {
-    return isReleaseBranch ? "${specificVersion.substring(0, specificVersion.indexOf('+'))}+develop" : "develop"
-  }
-  return specificVersion
-}
+//def calculatePublishVersion() {
+//  if (!grgit) {
+//    return 'UNKNOWN'
+//  }
+//  def specificVersion = calculateVersion()
+//  def isReleaseBranch = grgit.branch.current().name.startsWith('release-')
+//  if (specificVersion.contains('+')) {
+//    return isReleaseBranch ? "${specificVersion.substring(0, specificVersion.indexOf('+'))}+develop" : "develop"
+//  }
+//  return specificVersion
+//}
 
 // Calculate the version that teku --version will report (among other places)
 // If this exact commit is tagged, use the tag
 // Otherwise use git describe --tags and replace the - after the tag with a +
-def calculateVersion() {
-  if (!grgit) {
-    return 'UNKNOWN'
-  }
-  String version = grgit.describe(tags: true)
-  def versionPattern = ~/^(?<lastVersion>.*)-(?<devVersion>[0-9]+-g[a-z0-9]+)$/
-  def matcher = version =~ versionPattern
-  if (matcher.find()) {
-    return "${matcher.group("lastVersion")}+${matcher.group("devVersion")}"
-  }
-  return version
-}
+//def calculateVersion() {
+//  if (!grgit) {
+//    return 'UNKNOWN'
+//  }
+////  String version = grgit.describe(tags: true)
+////  def versionPattern = ~/^(?<lastVersion>.*)-(?<devVersion>[0-9]+-g[a-z0-9]+)$/
+////  def matcher = version =~ versionPattern
+//  if (matcher.find()) {
+//    return "${matcher.group("lastVersion")}+${matcher.group("devVersion")}"
+//  }
+//  return version
+//}
 
 task printVersion() {
   doFirst {
@@ -723,21 +723,21 @@ configure(subprojects.findAll {it.name != 'errorprone-checks'}) {
   }
 }
 
-bintray {
-  user = bintrayUser
-  key = bintrayKey
-
-  filesSpec {
-    from distTar.destinationDir.path
-    from distZip.destinationDir.path
-    into '.'
-  }
-
-  publish = true
-  override = isDevelopBuild
-
-  pkg = bintrayPackage
-}
+//bintray {
+//  user = bintrayUser
+//  key = bintrayKey
+//
+//  filesSpec {
+//    from distTar.destinationDir.path
+//    from distZip.destinationDir.path
+//    into '.'
+//  }
+//
+//  publish = true
+//  override = isDevelopBuild
+//
+//  pkg = bintrayPackage
+//}
 
 bintrayUpload.mustRunAfter(distTar)
 bintrayUpload.mustRunAfter(distZip)
@@ -756,10 +756,10 @@ task dockerUpload {
     additionalTags.add('develop')
   }
 
-  if (!isDevelopBuild) {
-    additionalTags.add('latest')
-    additionalTags.add(dockerBuildVersion.split(/\./)[0..1].join('.'))
-  }
+//  if (!isDevelopBuild) {
+//    additionalTags.add('latest')
+//    additionalTags.add(dockerBuildVersion.split(/\./)[0..1].join('.'))
+//  }
 
   doLast {
     for (def variant in dockerVariants) {
