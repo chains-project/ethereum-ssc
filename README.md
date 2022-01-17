@@ -1,3 +1,3 @@
 # ethereum-ssc
 
-This repo contains the scripts and data of our analys is on the software supply chain of dependencies of the Ethereum nodes Besu and Teku.
+This repository contains the scripts and data of our analysis of the software supply chain of dependencies corresponding to the Ethereum nodes Besu and Teku.
