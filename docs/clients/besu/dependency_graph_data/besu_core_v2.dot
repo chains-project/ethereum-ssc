@@ -1,0 +1,214 @@
+# unflatten -l 2 -f besu-core.dot  > besu-core_unflatten.dot
+digraph "tree" {
+node ["fontname"="Linux Biolinum"]
+"besubesu" ["shape"="plaintext","color"="#00B1FF","style"="filled","label"="besu-core", fontsize="36"]
+
+internal [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR><TD>config</TD><TD PORT="f1">pki</TD><TD PORT="f2">clique</TD></TR>
+
+  <TR><TD>common</TD><TD PORT="f1">plugin-api</TD><TD PORT="f2">ibft</TD></TR>
+
+  <TR><TD>ibftlegacy</TD><TD PORT="f1">merge</TD><TD PORT="f2">qbft</TD></TR>
+
+  <TR><TD>crypto</TD><TD PORT="f1">util</TD><TD PORT="f2">datatypes</TD></TR>
+
+  <TR><TD>enclave</TD><TD PORT="f1">api</TD><TD PORT="f2">blockcreation</TD></TR>
+
+  <TR><TD>ethereum-core</TD><TD PORT="f1">eth</TD><TD PORT="f2">p2p</TD></TR>
+
+  <TR><TD>permissioning</TD><TD PORT="f1">retesteth</TD><TD PORT="f2">rlp</TD></TR>
+
+  <TR><TD>trie</TD><TD PORT="f1">stratum</TD><TD PORT="f2">ethstats</TD></TR>
+
+  <TR><TD>evm</TD><TD PORT="f1">metrics-core</TD><TD PORT="f2">nat</TD></TR>
+
+  <TR><TD>rocksdb</TD><TD PORT="f1">kvstore</TD></TR>
+</TABLE>>, "color"="black","style"="filled", "shape"="plaintext", fontsize="36", fillcolor="#87E9FF"];
+
+"comfasterxmljacksoncorejacksondatabind" ["style"="filled","label"="jackson-databind","shape"="rectangle","color"="#86C4C4", fontsize="36"]
+"comfasterxmljacksoncorejacksonannotations" ["shape"="rectangle","color"="#86C4C4","style"="filled","label"="jackson-annotations", fontsize="36"]
+"comfasterxmljacksonjacksonbom" ["shape"="rectangle","color"="#86C4C4","style"="filled","label"="jackson-bom", fontsize="36"]
+"comfasterxmljacksoncorejacksoncore" ["style"="filled","label"="jackson-core","shape"="rectangle","color"="#86C4C4", fontsize="36"]
+"comfasterxmljacksondatatypejacksondatatypejdk8" ["shape"="rectangle","color"="#86C4C4","style"="filled","label"="jackson-datatype-jdk8", fontsize="36"]
+
+"comgraphqljavagraphqljava" ["shape"="rectangle","color"="#ABD18E","style"="filled","label"="graphql-java", fontsize="36"]
+"comgraphqljavajavadataloader" ["shape"="rectangle","color"="#ABD18E","style"="filled","label"="java-dataloader", fontsize="36"]
+
+"orgreactivestreamsreactivestreams" ["shape"="rectangle","color"="#ADBDE3","style"="filled","label"="reactive-streams", fontsize="36"]
+
+"infopicoclipicocli" ["shape"="rectangle","color"="#DFA4CA","style"="filled","label"="picocli", fontsize="36"]
+
+"iovertxvertxcore" ["style"="filled","label"="vertx-core","shape"="rectangle","color"="#C4B0D6", fontsize="36"]
+"iovertxvertxweb" ["shape"="rectangle","color"="#C4B0D6","style"="filled","label"="vertx-web", fontsize="36"]
+"iovertxvertxwebcommon" ["shape"="rectangle","color"="#C4B0D6","style"="filled","label"="vertx-web-common", fontsize="36"]
+"iovertxvertxauthcommon" ["shape"="rectangle","color"="#C4B0D6","style"="filled","label"="vertx-auth-common", fontsize="36"]
+"iovertxvertxbridgecommon" ["shape"="rectangle","color"="#C4B0D6","style"="filled","label"="vertx-bridge-common", fontsize="36"]
+
+"ionettynettyhandlerproxy" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-handler-proxy", fontsize="36"]
+"ionettynettycodechttp" ["style"="filled","label"="netty-codec-http","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettyhandler" ["style"="filled","label"="netty-handler","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettycodec" ["style"="filled","label"="netty-codec","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettytransport" ["style"="filled","label"="netty-transport","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettybuffer" ["style"="filled","label"="netty-buffer","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettycommon" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-common", fontsize="36"]
+"ionettynettyresolver" ["style"="filled","label"="netty-resolver","shape"="rectangle","color"="#ffcb2b", fontsize="36"]
+"ionettynettycodecsocks" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-codec-socks", fontsize="36"]
+"ionettynettycodechttp2" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-codec-http2", fontsize="36"]
+"ionettynettyresolverdns" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-resolver-dns", fontsize="36"]
+"ionettynettycodecdns" ["shape"="rectangle","color"="#ffcb2b","style"="filled","label"="netty-codec-dns", fontsize="36"]
+
+"organtlrantlr4runtime" ["shape"="rectangle","color"="#F08DB9","style"="filled","label"="antlr4-runtime", fontsize="36"]
+
+"orgspringframeworksecurityspringsecuritycrypto" ["shape"="rectangle","color"="#CCAA60","style"="filled","label"="spring-security-crypto", fontsize="36"]
+
+"orgxerialsnappysnappyjava" ["shape"="rectangle","color"="#7EB5D0","style"="filled","label"="snappy-java", fontsize="36"]
+
+"netconsensysservicesquorummainnetlauncher" ["shape"="rectangle","color"="#A8B3E2","style"="filled","label"="quorum-mainnet-launcher", fontsize="36"]
+
+"orgapachetuwenituweniunits" ["style"="filled","label"="tuweni-units","shape"="rectangle","color"="#77A57C", fontsize="36"]
+"orgapachetuwenituwenibytes" ["style"="filled","label"="tuweni-bytes","shape"="rectangle","color"="#77A57C", fontsize="36"]
+"orgapachelogginglog4jlog4japi" ["shape"="rectangle","color"="#77A57C","style"="filled","label"="log4j-api", fontsize="36"]
+"orgapachelogginglog4jlog4jcore" ["shape"="rectangle","color"="#77A57C","style"="filled","label"="log4j-core", fontsize="36"]
+"orgapachetuwenituweniconfig" ["shape"="rectangle","color"="#77A57C","style"="filled","label"="tuweni-config", fontsize="36"]
+"orgapachetuwenituwenitoml" ["style"="filled","label"="tuweni-toml","shape"="rectangle","color"="#77A57C", fontsize="36"]
+
+"comgoogleguavaguava" ["style"="filled","label"="guava","shape"="rectangle","color"="#CA97A5", fontsize="36"]
+"comgoogleguavafailureaccess" ["shape"="rectangle","color"="#CA97A5","style"="filled","label"="failureaccess", fontsize="36"]
+"comgoogleguavalistenablefuture" ["shape"="rectangle","color"="#CA97A5","style"="filled","label"="listenablefuture", fontsize="36"]
+"comgooglecodefindbugsjsr305" ["shape"="rectangle","color"="#CA97A5","style"="filled","label"="jsr305", fontsize="36"]
+"comgoogleerrorproneerror_prone_annotations" ["shape"="rectangle","color"="#CA97A5","style"="filled","label"="error_prone_annotations", fontsize="36"]
+"comgooglej2objcj2objcannotations" ["shape"="rectangle","color"="#CA97A5","style"="filled","label"="j2objc-annotations", fontsize="36"]
+
+"orgcheckerframeworkcheckerqual" ["shape"="rectangle","color"="#C4B0D6","style"="filled","label"="checker-qual", fontsize="36"]
+
+"orgconnidframework" ["shape"="rectangle","color"="#C89475","style"="filled","label"="framework", fontsize="36"]
+"orgconnidframeworkinternal" ["shape"="rectangle","color"="#C89475","style"="filled","label"="framework-internal", fontsize="36"]
+
+"orgjetbrainskotlinkotlinstdlibjdk8" ["style"="filled","label"="kotlin-stdlib-jdk8","shape"="rectangle","color"="#98B67F", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="kotlin-stdlib-jdk7", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlib" ["style"="filled","label"="kotlin-stdlib","shape"="rectangle","color"="#98B67F", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlibcommon" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="kotlin-stdlib-common", fontsize="36"]
+"orgjetbrainsannotations" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="jetbrains-annotations", fontsize="36"]
+
+
+{
+graph ["rank"="same"]
+"besubesu"
+}
+"besubesu" -> "internal" [color=darkgray, penwidth="0.5"]
+
+"besubesu" -> "comfasterxmljacksoncorejacksondatabind" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "comfasterxmljacksondatatypejacksondatatypejdk8" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "comgoogleguavaguava" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "comgraphqljavagraphqljava" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "infopicoclipicocli" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "iovertxvertxweb" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachelogginglog4jlog4japi" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachelogginglog4jlog4jcore" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachetuwenituwenibytes" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachetuwenituweniconfig" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachetuwenituwenitoml" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgapachetuwenituweniunits" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgspringframeworksecurityspringsecuritycrypto" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgxerialsnappysnappyjava" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "netconsensysservicesquorummainnetlauncher" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniunits" -> "orgapachetuwenituwenibytes" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniunits" -> "comgoogleguavaguava" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniunits" -> "orgjetbrainskotlinkotlinstdlibjdk8" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenibytes" -> "comgoogleguavaguava" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenibytes" -> "orgconnidframework" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenibytes" -> "orgconnidframeworkinternal" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenibytes" -> "orgjetbrainskotlinkotlinstdlibjdk8" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "comgoogleguavafailureaccess" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "comgoogleguavalistenablefuture" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "comgooglecodefindbugsjsr305" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "orgcheckerframeworkcheckerqual" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "comgoogleerrorproneerror_prone_annotations" [color=darkgray, penwidth="0.5"]
+"comgoogleguavaguava" -> "comgooglej2objcj2objcannotations" [color=darkgray, penwidth="0.5"]
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlibjdk7" [color=darkgray, penwidth="0.5"]
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlib" [color=darkgray, penwidth="0.5"]
+"orgjetbrainskotlinkotlinstdlibjdk7" -> "orgjetbrainskotlinkotlinstdlib" [color=darkgray, penwidth="0.5"]
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainskotlinkotlinstdlibcommon" [color=darkgray, penwidth="0.5"]
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainsannotations" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksonannotations" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksoncorejacksoncore" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksoncorejacksondatabind" -> "comfasterxmljacksonjacksonbom" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksoncorejacksonannotations" -> "comfasterxmljacksonjacksonbom" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksoncorejacksoncore" -> "comfasterxmljacksonjacksonbom" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksoncorejacksoncore" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksonjacksonbom" [color=darkgray, penwidth="0.5"]
+"comfasterxmljacksondatatypejacksondatatypejdk8" -> "comfasterxmljacksoncorejacksondatabind" [color=darkgray, penwidth="0.5"]
+"comgraphqljavagraphqljava" -> "comgraphqljavajavadataloader" [color=darkgray, penwidth="0.5"]
+"comgraphqljavagraphqljava" -> "orgreactivestreamsreactivestreams" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "comfasterxmljacksoncorejacksoncore" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "comfasterxmljacksoncorejacksondatabind" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettyhandlerproxy" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettycodechttp2" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettycodechttp" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettyresolverdns" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettyhandler" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettyresolver" [color=darkgray, penwidth="0.5"]
+"iovertxvertxcore" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettycodechttp" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettycodecsocks" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandlerproxy" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp" -> "ionettynettyhandler" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandler" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandler" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandler" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandler" -> "ionettynettyresolver" [color=darkgray, penwidth="0.5"]
+"ionettynettyhandler" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettycodec" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettycodec" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettycodec" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettytransport" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettytransport" -> "ionettynettyresolver" [color=darkgray, penwidth="0.5"]
+"ionettynettytransport" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettybuffer" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolver" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecsocks" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecsocks" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecsocks" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecsocks" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettycodechttp" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettyhandler" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettycodechttp2" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettyhandler" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettycodecdns" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettyresolver" [color=darkgray, penwidth="0.5"]
+"ionettynettyresolverdns" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecdns" -> "ionettynettycodec" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecdns" -> "ionettynettytransport" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecdns" -> "ionettynettybuffer" [color=darkgray, penwidth="0.5"]
+"ionettynettycodecdns" -> "ionettynettycommon" [color=darkgray, penwidth="0.5"]
+"iovertxvertxweb" -> "iovertxvertxwebcommon" [color=darkgray, penwidth="0.5"]
+"iovertxvertxweb" -> "iovertxvertxauthcommon" [color=darkgray, penwidth="0.5"]
+"iovertxvertxweb" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
+"iovertxvertxweb" -> "iovertxvertxbridgecommon" [color=darkgray, penwidth="0.5"]
+"iovertxvertxwebcommon" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
+"iovertxvertxauthcommon" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
+"orgapachelogginglog4jlog4jcore" -> "orgapachelogginglog4jlog4japi" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniconfig" -> "comgoogleguavaguava" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniconfig" -> "orgapachetuwenituwenitoml" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituweniconfig" -> "orgjetbrainskotlinkotlinstdlibjdk8" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenitoml" -> "comgooglecodefindbugsjsr305" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenitoml" -> "orgjetbrainskotlinkotlinstdlibjdk8" [color=darkgray, penwidth="0.5"]
+"orgapachetuwenituwenitoml" -> "organtlrantlr4runtime" [color=darkgray, penwidth="0.5"]
+}
