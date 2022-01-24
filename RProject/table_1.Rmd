@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Dependencies Data Analysis"
 output: html_notebook
 ---
 
@@ -15,14 +15,11 @@ teku_deps_all <- read.csv("Data/teku-22.1.0_dependencies_all.txt", sep = ":", he
 besu_deps_all_Jan2021 <- read.csv("Data/besu-20.10.4_dependencies_all.txt", sep = ":", header = FALSE)
 teku_deps_all_Jan2021 <- read.csv("Data/teku-21.1.0_dependencies_all.txt", sep = ":", header = FALSE)
 
-
 besu_deps_all_Jan2021_gav <- read.csv("Data/besu-20.10.4_dependencies_all_gav.txt", sep = ":", header = FALSE)
 besu_deps_all_gav <- read.csv("Data/besu-21.10.6_dependencies_all_gav.txt", sep = ":", header = FALSE)
 
 teku_deps_all_Jan2021_gav <- read.csv("Data/teku-21.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
 teku_deps_all_gav <- read.csv("Data/teku-22.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
-
-
 ```
 
 # Unique direct dependencies
@@ -35,7 +32,6 @@ besu_deps_direct <- besu_deps_direct %>%
 print("Unique direct dependencies (Besu):")
 nrow(besu_deps_direct)
 
-
 teku_deps_direct <- teku_deps_direct %>% 
   rename(Type = V2, GA = V3) %>% 
   select(GA) %>% 
@@ -43,43 +39,96 @@ teku_deps_direct <- teku_deps_direct %>%
 print("Unique direct dependencies (Teku):")
 nrow(teku_deps_direct)
 ```
+# Common direct dependencies
+
+```{r}
+common_direct <- inner_join(besu_deps_direct, teku_deps_direct, by = "GA")
+print("Common direct dependencies:")
+nrow(common_direct)
+```
 
 # Unique transitive dependencies
 
 ```{r}
+# Besu
 besu_deps_all <- besu_deps_all %>% 
   rename(G = V1, A = V2) %>% 
   mutate(GA = paste(G,A,sep = ":"))
-print("Unique transitive dependencies (Besu):")
-nrow(besu_deps_all) - nrow(besu_deps_direct)
 
+besu_ga_direct <- besu_deps_direct %>% 
+  mutate(GA = str_sub(GA, 2, nchar(GA) - 1))
+
+besu_ga_all <- besu_deps_all %>% 
+  select(GA) %>% 
+  mutate(GA = str_sub(GA, 2, nchar(GA)))
+
+besu_deps_transitive <- setdiff(besu_ga_all, besu_ga_direct)
+
+print("Unique transitive dependencies (Besu):")
+nrow(besu_deps_transitive)
+
+# Teku
 teku_deps_all <- teku_deps_all %>% 
   rename(G = V1, A = V2) %>% 
   mutate(GA = paste(G,A,sep = ":"))
+
+teku_ga_direct <- teku_deps_direct %>% 
+  mutate(GA = str_sub(GA, 2, nchar(GA) - 1))
+
+teku_ga_all <- teku_deps_all %>% 
+  select(GA) %>% 
+  mutate(GA = str_sub(GA, 2, nchar(GA)))
+
+teku_deps_transitive <- setdiff(teku_ga_all, teku_ga_direct)
+
 print("Unique transitive dependencies (Teku):")
-nrow(teku_deps_all) - nrow(teku_deps_direct)
+nrow(teku_deps_transitive)
 ```
+
+# Common transitive dependencies
+
+```{r}
+common_transitive <- inner_join(besu_deps_transitive, teku_deps_transitive, by = "GA")
+print("Common transitive dependencies:")
+nrow(common_transitive)
+```
+
 
 # Unique third-party dependencies
 
 ```{r}
-besu_deps_all %>%
+besu_ga_tp <- besu_deps_all %>%
   filter(!str_detect(G, 'project-'))
 
-teku_deps_all %>%
+teku_ga_tp <- teku_deps_all %>%
   filter(!str_detect(G, 'project-'))
 ```
 
+# Common third-party dependencies
+
+```{r}
+common_tp <- inner_join(besu_ga_tp, teku_ga_tp, by = "GA")
+print("Common third-party dependencies:")
+nrow(common_tp)
+```
 # Unique third-party suppliers
 
 ```{r}
-besu_deps_all %>%
+besu_suppliers_all <- besu_deps_all %>%
   select(G) %>% 
   distinct()
 
-teku_deps_all %>%
+teku_suppliers_all <- teku_deps_all %>%
   select(G) %>% 
   distinct()
+```
+
+# Common third-party suppliers
+
+```{r}
+common_suppliers <- inner_join(besu_suppliers_all, teku_suppliers_all, by = "G")
+print("Common third-party suppliers:")
+nrow(common_suppliers)
 ```
 
 # Dependencies introduced in 2021
@@ -87,18 +136,36 @@ teku_deps_all %>%
 ```{r}
 besu_deps_all_Jan2021 <- besu_deps_all_Jan2021 %>% 
   rename(G = V1, A = V2) %>% 
-  mutate(GA = paste(G,A,sep = ":"))
+  mutate(GA = paste(G,A,sep = ":")) %>% 
+  select(GA)
+
+besu_deps_all_Jan2022 <- besu_deps_all %>% 
+  select(GA)
+
+besu_deps_all_introduced <- setdiff(besu_deps_all_Jan2022, besu_deps_all_Jan2021)
 
 print("Dependencies introduced in 2021 (Besu):")
-nrow(besu_deps_all) - nrow(besu_deps_all_Jan2021)
-
+nrow(besu_deps_all_introduced)
 
 teku_deps_all_Jan2021 <- teku_deps_all_Jan2021 %>% 
   rename(G = V1, A = V2) %>% 
-  mutate(GA = paste(G,A,sep = ":"))
+  mutate(GA = paste(G,A,sep = ":")) %>% 
+  select(GA)
+
+teku_deps_all_Jan2022 <- teku_deps_all %>% 
+  select(GA)
+
+teku_deps_all_introduced <- setdiff(teku_deps_all_Jan2022, teku_deps_all_Jan2021)
 
 print("Dependencies introduced in 2021 (Teku):")
-nrow(teku_deps_all) - nrow(teku_deps_all_Jan2021)
+nrow(teku_deps_all_introduced)
+```
+
+# Common dependencies introduced in 2021
+```{r}
+common_deps_all_introduced <- inner_join(besu_deps_all_introduced, teku_deps_all_introduced, by = "GA")
+print("Common dependencies introduced in 2021:")
+nrow(common_deps_all_introduced)
 ```
 
 # Dependencies modified in 2021
@@ -130,9 +197,22 @@ besu_Jan2021 <- besu_deps_all_Jan2021_gav %>%
   mutate(Date = "Jan2021")
 
 besu_join <- inner_join(besu_Jan2022, besu_Jan2021, by = "GA")
-besu_join %>% filter(GAV.x != GAV.y) %>% 
+
+besu_deps_modified <- besu_join %>% 
+  filter(GAV.x != GAV.y) %>%
   select(GA) %>% 
   distinct()
+
+print("Dependencies modified in 2021 (Besu):")
+nrow(besu_deps_modified)
+
+besu_deps_intersection <- besu_join %>% 
+  select(GA) %>% 
+  distinct()
+
+print("Dependencies in both versions (Besu):")
+nrow(besu_deps_intersection)
+
 
 # Teku
 teku_Jan2022 <- teku_deps_all_gav %>%
@@ -160,7 +240,26 @@ teku_Jan2021 <- teku_deps_all_Jan2021_gav %>%
   mutate(Date = "Jan2021")
 
 teku_join <- inner_join(teku_Jan2022, teku_Jan2021, by = "GA")
-teku_join %>% filter(GAV.x != GAV.y) %>% 
+
+teku_deps_modified <- teku_join %>% 
+  filter(GAV.x != GAV.y) %>%
   select(GA) %>% 
   distinct()
+
+print("Dependencies modified in 2021 (Teku):")
+nrow(teku_deps_modified)
+
+teku_deps_intersection <- teku_join %>% 
+  select(GA) %>% 
+  distinct()
+
+print("Dependencies in both versions (Teku):")
+nrow(teku_deps_intersection)
+```
+
+# Common dependencies modified in 2021
+```{r}
+common_modified <- inner_join(besu_deps_modified, teku_deps_modified, by = "GA")
+print("Common dependencies modified in 2021:")
+nrow(common_modified)
 ```

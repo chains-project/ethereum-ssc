@@ -5,47 +5,93 @@ output: html_notebook
 
 ```{r}
 library(tidyverse)
+library(readxl)
 
-besu_data <- read.csv("besu_produc-inventory-report.csv", sep = ";")
-teku_data <- read.csv("teku_produc-inventory-report.csv", sep = ";")
+besu_lic_comp_rep <- read_excel("Data/white_source/besu-21.10.6-license-compatibility-report.xlsx", sheet = 1)
+teku_lic_comp_rep <- read_excel("Data/white_source/teku-22.1.0-license-compatibility-report.xlsx", sheet = 1)
+
+besu_inv_rep <- read_excel("Data/white_source/besu-21.10.6-inventory-report.xlsx", sheet = 1)
+teku_inv_rep <- read_excel("Data/white_source/teku-22.1.0-inventory-report.xlsx", sheet = 1)
+
+besu_vul_rep <- read_excel("Data/white_source/besu-21.10.6-vulnerability-report.xlsx", sheet = 1)
+teku_vul_rep <- read_excel("Data/white_source/teku-22.1.0-vulnerability-report.xlsx", sheet = 1)
+
+```
+
+# Unique Licenses
+
+```{r}
+besu_unique_licenses <- besu_inv_rep %>% 
+  select(Licenses) %>% 
+  distinct()
+
+teku_unique_licenses <- teku_inv_rep %>% 
+  select(Licenses) %>% 
+  distinct()
+```
+
+# Common unique licenses
+
+```{r}
+inner_join(besu_unique_licenses, teku_unique_licenses, by = "Licenses")
+```
+
+# Vulnerable dependencies
+
+```{r}
+besu_vul_deps <- besu_vul_rep %>% 
+  select(Library) %>% 
+  distinct()
+
+teku_vul_deps <- teku_vul_rep %>% 
+  select(Library) %>% 
+  distinct()
+
+```
+# Common vulnerable dependencies
+
+```{r}
+inner_join(besu_vul_deps, teku_vul_deps, by = "Library")
 ```
 
 # Count the number of different suppliers.
 
 ```{r}
-besu_data %>% 
+besu_inv_rep %>% 
   select("Group") %>%
   group_by(Group) %>%         
-  summarise(Unique_Elements = n())
+  summarise(Unique_Elements = n()) %>% 
+  arrange(desc(Unique_Elements))
 
-teku_data %>% 
+teku_inv_rep %>% 
   select("Group") %>%
   group_by(Group) %>%         
-  summarise(Unique_Elements = n())
+  summarise(Unique_Elements = n()) %>% 
+  arrange(desc(Unique_Elements))
 ```
 # Count the number of unique direct and transitive dependencies
 
 ```{r}
-besu_data %>% 
+besu_inv_rep %>% 
   select(Name, Project) %>% 
   filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
   select(Name) %>% 
   distinct()
 
-besu_data %>% 
+besu_inv_rep %>% 
   select(Name, Project) %>% 
   filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
   select(Name) %>% 
   distinct()
 
 
-teku_data %>% 
+teku_inv_rep %>% 
   select(Name, Project) %>% 
   filter(across(Project, ~ grepl('(Transitive Dependency)', .))) %>% 
   select(Name) %>% 
   distinct()
 
-teku_data %>% 
+teku_inv_rep %>% 
   select(Name, Project) %>% 
   filter(across(Project, ~ grepl('(Direct Dependency)', .))) %>% 
   select(Name) %>% 
@@ -54,16 +100,17 @@ teku_data %>%
 # Count the number of internal dependencies
 
 ```{r}
-besu_data %>% 
+besu_inv_rep %>% 
   select("Name") %>%
   group_by(Name) %>%         
   summarise(Unique_Elements = n()) %>% 
-  filter(across(Name, ~ grepl('besu', .)))
-
-
-teku_data %>% 
+  filter(across(Name, ~ grepl('besu', .))) %>% 
+  arrange(desc(Unique_Elements))
+  
+teku_inv_rep %>% 
   select("Name") %>%
   group_by(Name) %>%         
   summarise(Unique_Elements = n()) %>% 
-  filter(across(Name, ~ grepl('teku', .)))
+  filter(across(Name, ~ grepl('teku', .))) %>% 
+  arrange(desc(Unique_Elements))
 ```

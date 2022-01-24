@@ -20,9 +20,9 @@ https://api.github.com/users/lucassaldanha
 https://api.github.com/users/NicolasMassart
 https://api.github.com/users/vitorpy
 https://api.github.com/users/jframe
+https://api.github.com/users/courtneyeh
 https://api.github.com/users/joshuafernandes
 https://api.github.com/users/Errorific
-https://api.github.com/users/courtneyeh
 https://api.github.com/users/iikirilov
 https://api.github.com/users/MadelineMurray
 https://api.github.com/users/jalextowle
