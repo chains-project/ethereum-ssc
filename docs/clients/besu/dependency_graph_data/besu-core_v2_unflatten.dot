@@ -2,11 +2,14 @@ digraph tree {
 	node [fontname="Linux Biolinum"];
 	{
 		graph [rank=same];
-		besubesu	[color="#00B1FF",
-			fontsize=36,
+		besubesu	[color=brack,
+			fillcolor="#87E9FF",
+			fontsize=52,
+			height=1.5,
 			label="besu-core",
-			shape=plaintext,
-			style=filled];
+			shape=box,
+			style=filled,
+			width=5];
 	}
 	internal	[color=black,
 		fillcolor="#87E9FF",
@@ -52,12 +55,20 @@ digraph tree {
 		style=filled];
 	besubesu -> comfasterxmljacksondatatypejacksondatatypejdk8	[color=darkgray,
 		penwidth=0.5];
-	comgraphqljavagraphqljava	[color="#ABD18E",
+	comgraphqljavagraphqljava	[color="#d6a894",
 		fontsize=36,
 		label="graphql-java",
 		shape=rectangle,
 		style=filled];
 	besubesu -> comgraphqljavagraphqljava	[color=darkgray,
+		penwidth=0.5];
+	orgbouncycastlebcprovjdk15on	[color="#FFE599",
+		fontsize=36,
+		label="bcprov-jdk15on",
+		shape=rectangle,
+		style=filled];
+	besubesu -> orgbouncycastlebcprovjdk15on	[color=darkgray,
+		minlen=2,
 		penwidth=0.5];
 	infopicoclipicocli	[color="#DFA4CA",
 		fontsize=36,
@@ -65,7 +76,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	besubesu -> infopicoclipicocli	[color=darkgray,
-		minlen=2,
+		minlen=1,
 		penwidth=0.5];
 	iovertxvertxcore	[color="#C4B0D6",
 		fontsize=36,
@@ -87,7 +98,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	besubesu -> orgspringframeworksecurityspringsecuritycrypto	[color=darkgray,
-		minlen=3,
+		minlen=2,
 		penwidth=0.5];
 	orgxerialsnappysnappyjava	[color="#7EB5D0",
 		fontsize=36,
@@ -132,7 +143,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	besubesu -> orgapachelogginglog4jlog4jcore	[color=darkgray,
-		minlen=3,
+		minlen=1,
 		penwidth=0.5];
 	orgapachetuwenituweniconfig	[color="#77A57C",
 		fontsize=36,
@@ -187,7 +198,7 @@ digraph tree {
 		penwidth=0.5];
 	comfasterxmljacksondatatypejacksondatatypejdk8 -> comfasterxmljacksoncorejacksoncore	[color=darkgray,
 		penwidth=0.5];
-	comgraphqljavajavadataloader	[color="#ABD18E",
+	comgraphqljavajavadataloader	[color="#d6a894",
 		fontsize=36,
 		label="java-dataloader",
 		shape=rectangle,
@@ -294,7 +305,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	iovertxvertxweb -> iovertxvertxbridgecommon	[color=darkgray,
-		minlen=3,
+		minlen=1,
 		penwidth=0.5];
 	iovertxvertxwebcommon -> iovertxvertxcore	[color=darkgray,
 		penwidth=0.5];
@@ -414,7 +425,7 @@ digraph tree {
 		penwidth=0.5];
 	orgapachetuwenituweniunits -> comgoogleguavaguava	[color=darkgray,
 		penwidth=0.5];
-	orgjetbrainskotlinkotlinstdlibjdk8	[color="#98B67F",
+	orgjetbrainskotlinkotlinstdlibjdk8	[color="#a5ca97",
 		fontsize=36,
 		label="kotlin-stdlib-jdk8",
 		shape=rectangle,
@@ -485,7 +496,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	comgoogleguavaguava -> comgoogleerrorproneerror_prone_annotations	[color=darkgray,
-		minlen=3,
+		minlen=1,
 		penwidth=0.5];
 	comgooglej2objcj2objcannotations	[color="#CA97A5",
 		fontsize=36,
@@ -493,7 +504,7 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	comgoogleguavaguava -> comgooglej2objcj2objcannotations	[color=darkgray,
-		minlen=1,
+		minlen=2,
 		penwidth=0.5];
 	orgcheckerframeworkcheckerqual	[color="#C4B0D6",
 		fontsize=36,
@@ -501,9 +512,9 @@ digraph tree {
 		shape=rectangle,
 		style=filled];
 	comgoogleguavaguava -> orgcheckerframeworkcheckerqual	[color=darkgray,
-		minlen=2,
+		minlen=1,
 		penwidth=0.5];
-	orgjetbrainskotlinkotlinstdlibjdk7	[color="#98B67F",
+	orgjetbrainskotlinkotlinstdlibjdk7	[color="#a5ca97",
 		fontsize=36,
 		label="kotlin-stdlib-jdk7",
 		shape=rectangle,
@@ -511,7 +522,7 @@ digraph tree {
 	orgjetbrainskotlinkotlinstdlibjdk8 -> orgjetbrainskotlinkotlinstdlibjdk7	[color=darkgray,
 		minlen=1,
 		penwidth=0.5];
-	orgjetbrainskotlinkotlinstdlib	[color="#98B67F",
+	orgjetbrainskotlinkotlinstdlib	[color="#a5ca97",
 		fontsize=36,
 		label="kotlin-stdlib",
 		shape=rectangle,
@@ -520,7 +531,7 @@ digraph tree {
 		penwidth=0.5];
 	orgjetbrainskotlinkotlinstdlibjdk7 -> orgjetbrainskotlinkotlinstdlib	[color=darkgray,
 		penwidth=0.5];
-	orgjetbrainskotlinkotlinstdlibcommon	[color="#98B67F",
+	orgjetbrainskotlinkotlinstdlibcommon	[color="#a5ca97",
 		fontsize=36,
 		label="kotlin-stdlib-common",
 		shape=rectangle,
@@ -528,7 +539,7 @@ digraph tree {
 	orgjetbrainskotlinkotlinstdlib -> orgjetbrainskotlinkotlinstdlibcommon	[color=darkgray,
 		minlen=1,
 		penwidth=0.5];
-	orgjetbrainsannotations	[color="#98B67F",
+	orgjetbrainsannotations	[color="#a5ca97",
 		fontsize=36,
 		label="jetbrains-annotations",
 		shape=rectangle,

@@ -1,7 +1,7 @@
 # unflatten -l 2 -f besu-core.dot  > besu-core_unflatten.dot
 digraph "tree" {
 node ["fontname"="Linux Biolinum"]
-"besubesu" ["shape"="plaintext","color"="#00B1FF","style"="filled","label"="besu-core", fontsize="36"]
+besubesu	[width=5,height=1.5,fontsize=52,label="besu-core",shape=box,color=brack,fillcolor="#87E9FF",style=filled];
 
 internal [label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
@@ -32,8 +32,12 @@ internal [label=<
 "comfasterxmljacksoncorejacksoncore" ["style"="filled","label"="jackson-core","shape"="rectangle","color"="#86C4C4", fontsize="36"]
 "comfasterxmljacksondatatypejacksondatatypejdk8" ["shape"="rectangle","color"="#86C4C4","style"="filled","label"="jackson-datatype-jdk8", fontsize="36"]
 
-"comgraphqljavagraphqljava" ["shape"="rectangle","color"="#ABD18E","style"="filled","label"="graphql-java", fontsize="36"]
-"comgraphqljavajavadataloader" ["shape"="rectangle","color"="#ABD18E","style"="filled","label"="java-dataloader", fontsize="36"]
+"comgraphqljavagraphqljava" ["shape"="rectangle","color"="#d6a894","style"="filled","label"="graphql-java", fontsize="36"]
+"comgraphqljavajavadataloader" ["shape"="rectangle","color"="#d6a894","style"="filled","label"="java-dataloader", fontsize="36"]
+
+"orgbouncycastlebcprovjdk15on" ["shape"="rectangle","color"="#FFE599","style"="filled","label"="bcprov-jdk15on", fontsize="36"]
+
+
 
 "orgreactivestreamsreactivestreams" ["shape"="rectangle","color"="#ADBDE3","style"="filled","label"="reactive-streams", fontsize="36"]
 
@@ -85,12 +89,11 @@ internal [label=<
 "orgconnidframework" ["shape"="rectangle","color"="#C89475","style"="filled","label"="framework", fontsize="36"]
 "orgconnidframeworkinternal" ["shape"="rectangle","color"="#C89475","style"="filled","label"="framework-internal", fontsize="36"]
 
-"orgjetbrainskotlinkotlinstdlibjdk8" ["style"="filled","label"="kotlin-stdlib-jdk8","shape"="rectangle","color"="#98B67F", fontsize="36"]
-"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="kotlin-stdlib-jdk7", fontsize="36"]
-"orgjetbrainskotlinkotlinstdlib" ["style"="filled","label"="kotlin-stdlib","shape"="rectangle","color"="#98B67F", fontsize="36"]
-"orgjetbrainskotlinkotlinstdlibcommon" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="kotlin-stdlib-common", fontsize="36"]
-"orgjetbrainsannotations" ["shape"="rectangle","color"="#98B67F","style"="filled","label"="jetbrains-annotations", fontsize="36"]
-
+"orgjetbrainskotlinkotlinstdlibjdk8" ["style"="filled","label"="kotlin-stdlib-jdk8","shape"="rectangle","color"="#a5ca97", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","color"="#a5ca97","style"="filled","label"="kotlin-stdlib-jdk7", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlib" ["style"="filled","label"="kotlin-stdlib","shape"="rectangle","color"="#a5ca97", fontsize="36"]
+"orgjetbrainskotlinkotlinstdlibcommon" ["shape"="rectangle","color"="#a5ca97","style"="filled","label"="kotlin-stdlib-common", fontsize="36"]
+"orgjetbrainsannotations" ["shape"="rectangle","color"="#a5ca97","style"="filled","label"="jetbrains-annotations", fontsize="36"]
 
 {
 graph ["rank"="same"]
@@ -204,6 +207,7 @@ graph ["rank"="same"]
 "iovertxvertxweb" -> "iovertxvertxbridgecommon" [color=darkgray, penwidth="0.5"]
 "iovertxvertxwebcommon" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
 "iovertxvertxauthcommon" -> "iovertxvertxcore" [color=darkgray, penwidth="0.5"]
+"besubesu" -> "orgbouncycastlebcprovjdk15on" [color=darkgray, penwidth="0.5"]
 "orgapachelogginglog4jlog4jcore" -> "orgapachelogginglog4jlog4japi" [color=darkgray, penwidth="0.5"]
 "orgapachetuwenituweniconfig" -> "comgoogleguavaguava" [color=darkgray, penwidth="0.5"]
 "orgapachetuwenituweniconfig" -> "orgapachetuwenituwenitoml" [color=darkgray, penwidth="0.5"]
