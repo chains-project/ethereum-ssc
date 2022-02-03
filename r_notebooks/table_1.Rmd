@@ -20,6 +20,9 @@ besu_deps_all_gav <- read.csv("Data/besu-21.10.6_dependencies_all_gav.txt", sep 
 
 teku_deps_all_Jan2021_gav <- read.csv("Data/teku-21.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
 teku_deps_all_gav <- read.csv("Data/teku-22.1.0_dependencies_all_gav.txt", sep = ":", header = FALSE)
+
+besu_cont_usernames <- read.csv("Data/besu_contributors_usernames.txt", sep = ",", header = FALSE)
+teku_cont_usernames <- read.csv("Data/teku_contributors_usernames.txt", sep = ",", header = FALSE)
 ```
 
 # Unique direct dependencies
@@ -98,18 +101,33 @@ nrow(common_transitive)
 
 ```{r}
 besu_ga_tp <- besu_deps_all %>%
-  filter(!str_detect(G, 'project-'))
+  filter(!str_detect(G, 'project-')) %>% 
+  select(GA)
 
 teku_ga_tp <- teku_deps_all %>%
-  filter(!str_detect(G, 'project-'))
+  filter(!str_detect(G, 'project-')) %>% 
+  select(GA)
+
+
+
 ```
 
 # Common third-party dependencies
 
 ```{r}
-common_tp <- inner_join(besu_ga_tp, teku_ga_tp, by = "GA")
+common_tp <- inner_join(besu_ga_tp, teku_ga_tp, by = "GA") %>% 
+  select(GA)
 print("Common third-party dependencies:")
 nrow(common_tp)
+
+write_csv(common_tp, "besu_and_teku_third_party_dependencies.csv")
+
+
+besu_only_third_party_dependencies <- setdiff(besu_ga_tp, common_tp)
+teku_only_third_party_dependencies <- setdiff(teku_ga_tp, common_tp)
+write_csv(besu_only_third_party_dependencies, "besu_only_third_party_dependencies.csv")
+write_csv(teku_only_third_party_dependencies, "teku_only_third_party_dependencies.csv")
+
 ```
 # Unique third-party suppliers
 
@@ -147,6 +165,20 @@ besu_deps_all_introduced <- setdiff(besu_deps_all_Jan2022, besu_deps_all_Jan2021
 print("Dependencies introduced in 2021 (Besu):")
 nrow(besu_deps_all_introduced)
 
+# Suppliers
+besu_deps_all_Jan2022_suppliers <- besu_deps_all_Jan2022 %>% 
+  separate(GA, c("G", "A"), sep = ":") %>% 
+  select(G)
+
+besu_deps_all_Jan2021_suppliers <- besu_deps_all_Jan2021 %>% 
+  separate(GA, c("G", "A"), sep = ":") %>% 
+  select(G)
+
+besu_deps_all_introduced_suppliers <- setdiff(besu_deps_all_Jan2022_suppliers, besu_deps_all_Jan2021_suppliers)
+
+print("Suppliers introduced in 2021 (Besu):")
+nrow(besu_deps_all_introduced_suppliers)
+
 teku_deps_all_Jan2021 <- teku_deps_all_Jan2021 %>% 
   rename(G = V1, A = V2) %>% 
   mutate(GA = paste(G,A,sep = ":")) %>% 
@@ -159,14 +191,43 @@ teku_deps_all_introduced <- setdiff(teku_deps_all_Jan2022, teku_deps_all_Jan2021
 
 print("Dependencies introduced in 2021 (Teku):")
 nrow(teku_deps_all_introduced)
+
+
+# Suppliers
+teku_deps_all_Jan2022_suppliers <- teku_deps_all_Jan2022 %>% 
+  separate(GA, c("G", "A"), sep = ":") %>% 
+  select(G)
+
+teku_deps_all_Jan2021_suppliers <- teku_deps_all_Jan2021 %>% 
+  separate(GA, c("G", "A"), sep = ":") %>% 
+  select(G)
+
+teku_deps_all_introduced_suppliers <- setdiff(teku_deps_all_Jan2022_suppliers, teku_deps_all_Jan2021_suppliers)
+
+print("Suppliers introduced in 2021 (Teku):")
+nrow(teku_deps_all_introduced_suppliers)
+
+
+
+
+
 ```
 
 # Common dependencies introduced in 2021
+```{r}
+common_deps_suppliers_all_introduced <- inner_join(besu_deps_all_introduced_suppliers, teku_deps_all_introduced_suppliers, by = "G")
+print("Common suppliers introduced in 2021:")
+nrow(common_deps_suppliers_all_introduced)
+```
+
+
+# Common suppliers introduced in 2021
 ```{r}
 common_deps_all_introduced <- inner_join(besu_deps_all_introduced, teku_deps_all_introduced, by = "GA")
 print("Common dependencies introduced in 2021:")
 nrow(common_deps_all_introduced)
 ```
+
 
 # Dependencies modified in 2021
 
@@ -263,3 +324,10 @@ common_modified <- inner_join(besu_deps_modified, teku_deps_modified, by = "GA")
 print("Common dependencies modified in 2021:")
 nrow(common_modified)
 ```
+
+# Contributors
+
+```{r}
+inner_join(besu_cont_usernames, teku_cont_usernames, by = "V1") %>% distinct() %>% arrange(V1)
+```
+
