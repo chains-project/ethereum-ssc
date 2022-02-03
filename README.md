@@ -1,4 +1,4 @@
-![](/Users/cesarsv/WebstormProjects/ethereum-ssc/besu_dep_tree.png)
+![Dependency tree of software dependencies of Besu](besu_dep_tree.png)
 
 # Ethereum Software Supply Chain 
 
