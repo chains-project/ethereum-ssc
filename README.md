@@ -2,7 +2,18 @@
 
 # Ethereum Software Supply Chain 
 
-This repository contains the scripts and data of our analysis of the software supply chain of the Ethereum nodes Besu and Teku.
+This repository contains the scripts and data of our analysis of the software supply chain of the Ethereum nodes Besu and Teku. If you use this data, please cite:
+
+```bibtex
+@article{ethereumSupplyChain,
+ title = {The Multibillion Dollar Software Supply Chain of Ethereum},
+ journal = {IEEE Computer},
+ year = {2022},
+ doi = {10.1109/MC.2022.3175542},
+ author = {César Soto-Valero and Martin Monperrus and Benoit Baudry},
+ url = {http://arxiv.org/pdf/2202.07029},
+}
+```
 
 Repository structure:
 
